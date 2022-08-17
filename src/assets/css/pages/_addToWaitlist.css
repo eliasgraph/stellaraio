@@ -13,7 +13,28 @@
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
-
+.enter-email-wrapper{
+  max-width: 59.5rem;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  border-radius: 5px;
+}
+.enter-email-wrapper input{
+  margin: 0px;
+  padding: 0px 7px 0px 2.7rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 4.5rem;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px 1px rgba(50,50,114, 0.1 ), 0px 0px 2px 1px rgba(50,50,114,1 ), 0px 0px 5px 5px rgba(195, 46, 245, 0.1);
+  background-color: rgba(9, 9, 19, 1);
+  color: #fff;
+  font-size: 14px;
+  text-align: start;
+  position: relative;
+  z-index: 1;
+}
 .join-waitlist-div button{
   margin-bottom: 22px;
 }
@@ -51,6 +72,7 @@
   max-width: 59.5rem;
   position: relative;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 .skip-to-front{
@@ -211,5 +233,35 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
 }
 
+@media only screen and (max-width: 767px){
+  .skip-glowring{
+    display: none;
+  }
+  .skip-to-front-input-wrapper{
+    overflow: hidden;
+  }
+  .a-t-w-sponsors{
+    width: 90%;
+  }
+  .a-t-w-benefits{
+    width: 80%;
+  }
+  .a-t-w-tweet{
+    width: 95%;
+  }
+  .n-m-glowring{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 569px){
+  .a-t-w-benefits{
+    display: none;
+  }
+  .enter-email-wrapper{
+    width: 90%;
+  }
+}

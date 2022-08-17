@@ -30,16 +30,9 @@ function AddToWaitlist() {
           <div className="join-waitlist-div">
             <h2 className='text-center'>Join the Waitlist Now.</h2>
             <p className='text-center'>The real opportunity is here and you <br /> dont want to miss it.</p>
-            <Buttons
-              text={"Enter your email"}
-              width={"59.5rem"}
-              boxShadow={"inset 0px 0px 1px 1px rgba(50,50,114, 0.1 ), 0px 0px 2px 1px rgba(50,50,114,1 ), 0px 0px 5px 5px rgba(195, 46, 245, 0.1)"}
-              background={"#080812"}
-              color={"#97979B"}
-              height={"4.5rem"}
-              fontSize={"1.4rem"}
-              className="mx-auto d-block"
-            />
+            <div className="enter-email-wrapper">
+              <input type="email" placeholder='Enter your Email' className='text-center'/>
+            </div>
             <div className="gt-access-btn-div">
               <img className='join-waitlist-glowring' src={glowringsm} alt="" />
               <Buttons text={"Get Early Access"} className="d-block mx-auto position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>

@@ -98,8 +98,9 @@
 .ribbon{
   /* transform: translate(210px, -250px); */
   position: absolute;
-  bottom: -49%;
-  right: -331px;
+  bottom: -46%;
+  right: -61px;
+  max-width: 900px;
 }
 .ribbon--texts{
   max-width: 300px;
@@ -291,8 +292,9 @@ margin-top: 30px;
 
 @media only screen and (max-width: 1199px) {
   .ribbon{
-    bottom: -57%;
-    right: -339px;
+    max-width: 900px;
+    bottom: -54%;
+    right: -78px;
   }
   .ribbon--texts{
     left: -6%;
@@ -302,8 +304,9 @@ margin-top: 30px;
 @media only screen and (max-width: 991px) {
 
   .ribbon{
-    bottom: -61%;
-    right: -270px;
+    max-width: 750px;
+    bottom: -60%;
+    right: -60px;
   }
   .ribbon--texts{
     left: -2%;
@@ -355,7 +358,7 @@ margin-top: 30px;
  }
 
  .support-bg{
-  padding: 0 87px;
+  padding: 0 8.7rem;
   padding-bottom: 30px;
  }
  .support-text{
@@ -414,8 +417,8 @@ margin-top: 30px;
  }
 
  .ribbon{
-  bottom: -37%;
-  left: -198px;
+  bottom: -35%;
+  left: -182px;
  }
 
  .ribbon--texts{
@@ -424,4 +427,42 @@ margin-top: 30px;
   max-width: 680px;
   text-align: center;
  }
+}
+
+@media only screen and (max-width: 645px) {
+  .ribbon{
+    display: none;
+  }
+
+  .supported{
+    margin-top: 15rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .rowey{
+    width: 100%;
+  }
+  .home-users__users{
+    width: 100%;
+  }
+  .c-a-d__holder{
+    padding: 10px;
+  }
+  .c-a-d__item--img img{
+    width: 100%;
+  }
+
+  .c-a-d__item--texts{
+    margin: 0 auto;
+  }
+
+  .support-bg{
+    padding: 1rem;
+    padding-bottom: 30px;
+  }
+  .faq__card{
+    padding-left: 3.4rem;
+    padding-right: 2.9rem;
+  }
 }

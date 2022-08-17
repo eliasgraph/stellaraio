@@ -148,10 +148,10 @@ function Landing() {
           <h2 className='text-center'>Create. Automate. Dominate</h2>
           <p className='text-center'>How it works</p>
         </div>
-          <div className="p-relative">
+          <div className="p-relative overflow-hidden">
             <div className="c-a-d__holder">
               <div className="c-a-d__holder--inner">
-                <Row className="cad-row">
+                <Row className="cad-row align-items-center">
                   <Col md={6} sm={12}>
                     <div className="c-a-d__item--img">
                         <img  src={select} alt="select" />
@@ -204,7 +204,7 @@ function Landing() {
 
             </div>
             <div className="ribbon">
-              <img width={'80%'} src={ribbon} alt="ribbon" />
+              <img width={'100%'} src={ribbon} alt="ribbon" />
               <div className="ribbon--texts">
                 <h3>Performance <br /> speaks for itself.</h3>
                 <p>Stellar has again and again proven to be the best choice for you.</p>
