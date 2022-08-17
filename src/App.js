@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import { Container } from 'reactstrap';
+
+import Landing from './pages/Landing/Landing'
+import About from './pages/About/About'
+import AddToWaitlist from './pages/AddToWaitlist/AddToWaitlist'
+
+import Header from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Header/>
+        <div className="app-content">
+          <Container>
+            <Routes>
+              <Route path="/" element={ <Landing/> }/>
+              <Route path="/about" element={ <About/>} />
+              <Route path="/add-to-waitlist" element={ <AddToWaitlist/>} />
+            </Routes>
+          </Container>
+        </div>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 

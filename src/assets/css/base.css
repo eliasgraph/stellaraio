@@ -1,0 +1,39 @@
+:root{
+  --app-bg-color: #080812;
+  --app-text-secondary: #DBDCEC;
+  --color-purple-2: #c32ef5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: all .2s ease-out !important;
+}
+
+
+html {
+  width: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+}
+
+
+body {
+  width: 100%;
+  font-family: "Poppins" !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+    box-sizing: border-box;
+  }
+}
+
