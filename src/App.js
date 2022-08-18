@@ -10,6 +10,7 @@ import Header from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 function App() {
   return (

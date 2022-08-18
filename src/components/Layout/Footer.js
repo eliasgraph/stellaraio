@@ -12,7 +12,7 @@ function Footer() {
       <Container>
         <div className="footer__container">
           <Row>
-            <Col md={6}>
+            <Col md={6} sm={12}>
               <div className="footer__logo">
                 <img src={Logo} alt="logo" />
               </div>
@@ -23,7 +23,7 @@ function Footer() {
               performance to measure and optimize.
               </div>
             </Col>
-            <Col md={2}>
+            <Col md={2} sm={6}>
               <ul className='footer-list mt-4'>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="#features">Features</Link></li>
@@ -32,13 +32,13 @@ function Footer() {
                 <li><Link to="#faq">FAQ</Link></li>
               </ul>
             </Col>
-            <Col md={2}>
-            <ul className='footer-list mt-4'>
+            <Col md={2} sm={6}>
+            <ul className='footer-list footer-list-mid mt-4'>
               <li><Link to="#about">About</Link></li>
               <li><Link to="#support">Support</Link></li>
               <li><Link to="#terms">Terms</Link></li>
               <li><Link to="#privacy">Privacy</Link></li>
-          </ul>
+            </ul>
             </Col>
             <Col md={2}>
             <ul className='footer-list mt-4'>

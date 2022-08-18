@@ -9,6 +9,7 @@
   color: #DBDCEC;
   width: 28.9rem;
   margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 .footer-list{ 
   list-style: none;
@@ -43,10 +44,37 @@
   .footer__container{
     padding: 0 4.2rem;
   }
+  .footer__logo{
+    width: 100px;
+    margin: 0 auto;
+  }
+  .footer__mission{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  .footer__container .col-sm-6{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .footer__logo img{
+    width: 100%;
+  }
+  .footer-list a{
+    display: block;
+  }
+  .footer-list-mid{
+    text-align: right;
+  }
   .footer-icons{
     width: 40%;
   }
+  .footer-copy-icons{
+    flex-direction: column !important;
+  }
   .copyright{
     margin-right: 0;
+    margin-top: 20px;
   }
 }

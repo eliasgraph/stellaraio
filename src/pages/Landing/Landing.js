@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CardGradient from '../../components/Generals/CardGradient'
 import { Row, Col, Collapse, Modal, ModalBody } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
@@ -11,11 +11,14 @@ import support from '../../assets/imgs/landingpage/support.png'
 import torus from '../../assets/imgs/landingpage/torus.png'
 import cone from '../../assets/imgs/landingpage/cone.png'
 import spherespring from '../../assets/imgs/landingpage/spherespring.png'
-import select from '../../assets/imgs/landingpage/select1.png'
-import create from '../../assets/imgs/landingpage/create1.png'
-import checkout from '../../assets/imgs/landingpage/checkout1.png'
+/* import select from '../../assets/imgs/landingpage/select1.png' */
+import select from '../../assets/imgs/landingpage/select.png'
+/* import create from '../../assets/imgs/landingpage/create1.png' */
+import create from '../../assets/imgs/landingpage/create.png'
+/* import checkout from '../../assets/imgs/landingpage/checkout1.png' */
+import checkout from '../../assets/imgs/landingpage/checkout.png'
 import ribbon from '../../assets/imgs/landingpage/ribbon.png'
-import supportedby from '../../assets/imgs/landingpage/supportedby.png'
+import supportedby from '../../assets/imgs/landingpage/Mockup-Recovered 3.png'
 import quote from '../../assets/imgs/landingpage/quote.png'
 import rowey from '../../assets/imgs/landingpage/rowey.png'
 import left from '../../assets/imgs/landingpage/Arrow 2.png'
@@ -54,7 +57,7 @@ import walmart from '../../assets/imgs/logos/walmart.png'
 import target from '../../assets/imgs/logos/target_logo.png'
 import swatch from '../../assets/imgs/logos/Swatch.png'
 import close from '../../assets/imgs/icon/close.png'
-
+import glowringlg from '../../assets/imgs/Path 5.png'
 
 
 function Landing() {
@@ -72,6 +75,14 @@ function Landing() {
   const pushJoinWaitlist = ()=>{
     navigate('/add-to-waitlist')
   }
+  useEffect(() => {
+    if (seeSite) {
+      document.documentElement.style.overflow = 'hidden';
+    } else{
+      document.documentElement.style.overflow = 'unset';
+
+    }
+  }, [seeSite]);
   return (
     <>
       <section id='home'>
@@ -154,14 +165,15 @@ function Landing() {
                 <Row className="cad-row align-items-center">
                   <Col md={6} sm={12}>
                     <div className="c-a-d__item--img">
-                        <img  src={select} alt="select" />
+                      <img  src={select} alt="select" />
+                      <img width={'90%'} src={glowringlg} className="c-a-d-glowring" alt="" />
                     </div>
                     
                   </Col>
                   <Col md={6} sm={12} className="align-self-center cad-text-col">
                     <div className="c-a-d__item--texts ml-auto">
-                          <h3>Select <br /> Desired Products</h3>
-                          <p>Make a choice from the wide range of products suppoted on our Amazing platform.</p>
+                      <h3>Select <br /> Desired Products</h3>
+                      <p>Make a choice from the wide range of products suppoted on our Amazing platform.</p>
                     </div>
                     
                   </Col>
@@ -171,14 +183,15 @@ function Landing() {
                 <Row className="cad-row">
                   <Col md={6} sm={12}>
                     <div className="c-a-d__item--img ">
-                        <img  src={create} alt="create" />
+                      <img src={create} alt="create" />
+                      <img width={'90%'} src={glowringlg} className="c-a-d-glowring" alt="" />
                     </div>
                     
                   </Col>
                   <Col md={6} sm={12} className="align-self-center cad-text-col">
                   <div className="c-a-d__item--texts ml-auto">
-                        <h3>Create <br /> Task Seamlessly.</h3>
-                        <p>Easily create Tasks for your coveted products at light speed.</p>
+                      <h3>Create <br /> Task Seamlessly.</h3>
+                      <p>Easily create Tasks for your coveted products at light speed.</p>
                     </div>
                     
                   </Col>
@@ -188,7 +201,8 @@ function Landing() {
                 <Row className='cad-row'>
                   <Col md={6} sm={12}>
                     <div className="c-a-d__item--img ">
-                        <img src={checkout} alt="checkout" />
+                      <img src={checkout} alt="checkout" />
+                      <img width={'90%'} src={glowringlg} className="c-a-d-glowring" alt="" />
                     </div>
                     
                   </Col>
@@ -220,7 +234,8 @@ function Landing() {
             <Row>
               <Col lg={6} md={12}>
                 <div className="support-img">
-                  <img width={"100%"} src={supportedby} alt="supported-img" />
+                  <img src={supportedby} alt="supported-img" />
+                  <img src={glowringlg} className="support-img-glowring" alt="" />
                 </div>
               </Col>
               <Col lg={6} md={12}>
@@ -230,7 +245,7 @@ function Landing() {
                   <p className='text-right'>Stellar is your the only one and true AIO that allows you to shop easily and profitably from your favorite retailers globally.</p>
                 </div>
                 <div role={'button'} onClick={tog_seeSite} className="support-actions d-flex align-items-center justify-content-end">
-                  <p className='color-purple-2 me-3 mb-0'>See all Sites</p>
+                  <p className='color-purple-2 me-3 mb-0'>See all Site</p>
                   <div className="supportaction">
                     <img src={supportnext} alt="next" />
                   </div>
@@ -247,7 +262,10 @@ function Landing() {
               <div className="home-users-content">
                 <h4>What are users saying?</h4>
                 <div className="home-users__quote d-flex align-items-start">
-                  <img height={"100%"} src={quote} alt="quote" />
+                  <div className="home-users__quote--img">
+                    <img src={quote} alt="quote" />
+                  </div>
+                  
                   <div className="home-users__quote--quote ">
                     <p>Stellar for me has been the most worth it bot that I use for retail and it’s my go to bot. I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.
                     </p>
@@ -400,6 +418,7 @@ function Landing() {
         toggle={tog_seeSite}
         centered
         className='modal-md'
+        
       >
         <ModalBody>   
           <div className="see-site">

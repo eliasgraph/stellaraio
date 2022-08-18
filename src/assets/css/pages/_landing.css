@@ -78,8 +78,20 @@
 .c-a-d__holder--inner{
   margin-bottom: 11rem;
 }
+.c-a-d__item--img {
+  position: relative;
+}
 .c-a-d__item--img img{
-  width: 140%;
+  width: 100%;
+}
+.c-a-d__item--img img:first-of-type{
+  position: relative;
+  z-index: 1;
+}
+.c-a-d-glowring{
+  position: absolute;
+  top: -7%;
+  left: 28%;
 }
 .c-a-d__item--texts{
   width: 300px;
@@ -119,8 +131,17 @@
 
 .support-img{
   transform: translateY(-47px);
-}
+  position: relative;
 
+}
+.support-img img{
+  width: 90%;
+}
+.support-img-glowring{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
 .support-text {
   margin-top: 11.6rem;
   margin-bottom: 4rem;
@@ -224,7 +245,7 @@
   margin-top: 2.9rem;
 }
 
-.socials-content{
+.socials-icons{
   max-width: 23rem;
   margin: 0 auto;
 }
@@ -315,7 +336,7 @@ margin-top: 30px;
 }
 
 
- @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .home__left {
     margin-left: 0;
     margin-top: 0 auto;
@@ -368,9 +389,14 @@ margin-top: 30px;
  .supported{
   margin-top: 77rem;
  }
+ 
  .supported h4, .support-text p{
   text-align: center;
  }
+ .support-actions{
+  justify-content: center !important;
+ }
+
  .home-users-content{
   padding-left: 2.2rem;
   padding-right: 2.2rem;
@@ -397,11 +423,18 @@ margin-top: 30px;
   margin: 0 auto;
  }
 
- .socials-content {
-  max-width: 29rem;
- }
  .socials-icons{
   padding-top: 10px !important;
+  max-width: 23rem;
+  padding-left: 5px;
+ }
+ .socials-icons img{
+  width: 35px;
+ }
+ .social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
  .faq {
@@ -427,6 +460,12 @@ margin-top: 30px;
   max-width: 680px;
   text-align: center;
  }
+ .home-users__quote--img{
+  max-width: 30%;
+}
+.home-users__quote--img img{
+  width: 100%;
+}
 }
 
 @media only screen and (max-width: 645px) {
@@ -449,6 +488,7 @@ margin-top: 30px;
   .c-a-d__holder{
     padding: 10px;
   }
+  
   .c-a-d__item--img img{
     width: 100%;
   }
@@ -456,7 +496,9 @@ margin-top: 30px;
   .c-a-d__item--texts{
     margin: 0 auto;
   }
-
+  .support-img{
+    overflow: hidden;
+   }
   .support-bg{
     padding: 1rem;
     padding-bottom: 30px;
@@ -464,5 +506,14 @@ margin-top: 30px;
   .faq__card{
     padding-left: 3.4rem;
     padding-right: 2.9rem;
+  }
+  .see-site{
+    padding-left: 7%;
+  }
+  .home-users__quote--img{
+    max-width: 30%;
+  }
+  .home-users__quote--img img{
+    width: 100%;
   }
 }
