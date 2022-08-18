@@ -11,7 +11,8 @@ import discord from '../../assets/imgs/landingpage/discord.png'
 import Mokcup from '../../assets/imgs/addtowaitlist/Mockup 1.png'
 import sponsors from '../../assets/imgs/addtowaitlist/Group 12017.png'
 import sponsorsls from '../../assets/imgs/addtowaitlist/Group 120171.png'
-import tweet from '../../assets/imgs/addtowaitlist/ezgif 13.png'
+import tweet from '../../assets/imgs/addtowaitlist/ezgif 13.gif'
+import tweetmo from '../../assets/imgs/addtowaitlist/ezgif 14.gif'
 import benefits from '../../assets/imgs/addtowaitlist/Group 12050 1 3.png'
 import subtract from '../../assets/imgs/addtowaitlist/Subtract.png'
 import compass from '../../assets/imgs/icon/compass.png'
@@ -87,7 +88,7 @@ function AddToWaitlist() {
             </div>
           )}
           <div className="a-t-w-tweet">
-            <img style={{width: "100%", height:"657px"}} src={tweet} alt="tweet" />
+            { isMobile ? <img style={{width: "100%"}} src={tweetmo} alt="tweet" /> : <img style={{width: "100%", height:"657px"}} src={tweet} alt="tweet" />}
           </div>
           <img className='a-t-w-glowring' src={glowringlg} alt="" />
         </div>
