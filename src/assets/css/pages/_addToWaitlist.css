@@ -298,4 +298,8 @@
   .join-waitlist-glowring{
     display: none;
   }
+  .need-h-or-s-div{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
