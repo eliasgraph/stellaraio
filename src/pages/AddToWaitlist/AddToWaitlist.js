@@ -12,6 +12,7 @@ import Mokcup from '../../assets/imgs/addtowaitlist/Mockup 1.png'
 import sponsors from '../../assets/imgs/addtowaitlist/Group 12017.png'
 import sponsorsls from '../../assets/imgs/addtowaitlist/Group 120171.png'
 import tweet from '../../assets/imgs/addtowaitlist/ezgif 13.png'
+import benefits from '../../assets/imgs/addtowaitlist/Group 12050 1 3.png'
 import subtract from '../../assets/imgs/addtowaitlist/Subtract.png'
 import compass from '../../assets/imgs/icon/compass.png'
 import dollars from '../../assets/imgs/icon/dollars.png'
@@ -23,6 +24,7 @@ import { Link } from 'react-router-dom'
 
 function AddToWaitlist() {
   const isTab = useMediaQuery({ query: '(min-width: 992px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 569px)' })
   return (
     <>
       <section className="join-waitlist">
@@ -60,23 +62,30 @@ function AddToWaitlist() {
             { isTab ? <img width={"100%"} src={sponsors} alt="sponsors" /> : <img width={"100%"} src={sponsorsls} alt="sponsors" />}
             
           </div>
-          <div className="a-t-w-benefits  text-center">
-            <div className="test1 mb-20px mt-20px">
-              <img style={{position: 'absolute', top: '-16px', left: '39%'}} src={compass} alt="" />
-              <img src={subtract} alt="" />
-              <p className='compass-text mb-0 text-center'>5 milliseconds <br /> Checkout <br /> time</p>
+          { isMobile ? (
+            <div className="a-t-w-benefits">
+              <img width={'100%'} src={benefits} alt="" />
             </div>
-            <div className="test2 mb-20px">
-              <img style={{position: 'absolute', top: '-12px', left: '38%'}} src={cart} alt="" />
-              <img src={subtract} alt="" />
-              <p className='compass-text mb-0 text-center'>Run <br /> Thousands <br /> of Tasks</p>
+          ) : (
+
+            <div className="a-t-w-benefits  text-center">
+              <div className="test1 mb-20px mt-20px">
+                <img style={{position: 'absolute', top: '-16px', left: '39%'}} src={compass} alt="" />
+                <img src={subtract} alt="" />
+                <p className='compass-text mb-0 text-center'>5 milliseconds <br /> Checkout <br /> time</p>
+              </div>
+              <div className="test2 mb-20px">
+                <img style={{position: 'absolute', top: '-12px', left: '38%'}} src={cart} alt="" />
+                <img src={subtract} alt="" />
+                <p className='compass-text mb-0 text-center'>Run <br /> Thousands <br /> of Tasks</p>
+              </div>
+              <div className="test3">
+                <img style={{position: 'absolute', top: '-15px', left: '38%'}} src={dollars} alt="" />
+                <img src={subtract} alt="" />
+                <p className='compass-text mb-0 text-center'>Millions of <br /> dollars made <br /> between users</p>
+              </div>
             </div>
-            <div className="test3">
-              <img style={{position: 'absolute', top: '-15px', left: '38%'}} src={dollars} alt="" />
-              <img src={subtract} alt="" />
-              <p className='compass-text mb-0 text-center'>Millions of <br /> dollars made <br /> between users</p>
-            </div>
-          </div>
+          )}
           <div className="a-t-w-tweet">
             <img style={{width: "100%", height:"657px"}} src={tweet} alt="tweet" />
           </div>

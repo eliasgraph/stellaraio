@@ -39,3 +39,11 @@
     font-size: 14px !important;
   }
 }
+
+@media only screen and (max-width: 767px){
+  .navbar{
+    padding-left: 10px;
+    padding-right: 10px; 
+  }
+  
+}

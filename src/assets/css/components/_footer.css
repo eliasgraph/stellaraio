@@ -54,6 +54,9 @@
     margin: 0 auto;
     margin-bottom: 3rem;
   }
+  .footer__container{
+    padding: 0 3.5rem;
+  }
   .footer__container .col-sm-6{
     flex: 0 0 auto;
     width: 50%;
@@ -68,7 +71,11 @@
     text-align: right;
   }
   .footer-icons{
-    width: 40%;
+    width: 50%;
+    justify-content: space-around !important;
+  }
+  .footer-icon{
+    width: max-content;
   }
   .footer-copy-icons{
     flex-direction: column !important;

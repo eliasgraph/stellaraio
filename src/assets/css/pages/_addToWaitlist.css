@@ -252,6 +252,9 @@
   .a-t-w-tweet{
     width: 95%;
   }
+  .need-h-or-s-card1{
+    margin-bottom: 20px;
+  }
   .n-m-glowring{
     display: none;
   }
@@ -259,9 +262,35 @@
 
 @media only screen and (max-width: 569px){
   .a-t-w-benefits{
-    display: none;
+    padding: 0;
+  }
+  .a-t-w-benefits::before {
+    content: "";
+    position: relative;
+    inset: 0;
+    border-radius: 10px; 
+    padding: 0px; 
+    background:none; 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
   }
   .enter-email-wrapper{
     width: 90%;
   }
+  .skip-to-front-div{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+    .skip-to-front-input-wrapper button{
+      position: relative;
+      width: 100%;
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+    }
+  
 }
