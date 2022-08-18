@@ -208,10 +208,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    order: -1;
     padding-bottom: 10px;
     padding-top: 27px;
-    margin-bottom: 20px;
+    transform: translate(-40px, -20px);
   }
   .test1,.test2,.test3{
     margin-bottom: 0;
@@ -220,17 +219,18 @@
   .a-t-w-sponsors{
     height: max-content;
     width: max-content;
-    margin-bottom: 20px;
+    
   }
   .a-t-w-glowring {
     display: none;
   }
   .a-t-w-tweet{
     width: 100%;
+    transform: translateY(-40px);
   }
 
   .skip-to-front{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
   }
 

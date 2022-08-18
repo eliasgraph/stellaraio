@@ -20,9 +20,9 @@ function Header() {
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="m-auto z-index-1" navbar>
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
+            <Nav className="m-auto text-right z-index-1" navbar>
+              <NavItem className='text-right'>
+                <NavLink  href="/">Home</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#features">Features</NavLink>
@@ -37,7 +37,7 @@ function Header() {
                 <NavLink href="#blog">Blog</NavLink>
               </NavItem>
             </Nav>
-            <Buttons width={"14rem"} text={"Dashboard"}/>
+            <Buttons className="nav-btn" width={"14rem"} text={"Dashboard"}/>
           </Collapse>
         </Navbar>
     </div>

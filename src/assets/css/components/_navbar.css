@@ -45,5 +45,12 @@
     padding-left: 10px;
     padding-right: 10px; 
   }
-  
+  .nav-link{
+    margin-right: 0;
+    font-size: 18px;
+  }
+  .nav-btn{
+    margin-left: auto;
+    display: block;
+  }
 }
