@@ -277,6 +277,9 @@
     -webkit-mask-composite: xor;
             mask-composite: exclude; 
   }
+  .a-t-w-tweet{
+    box-shadow: none;
+  }
   .enter-email-wrapper{
     width: 90%;
   }
@@ -292,5 +295,7 @@
       right: 0;
       margin-top: 10px;
     }
-  
+  .join-waitlist-glowring{
+    display: none;
+  }
 }
