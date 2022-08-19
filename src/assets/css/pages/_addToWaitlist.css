@@ -302,4 +302,13 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .need-h-or-s-card2{
+    min-height: 26.5rem;
+  }
+  .need-h-or-s-div2{
+    margin-top: 7rem;
+  }
+  .need-h-or-s-div br{
+    display: none;
+  }
 }
