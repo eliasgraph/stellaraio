@@ -30,15 +30,17 @@ function AddToWaitlist() {
     <>
       <section className="join-waitlist">
         <CardGradient height={"43.1rem"}>
-          <div className="join-waitlist-div">
-            <h2 className='text-center'>Join the Waitlist Now.</h2>
-            <p className='text-center'>The real opportunity is here and you <br /> dont want to miss it.</p>
-            <div className="enter-email-wrapper">
-              <input type="email" placeholder='Enter your Email' className='text-center'/>
-            </div>
-            <div className="gt-access-btn-div">
-              <img className='join-waitlist-glowring' src={glowringsm} alt="" />
-              <Buttons text={"Get Early Access"} className="d-block mx-auto position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+          <div className="join-waitlist-div px-3">
+            <h2 className='text-center'>Tired of seeing sold out?</h2>
+            <p className='text-center'>Stellar handles the checkout process for you, ensuring you get the <br /> products you want before anyone else.</p>
+            <div className="enter-email-div d-flex align-items-center">
+              <div className="enter-email-wrapper me-4">
+                <input type="email" placeholder='Enter your Email' className='text-center'/>
+              </div>
+              <div className="gt-access-btn-div">
+                <img className='join-waitlist-glowring' src={glowringsm} alt="" />
+                <Buttons text={"Get Early Access"} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+              </div>
             </div>
             
           </div>
@@ -47,8 +49,12 @@ function AddToWaitlist() {
 
       <section className='n-m-restock mt-20px'>
           <CardGradient>
-            <div className="n-m-restock-div">
-              <h2 className="app-h2 text-center">Never miss a Restock again</h2>
+            <div className="n-m-restock-div px-3">
+              <h2 className="app-h2 text-center mb-20px">Never miss a Restock again</h2>
+              <p className="text-center">Stellar AIO is a leading retail and sneaker automation bot. We help collectors and resellers make money by checking out the most in-demand e-commerce products in a flash.
+              </p>
+              <p className="text-center">To that end, we make innovative, fast-paced checkout solutions effortless, accessible, and affordable for everyone. Our goal is to give resellers the tools they need to build a highly 
+              </p>
               <div className="n-m-restock-img-wrapper">
                 <img width={"100%"} src={Mokcup} alt="mockup" />
               </div>
@@ -57,6 +63,8 @@ function AddToWaitlist() {
           </CardGradient>
       </section>
       <section className="a-t-w">
+        <h2 className="app-h2 text-center">Stellar AIO works where you shop!</h2>
+        <p className="text-center">Proven Performance, so you never miss a release.</p>
         <div className="d-flex justify-content-between align-items-center a-t-w-wrapper">
           
           <div className="a-t-w-sponsors">
@@ -95,8 +103,9 @@ function AddToWaitlist() {
       </section>
       <section className='skip-to-front'>
         <CardGradient height={"32.7rem"}>
-          <div className="skip-to-front-div">
-            <h2 className="app-h2 text-center mb-30px">Skip to the front of the line</h2>
+          <div className="skip-to-front-div px-3">
+            <h2 className="app-h2 text-center">Your ticket to the front of the line.</h2>
+            <p className="text-center mb-30px">Stellar is how you beat every other buyer to get the products you want. Sign up to get the fastest checkout on the market.</p>
             <div className="skip-to-front-input-wrapper">
               <input type="email" placeholder='Enter your Email'/>
               <Buttons text={"Get Early Access"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
