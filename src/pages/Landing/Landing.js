@@ -12,11 +12,11 @@ import torus from '../../assets/imgs/landingpage/torus.png'
 import cone from '../../assets/imgs/landingpage/cone.png'
 import spherespring from '../../assets/imgs/landingpage/spherespring.png'
 /* import select from '../../assets/imgs/landingpage/select1.png' */
-import select from '../../assets/imgs/landingpage/select.png'
+import select from '../../assets/imgs/landingpage/select.gif'
 /* import create from '../../assets/imgs/landingpage/create1.png' */
-import create from '../../assets/imgs/landingpage/create.png'
+import create from '../../assets/imgs/landingpage/create.gif'
 /* import checkout from '../../assets/imgs/landingpage/checkout1.png' */
-import checkout from '../../assets/imgs/landingpage/checkout.png'
+import checkout from '../../assets/imgs/landingpage/checkout.gif'
 import ribbon from '../../assets/imgs/landingpage/ribbon.png'
 import supportedby from '../../assets/imgs/landingpage/Mockup-Recovered 3.png'
 import quote from '../../assets/imgs/landingpage/quote.png'
