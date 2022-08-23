@@ -39,7 +39,7 @@ function AddToWaitlist() {
               </div>
               <div className="gt-access-btn-div">
                 <img className='join-waitlist-glowring' src={glowringsm} alt="" />
-                <Buttons text={"Get Early Access"} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+                <Buttons text={"Be First in Line"} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
               </div>
             </div>
             
@@ -52,10 +52,6 @@ function AddToWaitlist() {
             <div className="n-m-restock-div px-3">
               <h2 className="app-h2 text-center">The Quickest path to the most <br /> in-demand products.</h2>
               <h2 className="app-h2 text-center app-color-primary mb-30px">Sneakers. Console. Trading cards.</h2>
-              <p className="text-center">Stellar AIO is a leading retail and sneaker automation bot. We help collectors and resellers make money by checking out the most in-demand e-commerce products in a flash.
-              </p>
-              <p className="text-center">To that end, we make innovative, fast-paced checkout solutions effortless, accessible, and affordable for everyone. Our goal is to give resellers the tools they need to build a highly 
-              </p>
               <div className="n-m-restock-img-wrapper">
                 <img width={"100%"} src={Mokcup} alt="mockup" />
               </div>
