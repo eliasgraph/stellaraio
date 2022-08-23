@@ -50,7 +50,8 @@ function AddToWaitlist() {
       <section className='n-m-restock mt-20px'>
           <CardGradient>
             <div className="n-m-restock-div px-3">
-              <h2 className="app-h2 text-center mb-20px">Never miss a Restock again</h2>
+              <h2 className="app-h2 text-center">The Quickest path to the most <br /> in-demand products.</h2>
+              <h2 className="app-h2 text-center app-color-primary mb-30px">Sneakers. Console. Trading cards.</h2>
               <p className="text-center">Stellar AIO is a leading retail and sneaker automation bot. We help collectors and resellers make money by checking out the most in-demand e-commerce products in a flash.
               </p>
               <p className="text-center">To that end, we make innovative, fast-paced checkout solutions effortless, accessible, and affordable for everyone. Our goal is to give resellers the tools they need to build a highly 
@@ -108,7 +109,7 @@ function AddToWaitlist() {
             <p className="text-center mb-30px">Stellar is how you beat every other buyer to get the products you want. Sign up to get the fastest checkout on the market.</p>
             <div className="skip-to-front-input-wrapper">
               <input type="email" placeholder='Enter your Email'/>
-              <Buttons text={"Get Early Access"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
+              <Buttons text={"Be First in Line"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
               <img className='skip-glowring' src={glowringsm} alt="" />
             </div>
           </div>
@@ -121,7 +122,7 @@ function AddToWaitlist() {
             <CardGradient height={"28.8rem"} className="need-h-or-s-card1">
               <div className="need-h-or-s-div">
                 <h2 className="app-h2 text-center mb-2">Need Help or Support?</h2>
-                <p className='text-center'>Our Support Team is standing by, whenever and wherever <br /> you may need them.</p>
+                <p className='text-center'>Got stuck at any step? Our team of experts and passionate community are there to answer your questions and provide you with handheld support 24/7.</p>
                 <Buttons text={"Visit Support Center"} className="d-block mx-auto" border={"none"} width={"20.7rem"}/>
               </div>
             </CardGradient>

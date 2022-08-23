@@ -61,7 +61,7 @@
 .n-m-restock-div p{
   max-width: 84rem;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .n-m-restock-img-wrapper{
   max-width: 80.1rem;
@@ -71,7 +71,7 @@
 
 .n-m-glowring{
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 30%;
   width: 400px;
 }
@@ -139,7 +139,9 @@
 }
 
 .need-h-or-s-div p{
+  margin: 0 auto;
   margin-bottom: 5.6rem;
+  max-width: 66.9rem;
 }
 
 .need-h-or-s-div2{
