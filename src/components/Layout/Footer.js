@@ -27,7 +27,7 @@ function Footer() {
               <ul className='footer-list mt-4'>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="#features">Features</Link></li>
-                <li><Link to="#blog">Blog</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="#site">Site</Link></li>
                 <li><Link to="#faq">FAQ</Link></li>
               </ul>

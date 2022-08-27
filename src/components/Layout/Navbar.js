@@ -34,7 +34,7 @@ function Header() {
                 <NavLink href="#faq">FAQ</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#blog">Blog</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
               </NavItem>
             </Nav>
             <Buttons className="nav-btn" width={"14rem"} text={"Dashboard"}/>
