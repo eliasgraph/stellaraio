@@ -139,8 +139,9 @@
 }
 .support-img-glowring{
   position: absolute;
-  top: 20%;
-  left: 30%;
+  width: 66% !important;
+  bottom: -13%;
+  left: 9px;
 }
 .support-text {
   margin-top: 11.6rem;

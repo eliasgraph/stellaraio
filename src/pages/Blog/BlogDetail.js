@@ -281,7 +281,7 @@ function BlogDetail() {
 
             </div>) : <></>  }
           </Col>
-          <Col className='ps-5' md={4}>
+          <Col className='blog-right-sidebar' md={4}>
             <div className="blog-top-posts">
                 <div className="top-post-header mb-20px d-flex align-items-center">
                   <Star/>
