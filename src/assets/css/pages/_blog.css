@@ -253,3 +253,10 @@
   color: #DBDCEC;
   font-size: 14px;
 }
+
+.blog-detail-content-imgs{
+  max-width: 95%;
+}
+.blog-detail-content-imgs img{
+  max-width: 100%;
+}

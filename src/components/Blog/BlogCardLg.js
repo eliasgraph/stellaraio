@@ -1,14 +1,11 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
 import glowhalf from '../../assets/imgs/blog/Path 5 (1).png'
-import {useDispatch} from 'react-redux'
-import {setOneBlog} from '../../store/actions'
+
 
 
 function BlogCardLg({blog}) {
-  const navigate = useNavigate()
   const pushToBlogDetail =()=>{
-    navigate(`/blog/${blog.id}`)
+    window.location.href = `/blog/${blog.id}`
   }
   return (
     <>

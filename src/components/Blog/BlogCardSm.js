@@ -1,14 +1,10 @@
 import React from 'react'
 import glowsmhalf from '../../assets/imgs/blog/Path 6.png'
-import {useNavigate} from 'react-router-dom'
-import {useDispatch} from 'react-redux'
-import {setOneBlog} from '../../store/actions'
-
 
 function BlogCardSm({small, blog}) {
-  const navigate = useNavigate()
+ 
   const pushToBlogDetail =()=>{
-    navigate(`/blog/${blog.id}`)
+    window.location.href = `/blog/${blog.id}`
   }
   return (
     <>

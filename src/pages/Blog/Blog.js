@@ -16,18 +16,21 @@ import BlogService from '../../services/BlogService'
 import { useSearchParams, useNavigate} from 'react-router-dom'
 
 
-import {setBlogs,  setTotalPages} from '../../store/actions'
+import {setBlogs,  setTotalPages, setTopPosts} from '../../store/actions'
 import { useSelector, useDispatch } from "react-redux";
+import Posts from '../../components/Blog/Posts'
 
 
 function Blog() {
-  const {blogs, totalPages} = useSelector((state)=>({
+  const {blogs, totalPages, topPosts} = useSelector((state)=>({
     blogs: state.Blogs.blogs,
-    totalPages: state.Blogs.totalPages
+    totalPages: state.Blogs.totalPages,
+    topPosts: state.Blogs.topPosts
   }))
 
   const [firstBlog, setFirstBlog] = useState(null)
   const [blogArr, setBlogArr] = useState([])
+  const [topPostLoading, setTopPostLoading] = useState(false)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -38,13 +41,14 @@ function Blog() {
 
   const pagesQuery = parseInt(searchParams.get('page'))
   const pages = (isNaN(pagesQuery) || typeof(pagesQuery) !== 'number') ? 1 : pagesQuery
-
+  const postPerPage = 7
   useEffect(()=>{
     run()
+    getTopPosts()
   },[pages])
 
   async function run (){
-    const query = `per_page=10&page=${pages}&_fields=id,title,acf.publisher,acf.blog_img`
+    const query = `per_page=${postPerPage}&page=${pages}&_fields=id,title,acf.publisher,acf.blog_img`
     setIsLoading(true)
     try{
       const res = await BlogService.getBlogs(query)
@@ -57,6 +61,18 @@ function Blog() {
     } catch(e){ 
       setErrors(e)
       setIsLoading(false)
+    }
+  }
+  async function getTopPosts (){
+    setTopPostLoading(true)
+    const query = `per_page=4&&_fields=id,title,acf.publisher,acf.top_post=true, acf.blog_img`
+    try {
+      const res = await BlogService.getTopPosts(query)
+
+      dispatch(setTopPosts(res.data))
+      setTopPostLoading(false)
+    } catch (e) {
+      setErrors({...errors, topPost: true})
     }
   }
 
@@ -149,22 +165,7 @@ function Blog() {
                   <img src={glowmd} alt="" />
                 </div>
               </div>
-              <div className="side-posts mb-20px">
-                <h6>What is a Best buy Bot and where can you buy one?</h6>
-                <p className='mb-0'>Author: Stellar AIO</p>
-              </div>
-              <div className="side-posts mb-20px">
-                <h6>What is a Best buy Bot and where can you buy one?</h6>
-                <p className='mb-0'>Author: Stellar AIO</p>
-              </div>
-              <div className="side-posts mb-20px">
-                <h6>What is a Best buy Bot and where can you buy one?</h6>
-                <p className='mb-0'>Author: Stellar AIO</p>
-              </div>
-              <div className="side-posts mb-20px">
-                <h6>What is a Best buy Bot and where can you buy one?</h6>
-                <p className='mb-0'>Author: Stellar AIO</p>
-              </div>
+              <Posts posts={topPosts || []} />
             </div>
             <div className="blog-socials">
               <div className="top-post-header mb-20px d-flex align-items-center">

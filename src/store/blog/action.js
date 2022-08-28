@@ -1,7 +1,8 @@
 import {
   SET_BLOGS,
   SET_ONE_BLOG,
-  SET_TOTAL_PAGES
+  SET_TOTAL_PAGES,
+  SET_TOP_POSTS
 } from './acionTypes'
 
 export const setBlogs = (payload) => ({
@@ -14,5 +15,9 @@ export const setOneBlog = (payload) => ({
 })
 export const setTotalPages = (payload) => ({
   type: SET_TOTAL_PAGES,
+  payload
+})
+export const setTopPosts = (payload) => ({
+  type: SET_TOP_POSTS,
   payload
 })

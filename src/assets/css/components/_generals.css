@@ -73,6 +73,10 @@ p, button{
   font-weight: 500;
   font-size: 2.5rem;
 }
+.app-h6{
+  font-weight: 500;
+  font-size: 2rem;
+}
 
 .app-color-primary{
   color: var(--color-purple-2);

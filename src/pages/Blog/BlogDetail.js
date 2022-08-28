@@ -18,37 +18,47 @@ import { setOneBlog } from '../../store/actions'
 import {useDispatch} from 'react-redux'
 import BlogService from '../../services/BlogService'
 import {useParams} from 'react-router-dom'
+import Posts from '../../components/Blog/Posts'
+import {TwitterTweetEmbed} from 'react-twitter-embed'
 
 function BlogDetail() {
-  const {errors, setErrors} = useState()
-  const {oneBlog} = useSelector((state)=>({
-    oneBlog: state.Blogs.oneBlog
+  const [errors, setErrors] = useState({})
+  const {blogs, oneBlog, topPosts} = useSelector((state)=>({
+    blogs: state.Blogs.blogs,
+    oneBlog: state.Blogs.oneBlog,
+    topPosts: state.Blogs.topPosts
   }))
+
   const {id} = useParams()
   const dispatch = useDispatch()
   const navigate = useNavigate()
   useEffect(()=>{
-    async function run (){      const query = `_fields=id,title,content,acf`
-      try{
-        const res = await BlogService.getOneBlog(id, query)
-        dispatch(setOneBlog(res.data))
-      } catch(e){ 
-        console.log(e)
-        setErrors(e)
-      }
-    }
     run()
   },[])
+
+  async function run (){ 
+    const query = `_fields=id,title,content,acf`
+    try{
+      const res = await BlogService.getOneBlog(id, query)
+      dispatch(setOneBlog(res.data))
+    } catch(e){ 
+      console.log(e)
+      setErrors(e)
+    }
+  }
   const pushJoinWaitlist = ()=>{
     navigate('/add-to-waitlist')
   }
   const goBack = ()=>{
     navigate(-1)
   }
+  const twitterShare = ()=>{
+    window.open(`https://twitter.com/share?url=${window.location.href}&text=${oneBlog.title.rendered}`, '_blank')
+  }
   return (
     <>
       <div className="share-blog-sticky">
-        <div className="share-blog-item share-blog-twitter">
+        <div onClick={twitterShare} className="share-blog-item share-blog-twitter">
           <Twittersm/>
         </div>
         <div className="share-blog-item share-blog-instagram">
@@ -60,81 +70,216 @@ function BlogDetail() {
       </div>
       <section className="blog-detail">
       <Row className='mb-30px mt-30px'>
-          <Col md={8}>
-            <div role={'button'} onClick={goBack} style={{width: 'max-content'}} className="d-flex align-items-center cursor-pointer position-relative z-index-1">
-              <BackArror/>
-              <p className='mb-0 ms-2'>Back</p>
-            </div>
-          </Col>
-          <Col className='ps-5' md={4}>
-            <div className="search">
-              <input type="text" placeholder='search'/>
-              <Buttons border='none' width={'39px'} height={'32.5px'} text={<Search/>}></Buttons>
-            </div>
-          </Col>
-        </Row>
+        <Col md={8}>
+          <div role={'button'} onClick={goBack} style={{width: 'max-content'}} className="d-flex align-items-center cursor-pointer position-relative z-index-1">
+            <BackArror/>
+            <p className='mb-0 ms-2'>Back</p>
+          </div>
+        </Col>
+        <Col className='ps-5' md={4}>
+          <div className="search">
+            <input type="text" placeholder='search'/>
+            <Buttons border='none' width={'39px'} height={'32.5px'} text={<Search/>}></Buttons>
+          </div>
+        </Col>
+      </Row>
         <Row>
           <Col md={8}>
-            <div className="blog-card-detail position-relative">
-              <div className="blog-card-details-glow">
-              {<img src={glowbig} alt="" />}
-              </div>
-              {oneBlog && <h5 className='app-h5'>{oneBlog.title.rendered}</h5>}
-              {oneBlog && <p className='app-color-primary'>Author: {oneBlog.acf.publisher}</p>}
-              {oneBlog && <div className="blog-card-detail-img mb-20px">
-                {oneBlog.acf.blog_img &&<img src={oneBlog.acf.blog_img} alt="" />}
-              </div>}
-              
-              {oneBlog && <p dangerouslySetInnerHTML={{__html: oneBlog.content.rendered}} className="blog-card-detail-description mb-0"></p>}
-              {oneBlog && <div className="tweet-screenshot mt-20px">
-                {oneBlog.acf.twitter_img && <img src={oneBlog.acf.twitter_img} alt="tweet" />}
+            {oneBlog ?(<div>
+              <div className="blog-card-detail position-relative">
+                <div className="blog-card-details-glow">
+                {<img src={glowbig} alt="" />}
+                </div>
+                {oneBlog && <h3 className='app-h3'>{oneBlog.title.rendered}</h3>}
+                {oneBlog && <p className='app-color-primary'>Author: {oneBlog.acf.publisher}</p>}
+                {oneBlog && <div className="blog-card-detail-img mb-20px">
+                  {oneBlog.acf.blog_img &&<img src={oneBlog.acf.blog_img} alt="" />}
+                </div>}
                 
-              </div>}
-              
-            </div>
-
-            <div className="mt-20px">
-              <h5 className="app-h5">Walmart</h5>
-              {oneBlog && <p>{oneBlog.acf.walmart}</p>}
-              {oneBlog &&<div className="tweet-screenshot mt-20px">
-                {oneBlog.acf.walmart_img &&<img src={oneBlog.acf.walmart_img} alt="" /> } 
-              </div>}
-              
-            </div>
-
-            <div className="mt-30px">
-              <h5 className="app-h5">Target</h5>
-              {oneBlog && <p>
-                {oneBlog.acf.target}
-              </p>}
-              {oneBlog && <div className="tweet-screenshot mt-20px">
-                {oneBlog.acf.target_img && <img src={TweetScreen} alt="tweet" />}
-              </div>}
-              
-            </div>
-            <div className="blog-detail-conclusion mt-30px">
-              <h5 className="app-h5">Conclusion</h5>
-              <p>
-              {oneBlog.acf.conclusion}
-              </p>
-              <Buttons clicked={pushJoinWaitlist} text={"Join The Waitlist"} border={"none"} width={"177px"}/>
-            </div>
-
-            <div className="blog-detail-share-post mt-3">
-              <p>share this post</p>
-              <div className="blog-detail-share-socials d-flex">
-                <div className="me-3">
-                  <Twittersm/>
-                </div>
-                <div className="me-3">
-                  <Instagramsm/>
-                </div>
-                <div className="">
-                  <Discordsm/>
-                </div>
-                
+                {oneBlog && <p dangerouslySetInnerHTML={{__html: oneBlog.content.rendered}} className="blog-card-detail-description mb-0"></p>}
+                {oneBlog && <div className="tweet-screenshot mt-20px">
+                  {oneBlog.acf.twitter_img && <img src={oneBlog.acf.twitter_img} alt="tweet" />}
+                  
+                </div>}
               </div>
-            </div>
+
+              {oneBlog.acf.title_1 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_1}</h5>}
+              {oneBlog.acf.sub_title_1 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_1}</h5>}
+              {oneBlog.acf.description_1 && <p className="mb-30px" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_1}}></p>}
+              {oneBlog.acf.twitter_id_1 && <div className="mb-30px">
+                  <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_1}
+                />
+              </div> }
+              {oneBlog.acf.image_1 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_1} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_2 && <h5  className="app-h5 mb-20px">{oneBlog.acf.title_2}</h5>}
+              {oneBlog.acf.sub_title_2 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_2}</h5>}
+              {oneBlog.acf.description_2 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_2}} ></p>}
+              {oneBlog.acf.twitter_id_2 && <div className="mb-30px">
+                  <TwitterTweetEmbed
+                    tweetId={oneBlog.acf.twitter_id_2}
+                  />
+              </div> }
+              {oneBlog.acf.image_2 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_2} alt="" /> </div>}
+
+              {oneBlog.acf.title_3 && <h5 className="app-h5 mb-30px">{oneBlog.acf.title_3}</h5>}
+              {oneBlog.acf.sub_title_3 && <h5 className="app-h6 mb-30px">{oneBlog.acf.sub_title_3}</h5>}
+              {oneBlog.acf.description_3 && <p className="mb-30px" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_3}} ></p>}
+              {oneBlog.acf.twitter_id_3 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_3}
+                />
+              </div> }
+              {oneBlog.acf.image_3 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_3} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_4 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_4}</h5>}
+              {oneBlog.acf.sub_title_4 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_4}</h5>}
+              {oneBlog.acf.description_4 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_4}} ></p>}
+              {oneBlog.acf.twitter_id_4 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_4}
+                />
+              </div> }
+              {oneBlog.acf.image_4 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_4} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_5 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_5}</h5>}
+              {oneBlog.acf.sub_title_5 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_5}</h5>}
+              {oneBlog.acf.description_5 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_5}} ></p>}
+              {oneBlog.acf.twitter_id_5 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_5}
+                />
+              </div> }
+              {oneBlog.acf.image_5 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_5} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_6 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_6}</h5>}
+              {oneBlog.acf.sub_title_6 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_6}</h5>}
+              {oneBlog.acf.description_6 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_6}} ></p>}
+              {oneBlog.acf.twitter_id_6 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_6}
+                />
+              </div> }
+              {oneBlog.acf.image_6 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_6} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_7 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_7}</h5>}
+              {oneBlog.acf.sub_title_7 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_7}</h5>}
+              {oneBlog.acf.description_7 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_7}} ></p>}
+              {oneBlog.acf.twitter_id_7 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_7}
+                />
+              </div> }
+              {oneBlog.acf.image_7 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_7} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_8 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_8}</h5>}
+              {oneBlog.acf.sub_title_8 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_8}</h5>}
+              {oneBlog.acf.description_8 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_8}} ></p>}
+              {oneBlog.acf.twitter_id_8 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_8}
+                />
+              </div> }
+              {oneBlog.acf.image_8 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_8} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_9 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_9}</h5>}
+              {oneBlog.acf.sub_title_9 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_9}</h5>}
+              {oneBlog.acf.description_9 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_9}} ></p>}
+              {oneBlog.acf.twitter_id_9 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_9}
+                />
+              </div> }
+              {oneBlog.acf.image_9 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_9} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_10 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_10}</h5>}
+              {oneBlog.acf.sub_title_10 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_10}</h5>}
+              {oneBlog.acf.description_10 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_10}} ></p>}
+              {oneBlog.acf.twitter_id_10 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_10}
+                />
+              </div> }
+              {oneBlog.acf.image_10 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_10} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_11 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_11}</h5>}
+              {oneBlog.acf.sub_title_11 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_11}</h5>}
+              {oneBlog.acf.description_11 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_11}} ></p>}
+              {oneBlog.acf.twitter_id_11 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_11}
+                />
+              </div> }
+              {oneBlog.acf.image_11 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_11} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_12 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_12}</h5>}
+              {oneBlog.acf.sub_title_12 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_12}</h5>}
+              {oneBlog.acf.description_12 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_12}} ></p>}
+              {oneBlog.acf.twitter_id_12 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_12}
+                />
+              </div> }
+              {oneBlog.acf.image_12 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_12} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_13 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_13}</h5>}
+              {oneBlog.acf.sub_title_13 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_13}</h5>}
+              {oneBlog.acf.description_13 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_13}} ></p>}
+              {oneBlog.acf.twitter_id_13 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_13}
+                />
+              </div> }
+              {oneBlog.acf.image_13 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_13} alt="" /> </div>}
+
+
+              {oneBlog.acf.title_14 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_14}</h5>}
+              {oneBlog.acf.sub_title_14 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_14}</h5>}
+              {oneBlog.acf.description_14 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_14}} ></p>}
+              {oneBlog.acf.twitter_id_14 && <div className="mb-30px">
+                <TwitterTweetEmbed
+                  tweetId={oneBlog.acf.twitter_id_14}
+                />
+              </div> }
+              {oneBlog.acf.image_14 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_14} alt="" /> </div>}
+
+
+              
+              <div className="blog-detail-conclusion mt-30px">
+                <h5 className="app-h5">Conclusion</h5>
+                <p dangerouslySetInnerHTML={{__html: oneBlog.acf.conclusion}}>
+                </p>
+                <Buttons clicked={pushJoinWaitlist} text={"Join The Waitlist"} border={"none"} width={"177px"}/>
+              </div>
+              <div className="blog-detail-share-post mt-3">
+                <p>share this post</p>
+                <div className="blog-detail-share-socials d-flex">
+                  <div className="me-3">
+                    <Twittersm/>
+                  </div>
+                  <div className="me-3">
+                    <Instagramsm/>
+                  </div>
+                  <div className="">
+                    <Discordsm/>
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>) : <></>  }
           </Col>
           <Col className='ps-5' md={4}>
             <div className="blog-top-posts">
@@ -142,9 +287,10 @@ function BlogDetail() {
                   <Star/>
                   <h5 className='ms-3 mb-0 app-h5'>Related Blogs</h5>
                 </div>
-                <BlogCardSm small={true}/>
-                <BlogCardSm small={true}/>
-                <BlogCardSm small={true}/>
+                {(topPosts || []).map((post, key)=>(
+                  <BlogCardSm key={key} blog={post} small={true}/>
+                ))}
+              
                 
             </div>
             <div className="blog-top-posts">
@@ -152,22 +298,8 @@ function BlogDetail() {
                   <Star/>
                   <h5 className='ms-3 mb-0 app-h5'>Recent Posts</h5>
                 </div>
-                <div className="side-posts mb-20px">
-                  <h6>What is a Best buy Bot and where can you buy one?</h6>
-                  <p className='mb-0'>Author: Stellar AIO</p>
-                </div>
-                <div className="side-posts mb-20px">
-                  <h6>What is a Best buy Bot and where can you buy one?</h6>
-                  <p className='mb-0'>Author: Stellar AIO</p>
-                </div>
-                <div className="side-posts mb-20px">
-                  <h6>What is a Best buy Bot and where can you buy one?</h6>
-                  <p className='mb-0'>Author: Stellar AIO</p>
-                </div>
-                <div className="side-posts mb-20px">
-                  <h6>What is a Best buy Bot and where can you buy one?</h6>
-                  <p className='mb-0'>Author: Stellar AIO</p>
-                </div>
+          
+                <Posts posts={blogs.slice(0,4)}/>
             </div>
           </Col>
         </Row>

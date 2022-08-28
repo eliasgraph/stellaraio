@@ -1,7 +1,8 @@
 import {
   SET_BLOGS,
   SET_ONE_BLOG,
-  SET_TOTAL_PAGES
+  SET_TOTAL_PAGES,
+  SET_TOP_POSTS
 } from './acionTypes'
 
 const INIT_STATE = {
@@ -9,7 +10,7 @@ const INIT_STATE = {
   oneBlog: null,
   totalPages: 0,
   relatedBlogs: [],
-  topPost:[],
+  topPosts:[],
 }
 
 const Blogs = (state = INIT_STATE, action) =>{
@@ -29,6 +30,11 @@ const Blogs = (state = INIT_STATE, action) =>{
       return{
         ...state,
         totalPages: parseInt(action.payload) 
+      }
+    case SET_TOP_POSTS:
+      return {
+        ...state,
+        topPosts: action.payload
       }
     default:
       return state;
