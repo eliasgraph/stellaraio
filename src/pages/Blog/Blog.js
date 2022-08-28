@@ -7,18 +7,16 @@ import Star from '../../assets/svgs/Star'
 import BlogCardLg from '../../components/Blog/BlogCardLg'
 import BlogCardSm from '../../components/Blog/BlogCardSm'
 
-import glowhalf from '../../assets/imgs/blog/Path 5 (1).png'
 import glowmd from '../../assets/imgs/blog/Path 9.png'
-import glowsmhalf from '../../assets/imgs/blog/Path 6.png'
-import Bloglg from '../../assets/imgs/blog/blog-lg.png'
 import Kor from '../../assets/imgs/blog/kor.png'
 import Retail from '../../assets/imgs/blog/retail.png'
 import Restock from '../../assets/imgs/blog/restock.png'
 import Rightarrowsm from '../../assets/svgs/Rightarrowsm'
 import BlogService from '../../services/BlogService'
+import { useSearchParams, useNavigate} from 'react-router-dom'
 
 
-import {setBlogs, setOneBlog, setTotalPages} from '../../store/actions'
+import {setBlogs,  setTotalPages} from '../../store/actions'
 import { useSelector, useDispatch } from "react-redux";
 
 
@@ -28,67 +26,67 @@ function Blog() {
     totalPages: state.Blogs.totalPages
   }))
 
-  const dispatch = useDispatch()
+  const [firstBlog, setFirstBlog] = useState(null)
+  const [blogArr, setBlogArr] = useState([])
 
-  const [page, setPage] = useState(1)
-  const [activePage, setActivePage] = useState(1)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [isLoading, setIsLoading] = useState(false)
   const [errors, setErrors] = useState(null)
 
+  const pagesQuery = parseInt(searchParams.get('page'))
+  const pages = (isNaN(pagesQuery) || typeof(pagesQuery) !== 'number') ? 1 : pagesQuery
 
   useEffect(()=>{
     run()
-  },[page])
+  },[pages])
 
   async function run (){
-    const query = `page=${page}&_fields=id,title,acf.publisher,acf.blog_img`
+    const query = `per_page=10&page=${pages}&_fields=id,title,acf.publisher,acf.blog_img`
     setIsLoading(true)
     try{
       const res = await BlogService.getBlogs(query)
+      const result = res.data
       dispatch(setTotalPages(res.headers["x-wp-totalpages"]))
       dispatch(setBlogs(res.data))
-      setActivePage(page)
+      setFirstBlog(result.shift())
+      setBlogArr(result)
       setIsLoading(false)
     } catch(e){ 
-      console.log(e)
       setErrors(e)
-      setPage(activePage)
       setIsLoading(false)
     }
   }
 
   const handleSetPage = (key) =>{
-    if(page === key){
+    if(pages === key){
       return
     }
     if(isLoading){
       return
     }
-    setPage(key)
-    run()
+    navigate(`/blog?page=${key}`)
   }
   const prev = () =>{
-    if(page === 1){
+    if(pages === 1){
       return
     }
     if(isLoading){
       return
     }
-    setPage(page-1)
-    run()
+    navigate(`/blog?page=${pages-1}`)
   }
   const next = () =>{
-    if(page >= totalPages){
+    if(pages >= totalPages){
       return
     }
     if(isLoading){
       return
     }
-    setPage(page + 1)
-    run()
+    navigate(`/blog?page=${pages+1}`)
   }
-  const blogArr = blogs
-  const firstBlog = blogArr.shift()
   return (
     <>
       <section className="blog">
@@ -105,7 +103,7 @@ function Blog() {
         </Row>
         <Row>
           <Col md={8}>
-            {blogs && <BlogCardLg blog={firstBlog}/>}
+            {firstBlog && <BlogCardLg blog={firstBlog}/>}
             
             <Row>
               {blogArr.map((blog, key)=>(
@@ -117,7 +115,7 @@ function Blog() {
               
               <div className="blog-pagination">
                 {
-                  activePage > 1 && <div onClick={prev} className="blog-pag-btn pag-left">
+                  pages > 1 && <div onClick={prev} className="blog-pag-btn pag-left">
                   <Rightarrowsm/>
                 </div>
                 }
@@ -125,7 +123,7 @@ function Blog() {
                 {
                   Array(parseInt(totalPages)).fill(0).map((_, i) => {
                     return (
-                      <div key={i+1} onClick={()=>{handleSetPage(i+1)}} className={`blog-pag-btn ${activePage === i+1 ? 'pag-active' : ''}`}>
+                      <div key={i+1} onClick={()=>{handleSetPage(i+1)}} className={`blog-pag-btn ${pages === i+1 ? 'pag-active' : ''}`}>
                       {i+1}
                     </div>
                     )
