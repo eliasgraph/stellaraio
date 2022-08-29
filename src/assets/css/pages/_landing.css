@@ -132,16 +132,18 @@
 .support-img{
   transform: translateY(-47px);
   position: relative;
-
 }
 .support-img img{
   width: 75%;
 }
 .support-img-glowring{
   position: absolute;
-  width: 66% !important;
-  bottom: -13%;
-  left: 9px;
+  top: 20%;
+  left: 27%;
+}
+.support-img-cell{
+  position: relative;
+  z-index: 1;
 }
 .support-text {
   margin-top: 11.6rem;

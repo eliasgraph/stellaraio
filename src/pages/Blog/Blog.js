@@ -1,5 +1,5 @@
 import React,{ useState, useEffect  }  from 'react'
-import {Row, Col } from 'reactstrap'
+import {Row, Col, Spinner } from 'reactstrap'
 
 import Buttons from '../../components/Generals/Buttons'
 import Search from '../../assets/svgs/Search'
@@ -122,11 +122,20 @@ function Blog() {
             {firstBlog && <BlogCardLg blog={firstBlog}/>}
             
             <Row>
-              {blogArr.map((blog, key)=>(
+              { blogArr ? blogArr.map((blog, key)=>(
                 <Col key={key} md={6}>
                   <BlogCardSm blog={blog}/>
                 </Col>
-              ))}
+              )): <Spinner size={'lg'} color="primary" 
+                style={{
+                  height: '6rem',
+                  width: '6rem'
+                }}
+                >
+                Loading...
+              </Spinner>
+              }
+              
               
               
               <div className="blog-pagination">
@@ -165,7 +174,15 @@ function Blog() {
                   <img src={glowmd} alt="" />
                 </div>
               </div>
-              <Posts posts={topPosts || []} />
+              {topPosts ? <Posts posts={topPosts} /> : <Spinner size={'lg'} color="primary" 
+              style={{
+                height: '6rem',
+                width: '6rem'
+              }}
+              >
+              Loading...
+            </Spinner> }
+              
             </div>
             <div className="blog-socials">
               <div className="top-post-header mb-20px d-flex align-items-center">

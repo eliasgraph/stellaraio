@@ -234,7 +234,7 @@ function Landing() {
             <Row>
               <Col lg={6} md={12}>
                 <div className="support-img">
-                  <img src={supportedby} alt="supported-img" />
+                  <img className="support-img-cell" src={supportedby} alt="supported-img" />
                   <img src={glowringlg} className="support-img-glowring" alt="" />
                 </div>
               </Col>
