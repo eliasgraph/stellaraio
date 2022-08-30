@@ -257,15 +257,10 @@ function BlogDetail() {
               <div className="blog-detail-share-post mt-3">
                 <p>share this post</p>
                 <div className="blog-detail-share-socials d-flex">
-                  <div className="me-3">
+                  <div onClick={twitterShare} role={'button'} className="me-3">
                     <Twittersm/>
                   </div>
-                  <div className="me-3">
-                    <Instagramsm/>
-                  </div>
-                  <div className="">
-                    <Discordsm/>
-                  </div>
+                  
                   
                 </div>
               </div>
