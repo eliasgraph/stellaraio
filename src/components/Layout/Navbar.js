@@ -38,7 +38,8 @@ function Header() {
                 <NavLink href="/blog">Blog</NavLink>
               </NavItem>
             </Nav>
-            <Buttons className="nav-btn" width={"14rem"} text={"Dashboard"}/>
+            <a href="https://account.stellaraio.com" rel='noreferrer' target={'_blank'}><Buttons className="nav-btn" width={"14rem"} text={"Dashboard"}/></a>
+            
           </Collapse>
         </Navbar>
     </div>

@@ -3,6 +3,7 @@ import CardGradient from '../../components/Generals/CardGradient'
 import { Row, Col, Collapse, Modal, ModalBody } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import Buttons from '../../components/Generals/Buttons'
+import { Link } from 'react-router-dom'
 
 import dash from '../../assets/imgs/landingpage/dash_.png'
 import analytic from '../../assets/imgs/landingpage/analytic.png'
@@ -353,13 +354,14 @@ function Landing() {
                 <h5 className='text-center'>Visit our Socials</h5>
                 <div className="socials-icons d-flex justify-content-between mt-2">
                   <div className="social-icon">
-                    <img src={twitter} alt="twitter" />
+                    <a href="https://twitter.com/stellara_io" rel='noreferrer' target={'_blank'}><img src={twitter} alt="twitter" /></a>
                   </div>
                   <div className="social-icon">
-                    <img src={instagram} alt="instagram" />
+                    <a href="https://www.instagram.com/stellaraio_/?hl=en" rel='noreferrer' target={"_blank"}><img src={instagram} alt="instagram" /></a> 
                   </div>
                   <div className="social-icon">
-                    <img src={discord} alt="discord" />
+                    <a href="https://discord.gg/EWKv9vPVjM" rel='noreferrer' target={'_blank'} ><img src={discord} alt="discord" /></a>
+                    
                   </div>
                 </div>
               </div>

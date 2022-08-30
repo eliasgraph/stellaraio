@@ -44,7 +44,7 @@ function Footer() {
             </Col>
             <Col md={2}>
             <ul className='footer-list mt-4'>
-                <li><Link to="https://account.stellaraio.com">Dashboard</Link></li>
+                <li><a href="https://account.stellaraio.com">Dashboard</a></li>
                 <li><Link to="/add-to-waitlist">Join Waitlist</Link></li>
               </ul>
             </Col>

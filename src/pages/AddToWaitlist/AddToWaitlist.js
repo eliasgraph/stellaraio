@@ -150,15 +150,15 @@ function AddToWaitlist() {
               <div className="need-h-or-s-div2">
                 <h3 className="app-h3 text-center">Visit our Socials</h3>
                 <div style={{width: "20rem"}} className="d-flex justify-content-between align-items-center mx-auto mt-30px">
-                  <Link to="#">
+                  <a href="https://twitter.com/stellara_io" target={'_blank'} rel="noreferrer">
                     <img width={"36px"} src={twitter} alt="twitter" />
-                  </Link>
-                  <Link to="#">
+                  </a>
+                  <a href="https://www.instagram.com/stellaraio_/?hl=enwitter.com/stellara_io" target={'_blank'} rel="noreferrer">
                     <img width={"36px"} src={instagram} alt="instagram" />
-                  </Link>
-                  <Link to="#">
+                  </a>
+                  <a href="https://discord.gg/EWKv9vPVjM" target={'_blank'} rel="noreferrer">
                     <img width={"36px"} src={discord} alt="discord" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </CardGradient>
