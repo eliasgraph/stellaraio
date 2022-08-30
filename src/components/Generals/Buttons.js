@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button} from 'reactstrap'
+import {Button, Spinner} from 'reactstrap'
 
 function Buttons(
   { 
@@ -15,12 +15,14 @@ function Buttons(
   border='none',
   zIndex,
   className,
+  loading,
   clicked = () =>{}
 }
 ) {
   return (
     <Button 
       className={className}
+      disabled = {loading ? true : false}
       style={{
       width,
       maxWidth,
@@ -31,10 +33,10 @@ function Buttons(
       borderRadius,
       border,
       fontSize,
-      zIndex
+      zIndex,
     }} 
     onClick={clicked}
-    >{text}</Button>
+    > {loading? <Spinner color='secondary'> Loading </Spinner> : text}</Button>
   )
 }
 

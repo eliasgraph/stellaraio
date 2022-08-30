@@ -4,9 +4,6 @@ import {Row, Col} from 'reactstrap'
 import Buttons from '../../components/Generals/Buttons'
 import BackArror from '../../assets/svgs/BackArrow'
 import Search from '../../assets/svgs/Search'
-import Bloglg from '../../assets/imgs/blog/blog-lg.png'
-import TweetScreen from '../../assets/imgs/blog/tweet-screenshot.png'
-import TweetScreenOverlay from '../../assets/imgs/blog/tweetscrenover.png'
 import Twittersm from '../../assets/svgs/Twittersm'
 import Instagramsm from '../../assets/svgs/Instagramsm'
 import Discordsm from '../../assets/svgs/Discordsm'
@@ -60,12 +57,6 @@ function BlogDetail() {
       <div className="share-blog-sticky">
         <div onClick={twitterShare} className="share-blog-item share-blog-twitter">
           <Twittersm/>
-        </div>
-        <div className="share-blog-item share-blog-instagram">
-          <Instagramsm/>
-        </div>
-        <div className="share-blog-item share-blog-discord">
-          <Discordsm/>
         </div>
       </div>
       <section className="blog-detail">

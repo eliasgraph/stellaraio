@@ -10,6 +10,7 @@ import About from './pages/About/About'
 import AddToWaitlist from './pages/AddToWaitlist/AddToWaitlist'
 import Blog from './pages/Blog/Blog';
 import BlogDetail from './pages/Blog/BlogDetail';
+import ThankYou from './pages/ThankYou/ThankYou';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -28,6 +29,7 @@ function App() {
               <Route path="/add-to-waitlist" element={ <AddToWaitlist/>} />
               <Route path="/blog" element={ <Blog/>} />
               <Route path="/blog/:id" element={ <BlogDetail/>} />
+              <Route path="/thank-you" element={ <ThankYou/>} />
             </Routes>
           </Container>
         </div>

@@ -20,13 +20,8 @@ import checkout from '../../assets/imgs/landingpage/checkout.gif'
 import ribbon from '../../assets/imgs/landingpage/ribbon.png'
 import supportedby from '../../assets/imgs/landingpage/Mockup-Recovered 3.png'
 import quote from '../../assets/imgs/landingpage/quote.png'
-import rowey from '../../assets/imgs/landingpage/rowey.png'
 import left from '../../assets/imgs/landingpage/Arrow 2.png'
 import right from '../../assets/imgs/landingpage/Arrow 3.png'
-import u1 from '../../assets/imgs/landingpage/u1.png'
-import u2 from '../../assets/imgs/landingpage/u2.png'
-import u3 from '../../assets/imgs/landingpage/u3.png'
-import u4 from '../../assets/imgs/landingpage/u4.png'
 import twitter from '../../assets/imgs/landingpage/twitter.png'
 import instagram from '../../assets/imgs/landingpage/instagram.png'
 import discord from '../../assets/imgs/landingpage/discord.png'
@@ -58,6 +53,11 @@ import target from '../../assets/imgs/logos/target_logo.png'
 import swatch from '../../assets/imgs/logos/Swatch.png'
 import close from '../../assets/imgs/icon/close.png'
 import glowringlg from '../../assets/imgs/Path 5.png'
+import img1 from '../../assets/imgs/landingpage/img1 (1).jpeg'
+import img2 from '../../assets/imgs/landingpage/img1 (2).jpeg'
+import img3 from '../../assets/imgs/landingpage/img1 (3).jpeg'
+import img4 from '../../assets/imgs/landingpage/img1 (4).jpeg'
+import img5 from '../../assets/imgs/landingpage/img1 (5).jpeg'
 
 
 function Landing() {
@@ -65,7 +65,18 @@ function Landing() {
   const [isOpenFaq2, setIsOpenFaq2] = useState(false)
   const [isOpenFaq3, setIsOpenFaq3] = useState(false)
   const [isOpenFaq4, setIsOpenFaq4] = useState(false)
+  const [isOpenFaq5, setIsOpenFaq5] = useState(false)
   const [seeSite, setSeeSite] = useState(false)
+  const [imgIndex, setImgIndex] = useState(0)
+
+  useEffect(() => {
+    if (seeSite) {
+      document.documentElement.style.overflow = 'hidden';
+    } else{
+      document.documentElement.style.overflow = 'unset';
+
+    }
+  }, [seeSite]);
 
   const tog_seeSite = ()=>{
     setSeeSite(!seeSite)
@@ -75,14 +86,43 @@ function Landing() {
   const pushJoinWaitlist = ()=>{
     navigate('/add-to-waitlist')
   }
-  useEffect(() => {
-    if (seeSite) {
-      document.documentElement.style.overflow = 'hidden';
-    } else{
-      document.documentElement.style.overflow = 'unset';
-
+  
+  const prev = ()=>{
+    if(imgIndex === 0){
+      return
     }
-  }, [seeSite]);
+    setImgIndex(imgIndex - 1)
+  }
+
+  const next = ()=>{
+    if(imgIndex === reviews.length -1){
+      return
+    }
+    setImgIndex(imgIndex + 1)
+  }
+
+  const reviews = [
+    {
+      review: "Stellar for me has been the most worth it bot that I use for retail and it's my go to bot. I got it over a year ago now and it's paid off for me 100 fold, it's easy to use and user friendly.",
+      img: img1
+    },
+    {
+      review: "Great product, devs seem to be on top of things, continually provide new ideas and services.",
+      img: img2
+    },
+    {
+      review: "I feel it's a great bot that improves daily alongside the retailers constantly changing how their system works. The improvements made daily along with the constant bug fixes is top notch",
+      img: img3
+    },
+    {
+      review: "I love Stellar, it has provided me a way to make money easily while sitting away from my keyboard. You guys make it as easy as starting it and not touching anything!",
+      img: img4
+    },
+    {
+      review: "It is a solid bot with great Devs and support. It's a new way of doing business and I'm excited about it.",
+      img: img5
+    },
+  ]
   return (
     <>
       <section id='home'>
@@ -154,7 +194,7 @@ function Landing() {
         </Row>
       </section>
 
-      <section className="c-a-d">
+      <section id='features' className="c-a-d">
         <div className="head-info">
           <h2 className='text-center'>Create. Automate. Dominate</h2>
           <p className='text-center'>How it works</p>
@@ -227,7 +267,7 @@ function Landing() {
           </div>
       </section>
 
-      <section className="supported">
+      <section id='sites' className="supported">
           <CardGradient
             className="support-bg"
           >
@@ -256,7 +296,7 @@ function Landing() {
       </section>
 
       <section className="home-users">
-        <CardGradient height={'51.7rem'} className="home-users__card">
+        <CardGradient height={'46rem'} className="home-users__card">
           <Row>
             <Col lg={8} md={12}>
               <div className="home-users-content">
@@ -266,47 +306,41 @@ function Landing() {
                     <img src={quote} alt="quote" />
                   </div>
                   
-                  <div className="home-users__quote--quote ">
-                    <p>Stellar for me has been the most worth it bot that I use for retail and it’s my go to bot. I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.
-                    </p>
-                    <h6>Rowey Landsley</h6>
-                    <p className="home-users-p-role">CEO Atkin Waters Enterprice</p>
+                  <div className="home-users__quote--quote">
+                    <p>{reviews[imgIndex].review}</p>
                   </div>
                 </div>
                 <div className="home-users__users d-flex align-items-center justify-content-between">
-                  <div className="arrow-icon">
+                  <div onClick={prev} className="arrow-icon">
                     <img src={left} alt="left" />
                   </div>
-                  <div className="home-users__user">
-                    <img src={u1} alt="u1" />
-                  </div>
-                  <div className="home-users__user">
-                    <img src={u2} alt="u2" />
-                  </div>
-                  <div className="home-users__user">
-                    <img src={u3} alt="u3" />
-                  </div>
-                  <div className="home-users__user">
-                    <img src={u2} alt="u4" />
-                  </div>
-                  <div className="home-users__user">
-                    <img src={u4} alt="u5" />
-                  </div>
-                  <div className="arrow-icon">
+                  {
+                    reviews.map((item, key)=>(
+                      <div key={key} onClick={()=>{setImgIndex(key)}} role={"button"} className={`home-users__user ${imgIndex === key ? 'home-users__user-active': ''}`}>
+                        <img src={item.img} alt="u1" />
+                      </div>
+                    ))
+                  }
+                  
+                  
+                  <div onClick={next} className="arrow-icon">
                     <img src={right} alt="left" />
                   </div>
                 </div>
               </div>
             </Col>
 
-            <Col lg={4} md={12}>
-              <img className='rowey' src={rowey} alt="rowey" />
+            <Col lg={4} md={12} className="d-flex justify-content-end align-items-center">
+              <div className="home-user-review-img">
+                <img className='home-user-reviewimg-img' src={reviews[imgIndex].img} alt="" />
+                {/* <img className='home-user-review-glowring' src={glowringlg} alt="" /> */}
+              </div>
             </Col>
           </Row>
         </CardGradient>
       </section>
 
-      <section className="faq">
+      <section id='faq' className="faq">
         <Row>
           <Col lg={4} md={12}>
             <div className="need_help">
@@ -344,14 +378,14 @@ function Landing() {
                     className='d-flex align-items-center justify-content-between'
                     onClick={()=>{setIsOpenFaq1(!isOpenFaq1)}}
                   >
-                    How much does Stellar AIO Cost?
+                    How much does Stellar AIO cost?
                     {!isOpenFaq1 && <span>+</span> }
                     {isOpenFaq1 && <span>-</span> }
 
                   </h6>
                   <Collapse isOpen={isOpenFaq1}>
                     <div className="">
-                      <p >The retail cost for Stellar AIO is $300 and comes with 30 days of free updates. Monthly Renewal is $30.
+                      <p >The initial price for Stellar AIO is $300 and comes with 30 days of free updates. The monthly renewal fee is $30.
                       </p>
                     </div>
                   </Collapse>
@@ -361,14 +395,14 @@ function Landing() {
                     className='d-flex align-items-center justify-content-between'
                     onClick={()=>{setIsOpenFaq2(!isOpenFaq2)}}
                   >
-                    How much does Stellar AIO Cost?
+                    What sites do you currently support?
                     {!isOpenFaq2 && <span>+</span> }
                     {isOpenFaq2 && <span>-</span> }
 
                   </h6>
                   <Collapse isOpen={isOpenFaq2}>
                     <div className="">
-                      <p >The retail cost for Stellar AIO is $300 and comes with 30 days of free updates. Monthly Renewal is $30.
+                      <p >Stellar AIO supports over 50 websites. Our most popular site modules include Amazon, Walmart, Target, Best Buy, The Home Depot, Academy, Pokémon Center, Fanatics, Topps, Panini, GameStop, BH Photo, Newegg, Converse, Dick Sporting Goods, Footlocker, FLX Raffles, SSense, Yeezy Supply, and all Shopify sites (Kith, Undefeated, and Shop Nice Kicks).
                       </p>
                     </div>
                   </Collapse>
@@ -378,14 +412,14 @@ function Landing() {
                     className='d-flex align-items-center justify-content-between'
                     onClick={()=>{setIsOpenFaq3(!isOpenFaq3)}}
                   >
-                    How much does Stellar AIO Cost?
+                    What software system does Stellar work on?
                     {!isOpenFaq3 && <span>+</span> }
                     {isOpenFaq3 && <span>-</span> }
 
                   </h6>
                   <Collapse isOpen={isOpenFaq3}>
                     <div className="">
-                      <p >The retail cost for Stellar AIO is $300 and comes with 30 days of free updates. Monthly Renewal is $30.
+                      <p >Stellar AIO can be used on Windows and MacOS.
                       </p>
                     </div>
                   </Collapse>
@@ -395,14 +429,31 @@ function Landing() {
                     className='d-flex align-items-center justify-content-between'
                     onClick={()=>{setIsOpenFaq4(!isOpenFaq4)}}
                   >
-                    How much does Stellar AIO Cost?
+                    What regions do you currently support?
                     {!isOpenFaq4 && <span>+</span> }
                     {isOpenFaq4 && <span>-</span> }
 
                   </h6>
                   <Collapse isOpen={isOpenFaq4}>
                     <div className="">
-                      <p >The retail cost for Stellar AIO is $300 and comes with 30 days of free updates. Monthly Renewal is $30.
+                      <p >Stellar AIO's supported site regions include the United States, Japan, and Canada. We plan on adding EU and UK sites in the future.
+                      </p>
+                    </div>
+                  </Collapse>
+                </div>
+                <div className="faq__faqs--item">
+                  <h6
+                    className='d-flex align-items-center justify-content-between'
+                    onClick={()=>{setIsOpenFaq5(!isOpenFaq5)}}
+                  >
+                    I want to purchase StellarAIO. When is your next restock?
+                    {!isOpenFaq5 && <span>+</span> }
+                    {isOpenFaq5 && <span>-</span> }
+
+                  </h6>
+                  <Collapse isOpen={isOpenFaq5}>
+                    <div className="">
+                      <p >We currently have no planned restocks or group buys. We recommend that you join our waitlist and follow us on Twitter to stay up to date!
                       </p>
                     </div>
                   </Collapse>

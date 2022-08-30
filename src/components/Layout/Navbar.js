@@ -8,6 +8,7 @@ function Header() {
   const toggle = () =>{
     setIsOpen(!isOpen)
   }
+  const hostname = window.location.origin
 
   return (
     <div className='page-navbar'>
@@ -25,13 +26,13 @@ function Header() {
                 <NavLink  href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#features">Features</NavLink>
+                <NavLink href={hostname+"/#features"}>Features</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#sites">Sites</NavLink>
+                <NavLink href={hostname+"/#sites"}>Sites</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#faq">FAQ</NavLink>
+                <NavLink href={hostname+"/#faq"}>FAQ</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/blog">Blog</NavLink>

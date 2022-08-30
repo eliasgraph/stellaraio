@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardGradient from '../../components/Generals/CardGradient'
 import Buttons from '../../components/Generals/Buttons'
 import {Row, Col} from 'reactstrap'
@@ -20,12 +20,33 @@ import dollars from '../../assets/imgs/icon/dollars.png'
 import cart from '../../assets/imgs/icon/cart-plus.png'
 import glowringsm from '../../assets/imgs/Path 6.png'
 import glowringlg from '../../assets/imgs/Path 5.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+import { isEmail } from '../../helpers/validations'
 
 
 function AddToWaitlist() {
   const isTab = useMediaQuery({ query: '(min-width: 992px)' })
   const isMobile = useMediaQuery({ query: '(max-width: 569px)' })
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [emailError, setEmailError] = useState(false)
+  const [emailLoding, setEmailLoading] = useState(false)
+
+  const sendEmail = ()=>{
+    const emailValid = isEmail(email)
+    if(!email.length || !emailValid){
+      setEmailError(true)
+      return
+    }
+    setEmailLoading(true)
+    setTimeout(()=>{
+      navigate('/thank-you')
+      setEmailLoading(false)
+      setEmailError(false)
+    }, 1000)
+  }
+
   return (
     <>
       <section className="join-waitlist">
@@ -33,13 +54,14 @@ function AddToWaitlist() {
           <div className="join-waitlist-div px-3">
             <h2 className='text-center'>Tired of seeing sold out?</h2>
             <p className='text-center'>Stellar handles the checkout process for you, ensuring you get the <br /> products you want before anyone else.</p>
-            <div className="enter-email-div d-flex align-items-center">
+            <div className="enter-email-div d-flex align-items-start">
               <div className="enter-email-wrapper me-4">
-                <input type="email" placeholder='Enter your Email' className='text-center'/>
+                <input type="email" onChange={(e)=>{ setEmail(e.target.value)}} placeholder='Enter your Email' className={`text-center form-control ${emailError ? 'is-invalid': ''}`}/>
+                <div className='invalid-feedback text-center mt-3'>Please provide a valid email address</div>
               </div>
               <div className="gt-access-btn-div">
                 <img className='join-waitlist-glowring' src={glowringsm} alt="" />
-                <Buttons text={"Be First in Line"} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+                <Buttons clicked={sendEmail} text={"Be First in Line"} loading={emailLoding} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
               </div>
             </div>
             
