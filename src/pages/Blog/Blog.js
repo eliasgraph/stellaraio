@@ -48,7 +48,7 @@ function Blog() {
   },[pages])
 
   async function run (){
-    const query = `per_page=${postPerPage}&page=${pages}&_fields=id,title,acf.publisher,acf.blog_img`
+    const query = `per_page=${postPerPage}&page=${pages}&_fields=id,title,content,acf`
     setIsLoading(true)
     try{
       const res = await BlogService.getBlogs(query)
