@@ -4,6 +4,9 @@
 .footer__container{
   padding: 0 8.5rem;
 }
+.footer__logo img{
+  transform: translateX(-14px);
+}
 .footer__mission{
   font-size: 14px;
   color: #DBDCEC;

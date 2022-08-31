@@ -101,7 +101,7 @@ function Landing() {
     }
     setImgIndex(imgIndex + 1)
   }
-
+  
   const reviews = [
     {
       review: "Stellar for me has been the most worth it bot that I use for retail and it's my go to bot. I got it over a year ago now and it's paid off for me 100 fold, it's easy to use and user friendly.",

@@ -81,7 +81,7 @@ function BlogDetail() {
                 <div className="blog-card-details-glow">
                 {<img src={glowbig} alt="" />}
                 </div>
-                {oneBlog && <h3 className='app-h3'>{oneBlog.title.rendered}</h3>}
+                {oneBlog && <h3 className='blog-detail-title'>{oneBlog.title.rendered}</h3>}
                 {oneBlog && <p className='app-color-primary'>Author: {oneBlog.acf.publisher}</p>}
                 {oneBlog && <div className="blog-card-detail-img mb-20px">
                   {oneBlog.acf.blog_img &&<img src={oneBlog.acf.blog_img} alt="" />}
@@ -94,9 +94,9 @@ function BlogDetail() {
                 </div>}
               </div>
 
-              {oneBlog.acf.title_1 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_1}</h5>}
-              {oneBlog.acf.sub_title_1 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_1}</h5>}
-              {oneBlog.acf.description_1 && <p className="mb-30px" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_1}}></p>}
+              {oneBlog.acf.title_1 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_1}</h5>}
+              {oneBlog.acf.sub_title_1 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_1}</h5>}
+              {oneBlog.acf.description_1 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_1}}></p>}
               {oneBlog.acf.twitter_id_1 && <div className="mb-30px">
                   <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_1}
@@ -105,9 +105,9 @@ function BlogDetail() {
               {oneBlog.acf.image_1 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_1} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_2 && <h5  className="app-h5 mb-20px">{oneBlog.acf.title_2}</h5>}
-              {oneBlog.acf.sub_title_2 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_2}</h5>}
-              {oneBlog.acf.description_2 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_2}} ></p>}
+              {oneBlog.acf.title_2 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_2}</h5>}
+              {oneBlog.acf.sub_title_2 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_2}</h5>}
+              {oneBlog.acf.description_2 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_2}} ></p>}
               {oneBlog.acf.twitter_id_2 && <div className="mb-30px">
                   <TwitterTweetEmbed
                     tweetId={oneBlog.acf.twitter_id_2}
@@ -115,9 +115,9 @@ function BlogDetail() {
               </div> }
               {oneBlog.acf.image_2 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_2} alt="" /> </div>}
 
-              {oneBlog.acf.title_3 && <h5 className="app-h5 mb-30px">{oneBlog.acf.title_3}</h5>}
-              {oneBlog.acf.sub_title_3 && <h5 className="app-h6 mb-30px">{oneBlog.acf.sub_title_3}</h5>}
-              {oneBlog.acf.description_3 && <p className="mb-30px" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_3}} ></p>}
+              {oneBlog.acf.title_3 && <h5 className="blog-detail-subtitle mb-30px">{oneBlog.acf.title_3}</h5>}
+              {oneBlog.acf.sub_title_3 && <h5 className="blog-detail-subtitle-sub mb-30px">{oneBlog.acf.sub_title_3}</h5>}
+              {oneBlog.acf.description_3 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html:oneBlog.acf.description_3}} ></p>}
               {oneBlog.acf.twitter_id_3 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_3}
@@ -126,9 +126,9 @@ function BlogDetail() {
               {oneBlog.acf.image_3 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_3} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_4 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_4}</h5>}
-              {oneBlog.acf.sub_title_4 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_4}</h5>}
-              {oneBlog.acf.description_4 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_4}} ></p>}
+              {oneBlog.acf.title_4 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_4}</h5>}
+              {oneBlog.acf.sub_title_4 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_4}</h5>}
+              {oneBlog.acf.description_4 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_4}} ></p>}
               {oneBlog.acf.twitter_id_4 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_4}
@@ -137,9 +137,9 @@ function BlogDetail() {
               {oneBlog.acf.image_4 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_4} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_5 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_5}</h5>}
-              {oneBlog.acf.sub_title_5 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_5}</h5>}
-              {oneBlog.acf.description_5 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_5}} ></p>}
+              {oneBlog.acf.title_5 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_5}</h5>}
+              {oneBlog.acf.sub_title_5 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_5}</h5>}
+              {oneBlog.acf.description_5 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_5}} ></p>}
               {oneBlog.acf.twitter_id_5 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_5}
@@ -148,9 +148,9 @@ function BlogDetail() {
               {oneBlog.acf.image_5 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_5} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_6 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_6}</h5>}
-              {oneBlog.acf.sub_title_6 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_6}</h5>}
-              {oneBlog.acf.description_6 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_6}} ></p>}
+              {oneBlog.acf.title_6 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_6}</h5>}
+              {oneBlog.acf.sub_title_6 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_6}</h5>}
+              {oneBlog.acf.description_6 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_6}} ></p>}
               {oneBlog.acf.twitter_id_6 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_6}
@@ -159,9 +159,9 @@ function BlogDetail() {
               {oneBlog.acf.image_6 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_6} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_7 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_7}</h5>}
-              {oneBlog.acf.sub_title_7 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_7}</h5>}
-              {oneBlog.acf.description_7 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_7}} ></p>}
+              {oneBlog.acf.title_7 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_7}</h5>}
+              {oneBlog.acf.sub_title_7 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_7}</h5>}
+              {oneBlog.acf.description_7 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_7}} ></p>}
               {oneBlog.acf.twitter_id_7 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_7}
@@ -170,9 +170,9 @@ function BlogDetail() {
               {oneBlog.acf.image_7 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_7} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_8 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_8}</h5>}
-              {oneBlog.acf.sub_title_8 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_8}</h5>}
-              {oneBlog.acf.description_8 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_8}} ></p>}
+              {oneBlog.acf.title_8 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_8}</h5>}
+              {oneBlog.acf.sub_title_8 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_8}</h5>}
+              {oneBlog.acf.description_8 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_8}} ></p>}
               {oneBlog.acf.twitter_id_8 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_8}
@@ -181,9 +181,9 @@ function BlogDetail() {
               {oneBlog.acf.image_8 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_8} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_9 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_9}</h5>}
-              {oneBlog.acf.sub_title_9 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_9}</h5>}
-              {oneBlog.acf.description_9 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_9}} ></p>}
+              {oneBlog.acf.title_9 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_9}</h5>}
+              {oneBlog.acf.sub_title_9 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_9}</h5>}
+              {oneBlog.acf.description_9 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_9}} ></p>}
               {oneBlog.acf.twitter_id_9 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_9}
@@ -192,9 +192,9 @@ function BlogDetail() {
               {oneBlog.acf.image_9 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_9} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_10 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_10}</h5>}
-              {oneBlog.acf.sub_title_10 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_10}</h5>}
-              {oneBlog.acf.description_10 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_10}} ></p>}
+              {oneBlog.acf.title_10 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_10}</h5>}
+              {oneBlog.acf.sub_title_10 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_10}</h5>}
+              {oneBlog.acf.description_10 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_10}} ></p>}
               {oneBlog.acf.twitter_id_10 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_10}
@@ -203,9 +203,9 @@ function BlogDetail() {
               {oneBlog.acf.image_10 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_10} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_11 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_11}</h5>}
-              {oneBlog.acf.sub_title_11 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_11}</h5>}
-              {oneBlog.acf.description_11 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_11}} ></p>}
+              {oneBlog.acf.title_11 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_11}</h5>}
+              {oneBlog.acf.sub_title_11 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_11}</h5>}
+              {oneBlog.acf.description_11 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_11}} ></p>}
               {oneBlog.acf.twitter_id_11 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_11}
@@ -214,9 +214,9 @@ function BlogDetail() {
               {oneBlog.acf.image_11 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_11} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_12 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_12}</h5>}
-              {oneBlog.acf.sub_title_12 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_12}</h5>}
-              {oneBlog.acf.description_12 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_12}} ></p>}
+              {oneBlog.acf.title_12 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_12}</h5>}
+              {oneBlog.acf.sub_title_12 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_12}</h5>}
+              {oneBlog.acf.description_12 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_12}} ></p>}
               {oneBlog.acf.twitter_id_12 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_12}
@@ -225,9 +225,9 @@ function BlogDetail() {
               {oneBlog.acf.image_12 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_12} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_13 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_13}</h5>}
-              {oneBlog.acf.sub_title_13 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_13}</h5>}
-              {oneBlog.acf.description_13 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_13}} ></p>}
+              {oneBlog.acf.title_13 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_13}</h5>}
+              {oneBlog.acf.sub_title_13 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_13}</h5>}
+              {oneBlog.acf.description_13 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_13}} ></p>}
               {oneBlog.acf.twitter_id_13 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_13}
@@ -236,9 +236,9 @@ function BlogDetail() {
               {oneBlog.acf.image_13 && <div className="blog-detail-content-imgs mb-30px"><img src={oneBlog.acf.image_13} alt="" /> </div>}
 
 
-              {oneBlog.acf.title_14 && <h5 className="app-h5 mb-20px">{oneBlog.acf.title_14}</h5>}
-              {oneBlog.acf.sub_title_14 && <h5 className="app-h6 mb-20px">{oneBlog.acf.sub_title_14}</h5>}
-              {oneBlog.acf.description_14 && <p className="mb-30px" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_14}} ></p>}
+              {oneBlog.acf.title_14 && <h5 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_14}</h5>}
+              {oneBlog.acf.sub_title_14 && <h5 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_14}</h5>}
+              {oneBlog.acf.description_14 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.description_14}} ></p>}
               {oneBlog.acf.twitter_id_14 && <div className="mb-30px">
                 <TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_14}
@@ -249,8 +249,8 @@ function BlogDetail() {
 
               
               <div className="blog-detail-conclusion mt-30px">
-                <h5 className="app-h5">Conclusion</h5>
-                <p dangerouslySetInnerHTML={{__html: oneBlog.acf.conclusion}}>
+                <h5 className="blog-detail-subtitle">Conclusion</h5>
+                <p className="blog-detail-description" dangerouslySetInnerHTML={{__html: oneBlog.acf.conclusion}}>
                 </p>
                 <Buttons clicked={pushJoinWaitlist} text={"Join The Waitlist"} border={"none"} width={"177px"}/>
               </div>

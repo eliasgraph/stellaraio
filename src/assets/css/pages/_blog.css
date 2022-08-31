@@ -58,8 +58,8 @@
 }
 
 .blog-card-lg-content h5{
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 3.8rem;
+  font-weight: bold;
   max-width: 71.5rem;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -78,6 +78,11 @@
   overflow: hidden;
   background-color: var(--app-bg-color);
   margin-bottom: 25px;
+  transition: all 0.5s ease-out;
+  z-index: 1;
+}
+.blog-card-sm:hover{
+  transform: scale(1.1);
 }
 .blog-card-sm-img{
   max-height: 22rem;
@@ -101,8 +106,8 @@
 
 }
 .blog-card-sm-content h6{
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 13px;
 }
 
@@ -232,6 +237,23 @@
   height: 47rem;
   object-fit: cover;
   object-position: top;
+}
+
+.blog-detail-title{
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+.blog-detail-subtitle{
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.blog-detail-subtitle-sub{
+  font-size: 24rem;
+  font-weight: bold;
+}
+.blog-detail-descriptions{
+  font-size: 1.4rem;
+  
 }
 
 .blog-card-detail-description{

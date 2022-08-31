@@ -8,7 +8,41 @@ import discord from '../../assets/imgs/landingpage/discord.png'
 
 
 function Footer() {
-  let hostname = window.location.origin
+ let hostname = window.location.origin
+
+ /* const scroll = ()=>{
+    setTimeout(() => {
+      const path = window.location.hash
+      console.log(path);
+      const app = document.querySelector('.app-content')
+      console.log(app)
+      const features = document.querySelector('#feature')
+      const sites = document.querySelector('#site')
+      const faqs = document.querySelector('#faqs')
+      console.log(features.scrollHeight);
+      console.log(sites.scrollHeight);
+      console.log(faqs.scrollHeight);
+      if(path === '/#features'){
+        app.scroll({
+          top: features.scrollHeight,
+          behavior: "smooth"
+        })
+      }
+      if(path === '/#sites'){
+        app.scroll({
+          top: sites.scrollHeight,
+          behavior: "smooth"
+        })
+      }
+      if(path === '/#faq'){
+        app.scroll({
+          top: faqs.scrollHeight,
+          behavior: "smooth"
+        })
+      }
+      
+    }, 200);
+  } */
   return (
     <footer className="footer">
       <Container>
@@ -30,7 +64,7 @@ function Footer() {
                 <li><Link to="/">Home</Link></li>
                 <li><a href={hostname+'/#features'}>Features</a></li>
                 <li><Link to="/blog">Blog</Link></li>
-                <li><a href={hostname+'/#site'}>Site</a></li>
+                <li><a href={hostname+'/#sites'}>Site</a></li>
                 <li><a href={hostname+'/#faq'}>FAQ</a></li>
               </ul>
             </Col>
