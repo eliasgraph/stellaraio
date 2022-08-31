@@ -1,10 +1,14 @@
 import React from 'react'
 import glowsmhalf from '../../assets/imgs/blog/Path 6.png'
+import { useDispatch } from 'react-redux'
+import {setOneBlog} from '../../store/actions'
 
 function BlogCardSm({small, blog}) {
  
+  const dispatch = useDispatch()
   const pushToBlogDetail =()=>{
-    window.location.href = `/blog/${blog.id}`
+    dispatch(setOneBlog(blog))
+    window.location.href = `/blog/${blog.acf.url}`
   }
   return (
     <>

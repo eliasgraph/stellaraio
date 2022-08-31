@@ -26,7 +26,7 @@ function BlogDetail() {
     topPosts: state.Blogs.topPosts
   }))
 
-  const {id} = useParams()
+  const {id} = oneBlog
   const dispatch = useDispatch()
   const navigate = useNavigate()
   useEffect(()=>{

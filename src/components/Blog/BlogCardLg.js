@@ -1,11 +1,13 @@
 import React from 'react'
 import glowhalf from '../../assets/imgs/blog/Path 5 (1).png'
-
-
+import { useDispatch } from 'react-redux'
+import {setOneBlog} from '../../store/actions'
 
 function BlogCardLg({blog}) {
+  const dispatch = useDispatch()
   const pushToBlogDetail =()=>{
-    window.location.href = `/blog/${blog.id}`
+    dispatch(setOneBlog(blog))
+    window.location.href = `/blog/${blog.acf.url}`
   }
   return (
     <>
