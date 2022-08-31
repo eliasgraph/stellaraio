@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { useDispatch } from 'react-redux'
+import {setOneBlog} from '../../store/actions'
 function Posts({posts}) {
-  const pushToBlogDetail =(item)=>{
-    window.location.href = `/blog/${item.id}`
+  const dispatch = useDispatch()
+  const pushToBlogDetail =(post)=>{
+    dispatch(setOneBlog(post))
+    window.location.href = `/blog/${post.acf.url}`
   }
   return (
     <>
