@@ -16,12 +16,14 @@ function Buttons(
   zIndex,
   className,
   loading,
+  type,
   clicked = () =>{}
 }
 ) {
   return (
     <Button 
       className={className}
+      type={type ? type : 'submit'}
       disabled = {loading ? true : false}
       style={{
       width,

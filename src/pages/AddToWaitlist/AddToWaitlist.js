@@ -33,18 +33,37 @@ function AddToWaitlist() {
   const [emailError, setEmailError] = useState(false)
   const [emailLoding, setEmailLoading] = useState(false)
 
-  const sendEmail = ()=>{
+  const sendEmail = (e)=>{
+    e.preventDefault()
+    const data = new FormData(e.target)
     const emailValid = isEmail(email)
+
     if(!email.length || !emailValid){
       setEmailError(true)
       return
     }
+
     setEmailLoading(true)
-    setTimeout(()=>{
-      navigate('/thank-you')
+    
+    fetch('https://culturemizedideas.activehosted.com/proc.php', {
+      method: 'POST',
+      body: data,
+      mode: 'no-cors',
+    })
+    .then(response => {
+      setTimeout(()=>{
+        navigate('/thank-you')
+        setEmailLoading(false)
+        setEmailError(false)
+      }, 1000)
+    })
+    .catch(error =>{
       setEmailLoading(false)
       setEmailError(false)
-    }, 1000)
+      console.log('Request failed', error)
+    });
+    
+    
   }
 
   return (
@@ -54,7 +73,46 @@ function AddToWaitlist() {
           <div className="join-waitlist-div px-3">
             <h2 className='text-center'>Tired of seeing sold out?</h2>
             <p className='text-center'>Stellar handles the checkout process for you, ensuring you get the <br /> products you want before anyone else.</p>
-            <div className="enter-email-div d-flex align-items-start">
+            <form onSubmit={sendEmail} method="POST" action="https://culturemizedideas.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" noValidate>
+                <input type="hidden" name="u" value="1" />
+                <input type="hidden" name="f" value="1" />
+                <input type="hidden" name="s" />
+                <input type="hidden" name="c" value="0" />
+                <input type="hidden" name="m" value="0" />
+                <input type="hidden" name="act" value="sub" />
+                <input type="hidden" name="v" value="2" />
+                <input type="hidden" name="or" value="e8713af3a38309585ef3ff0e7c91636b" />
+                <div class="_form-content">
+                  {/* <div class="_form_element _x16931030 _full_width " >
+                    <label for="email" class="_form-label">
+                      Email*
+                    </label>
+                    <div class="_field-wrapper">
+                      <input type="text" id="email" name="email" placeholder="Type your email" required/>
+                    </div>
+                  </div> */}
+                  {/* <div class="_button-wrapper _full_width">
+                    <button id="_form_1_submit" className="_submit" type="submit">
+                      Submit
+                    </button>
+                  </div> */}
+                  <div className="enter-email-div d-flex align-items-start">
+                  <div className="enter-email-wrapper me-4">
+                    <input type="email" id='email' name='email' onChange={(e)=>{ setEmail(e.target.value)}} placeholder='Enter your Email' className={`text-center form-control ${emailError ? 'is-invalid': ''}`}/>
+                    <div className='invalid-feedback text-center mt-3'>Please provide a valid email address</div>
+                  </div>
+                  <div className="gt-access-btn-div">
+                    <img className='join-waitlist-glowring' src={glowringsm} alt="" />
+                    <Buttons text={"Be First in Line"} loading={emailLoding} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+                  </div>
+                </div>
+                  <div class="_clear-element">
+                  </div>
+                </div>
+                <div class="_form-thank-you" style={{display: 'none'}}>
+              </div>
+            </form>
+            {/* <div className="enter-email-div d-flex align-items-start">
               <div className="enter-email-wrapper me-4">
                 <input type="email" onChange={(e)=>{ setEmail(e.target.value)}} placeholder='Enter your Email' className={`text-center form-control ${emailError ? 'is-invalid': ''}`}/>
                 <div className='invalid-feedback text-center mt-3'>Please provide a valid email address</div>
@@ -63,7 +121,7 @@ function AddToWaitlist() {
                 <img className='join-waitlist-glowring' src={glowringsm} alt="" />
                 <Buttons clicked={sendEmail} text={"Be First in Line"} loading={emailLoding} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
               </div>
-            </div>
+            </div> */}
             
           </div>
         </CardGradient>
@@ -125,11 +183,50 @@ function AddToWaitlist() {
           <div className="skip-to-front-div px-3">
             <h2 className="app-h2 text-center">Your ticket to the front of the line.</h2>
             <p className="text-center mb-30px">Stellar is how you beat every other buyer to get the products you want. Sign up to get the fastest checkout on the market.</p>
-            <div className="skip-to-front-input-wrapper">
+            {/* <div className="skip-to-front-input-wrapper">
               <input type="email" placeholder='Enter your Email'/>
               <Buttons text={"Be First in Line"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
               <img className='skip-glowring' src={glowringsm} alt="" />
-            </div>
+            </div> */}
+            <form onSubmit={sendEmail} method="POST" action="https://culturemizedideas.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" noValidate>
+                <input type="hidden" name="u" value="1" />
+                <input type="hidden" name="f" value="1" />
+                <input type="hidden" name="s" />
+                <input type="hidden" name="c" value="0" />
+                <input type="hidden" name="m" value="0" />
+                <input type="hidden" name="act" value="sub" />
+                <input type="hidden" name="v" value="2" />
+                <input type="hidden" name="or" value="e8713af3a38309585ef3ff0e7c91636b" />
+                <div class="_form-content">
+                  {/* <div class="_form_element _x16931030 _full_width " >
+                    <label for="email" class="_form-label">
+                      Email*
+                    </label>
+                    <div class="_field-wrapper">
+                      <input type="text" id="email" name="email" placeholder="Type your email" required/>
+                    </div>
+                  </div> */}
+                  {/* <div class="_button-wrapper _full_width">
+                    <button id="_form_1_submit" className="_submit" type="submit">
+                      Submit
+                    </button>
+                  </div> */}
+                  <div className="enter-email-div d-flex align-items-start">
+                  <div className="enter-email-wrapper me-4">
+                    <input type="email" id='email' name='email' onChange={(e)=>{ setEmail(e.target.value)}} placeholder='Enter your Email' className={`text-center form-control ${emailError ? 'is-invalid': ''}`}/>
+                    <div className='invalid-feedback text-center mt-3'>Please provide a valid email address</div>
+                  </div>
+                  <div className="gt-access-btn-div">
+                    <img className='join-waitlist-glowring' src={glowringsm} alt="" />
+                    <Buttons text={"Be First in Line"} loading={emailLoding} className="d-block mx-auto mb-0 position-relative" border={"none"} width={"17.7rem"} zIndex={1}/>
+                  </div>
+                </div>
+                  <div class="_clear-element">
+                  </div>
+                </div>
+                <div class="_form-thank-you" style={{display: 'none'}}>
+              </div>
+            </form>
           </div>
         </CardGradient>
       </section>
