@@ -18,7 +18,7 @@ function BlogCardLg({blog}) {
           
         </div>
         <div className="blog-card-lg-content">
-          {blog && <h5>{blog ? blog.title.rendered : ''}</h5>}
+          {blog && <h1>{blog ? blog.title.rendered : ''}</h1>}
           
           <p  className="app-color-primary">Author: Stellar AIO</p>
           <div className="blog-card-glow-half">

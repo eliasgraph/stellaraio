@@ -17,7 +17,7 @@ function BlogCardSm({small, blog}) {
         <img  src={blog ? blog.acf.blog_img : ''} alt="" />
       </div>
       <div className={`blog-card-sm-content ${small ? "blog-card-sm-content-small" : ""}`}>
-        <h6>{blog ? blog.title.rendered : ''}</h6>
+        <h3>{blog ? blog.title.rendered : ''}</h3>
         <p className='mb-0'>Author: Stellar AIO</p>
         <div className="blog-card-glow-halfsm">
           <img src={glowsmhalf} alt="" />
