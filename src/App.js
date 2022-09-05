@@ -29,7 +29,7 @@ function App() {
               <Route path="/about" element={ <About/>} />
               <Route path="/add-to-waitlist" element={ <AddToWaitlist/>} />
               <Route path="/blog" element={ <Blog/>} />
-              <Route path="/blog/:id" element={ <BlogDetail/>} />
+              <Route path="/blog/:slug" element={ <BlogDetail/>} />
               <Route path="/thank-you" element={ <ThankYou/>} />
               <Route path="/terms-of-use" element={ <Terms/>} />
             </Routes>

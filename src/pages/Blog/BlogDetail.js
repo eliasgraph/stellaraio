@@ -27,7 +27,7 @@ function BlogDetail() {
 
   }))
 
-  const { id } = oneBlog
+  const { slug } = useParams()
   const dispatch = useDispatch()
   const navigate = useNavigate()
   useEffect(() => {
@@ -37,8 +37,8 @@ function BlogDetail() {
   async function run() {
     const query = `_fields=id,title,content,acf`
     try {
-      const res = await BlogService.getOneBlog(id, query)
-      dispatch(setOneBlog(res.data))
+      const res = await BlogService.searchOneBlog(slug, query)
+      dispatch(setOneBlog(res.data[0]))
     } catch (e) {
       console.log(e)
       setErrors(e)

@@ -7,6 +7,9 @@ const BlogService = {
   getOneBlog(id, query){
     return Api().get(`/blogs/${id}?${query}`)
   },
+  searchOneBlog(slug, query){
+    return Api().get(`/blogs/?search=${slug}&query=${query}`)
+  },
   getBlogImg(id){
     return Api().get(`/media/${id}`)
   },
