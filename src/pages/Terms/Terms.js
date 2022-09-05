@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import { Row, Col, Button } from 'reactstrap'
 import CardGradient from '../../components/Generals/CardGradient'
 import NeedHelp from '../../components/Generals/NeedHelp'
@@ -7,6 +7,9 @@ import glow1 from '../../assets/imgs/terms/Path 5.png'
 import glow2 from '../../assets/imgs/terms/Path 7.png'
 
 function Terms() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   return (
     <>
     <div className="terms">

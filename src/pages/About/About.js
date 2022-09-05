@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import Buttons from '../../components/Generals/Buttons'
@@ -14,6 +14,9 @@ import glow2 from '../../assets/imgs/about/Path 7.png'
 import NeedHelp from '../../components/Generals/NeedHelp'
 
 function About() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   const navigate = useNavigate()
   const pushJoinWaitlist = ()=>{
     navigate('/add-to-waitlist')
