@@ -37,7 +37,12 @@ p, button{
 .mt-30px{
   margin-top: 30px;
 }
-
+.mb-40px{
+  margin-bottom: 40px;
+}
+.mt-40px{
+  margin-top: 40px;
+}
 .color-purple-2{
   color: var(--color-purple-2);
 }

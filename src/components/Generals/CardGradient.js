@@ -13,6 +13,7 @@ function CardGradient({
         style={{
           minHeight: height,
           borderRadius,
+          overflow: 'hidden'
         }}
         className= {className ? className : 'card-gradient'}
       >
