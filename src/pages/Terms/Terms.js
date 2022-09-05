@@ -22,14 +22,15 @@ function Terms() {
                   <h1 className='app-h1 mb-3'>Legal Terms</h1>
                   <p>Welcome! Learn everything legally speaking, when using Stellar AIO</p>
                   <div className="legal-btns">
-                    <Button className='legal-btn'>Privacy Policy</Button>
-                    <Button className='legal-btn'>Terms of Use</Button>
+                    <a href="#privacy"><Button className='legal-btn'>Privacy Policy</Button></a>
+                    <a href="#terms-of-use"><Button className='legal-btn'>Terms of Use</Button></a>
+                    
                   </div>
                 </div>
               </Col>
               <Col md={6}>
                 <div className="terms-img d-flex justify-content-end">
-                  <img src={sideimg} alt="" />
+                  <img className='terms-side-img' src={sideimg} alt="" />
                   <img src={glow1} alt="" className="terms-glow1" />
                   <img src={glow2} alt="" className="terms-glow2" />
                 </div>
@@ -37,7 +38,7 @@ function Terms() {
             </Row>
           </CardGradient>
       </section>
-      <section className="terms-privacy-policy mb-40px">
+      <section id="privacy" className="terms-privacy-policy mb-40px">
         <CardGradient>
           <h2 className="app-h2 mb-3">PRIVACY POLICY</h2>
 
@@ -148,7 +149,7 @@ function Terms() {
           <p className='terms-latest-revised'>LAST REVISED: November 22, 2021</p>
         </CardGradient>
       </section>
-      <section className="terms-terms-of-use">
+      <section id="terms-of-use" className="terms-terms-of-use">
         <CardGradient>
           <h2 className="app-h2">TERMS OF USE</h2>
 
