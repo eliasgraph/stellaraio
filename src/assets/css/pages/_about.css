@@ -20,7 +20,7 @@
 .about-content{
   font-size: 1.8rem;
   text-align: center;
-  width: 80rem;
+  max-width: 80rem;
   margin: 0 auto;
   margin-top: 4.4rem;
   position: relative;
@@ -68,4 +68,17 @@
 .about-need-help{
   margin-top: 8.6rem;
   margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-glow1{
+    display: none;
+  }
+  .about-glow2{
+    display: none;
+  }
+  .about-content{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
