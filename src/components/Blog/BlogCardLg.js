@@ -7,7 +7,9 @@ function BlogCardLg({blog}) {
   const dispatch = useDispatch()
   const pushToBlogDetail =()=>{
     dispatch(setOneBlog(blog))
-    window.location.href = `/blog/${blog.acf.url}`
+    setTimeout(()=>{
+      window.location.href = `/blog/${blog.acf.url}`
+    },500)
   }
   return (
     <>
