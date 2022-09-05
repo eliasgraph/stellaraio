@@ -70,10 +70,10 @@ function Footer() {
             </Col>
             <Col md={2} sm={6}>
             <ul className='footer-list footer-list-mid mt-4'>
-              <li><Link to="#about">About</Link></li>
+              <li><Link to="/about">About</Link></li>
               <li><a href="https://help.stellaraio.com/en/">Support</a></li>
-              <li><Link to="#terms">Terms</Link></li>
-              <li><Link to="#privacy">Privacy</Link></li>
+              <li><Link to="/terms-of-use">Terms</Link></li>
+              <li><Link to="/terms-of-use">Privacy</Link></li>
             </ul>
             </Col>
             <Col md={2}>
