@@ -1,15 +1,17 @@
 import React from 'react'
 import glowsmhalf from '../../assets/imgs/blog/Path 6.png'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import {setOneBlog} from '../../store/actions'
 
 function BlogCardSm({small, blog}) {
- 
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const pushToBlogDetail =()=>{
     dispatch(setOneBlog(blog))
     setTimeout(()=>{
-      window.location.href = `/blog/${blog.acf.url}`
+      /* window.location.href =`/blog/${blog.acf.url}` */
+      navigate(`/blog/${blog.acf.url}`)
     },500)
   }
   return (

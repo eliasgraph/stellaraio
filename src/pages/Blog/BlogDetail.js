@@ -78,7 +78,7 @@ function BlogDetail() {
         </Row>
         <Row>
           <Col md={8}>
-            {oneBlog ? (<div>
+            {oneBlog.acf ? (<div>
               <div className="blog-card-detail position-relative">
                 <div className="blog-card-details-glow">
                   {<img src={glowbig} alt="" />}

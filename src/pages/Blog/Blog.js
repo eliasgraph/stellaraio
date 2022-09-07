@@ -65,10 +65,10 @@ function Blog() {
   }
   async function getTopPosts (){
     setTopPostLoading(true)
-    const query = `per_page=4&&_fields=id,title,acf.publisher,acf.top_post=true, acf.blog_img`
+    const query = `per_page=4&_fields=id,title,content,acf`
     try {
       const res = await BlogService.getTopPosts(query)
-
+      console.log(res.data)
       dispatch(setTopPosts(res.data))
       setTopPostLoading(false)
     } catch (e) {
