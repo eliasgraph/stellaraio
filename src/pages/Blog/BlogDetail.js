@@ -82,7 +82,7 @@ function BlogDetail() {
                 <div className="blog-card-details-glow">
                   {<img src={glowbig} alt="" />}
                 </div>
-                {oneBlog && <h1 className='blog-detail-title'>{oneBlog.title.rendered}</h1>}
+                {oneBlog && <h1 dangerouslySetInnerHTML={{__html: oneBlog.title.rendered}} className='blog-detail-title'></h1>}
                 {oneBlog && <p className='app-color-primary'>Author: {oneBlog.acf.publisher}</p>}
                 {oneBlog && <div className="blog-card-detail-img mb-20px">
                   {oneBlog.acf.blog_img && <img src={oneBlog.acf.blog_img} alt="" />}
