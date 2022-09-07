@@ -38,6 +38,7 @@ function BlogDetail() {
     const query = `_fields=id,title,content,acf`
     try {
       const res = await BlogService.searchOneBlog(slug, query)
+      document.title = res.data.title.rendered
       dispatch(setOneBlog(res.data[0]))
     } catch (e) {
       console.log(e)
