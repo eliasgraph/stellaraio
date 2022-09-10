@@ -216,7 +216,8 @@
 }
 
 .home-users__user img{
-  width: 100%;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -227,6 +228,7 @@
 }
 .home-user-review-img{
   width: 25rem;
+  height: 25rem;
   border-radius: 100%;
   overflow: hidden;
   position: relative;
@@ -235,7 +237,7 @@
 
 .home-user-reviewimg-img{
   width: 100%;
-  height: 100%;
+  height: inherit;
   object-fit: cover;
   position: relative;
   
@@ -530,7 +532,8 @@ margin-top: 30px;
     margin: 0 auto;
   }
   .support-img{
-    overflow: hidden;
+    /* overflow: hidden;
+    overflow-y: visible; */
    }
   .support-bg{
     padding: 1rem;

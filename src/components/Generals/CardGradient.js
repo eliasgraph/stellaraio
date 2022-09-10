@@ -5,6 +5,7 @@ function CardGradient({
   children,
   height,
   className,
+  overflow,
   borderRadius = "20px"
 }) {
   return (
@@ -13,7 +14,7 @@ function CardGradient({
         style={{
           minHeight: height,
           borderRadius,
-          overflow: 'hidden'
+          overflow: overflow ? 'hidden' : 'visible'
         }}
         className= {className ? className : 'card-gradient'}
       >

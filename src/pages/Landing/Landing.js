@@ -54,11 +54,11 @@ import target from '../../assets/imgs/logos/target_logo.png'
 import swatch from '../../assets/imgs/logos/Swatch.png'
 import close from '../../assets/imgs/icon/close.png'
 import glowringlg from '../../assets/imgs/Path 5.png'
-import img1 from '../../assets/imgs/landingpage/img1 (1).jpeg'
-import img2 from '../../assets/imgs/landingpage/img1 (2).jpeg'
-import img3 from '../../assets/imgs/landingpage/img1 (3).jpeg'
-import img4 from '../../assets/imgs/landingpage/img1 (4).jpeg'
-import img5 from '../../assets/imgs/landingpage/img1 (5).jpeg'
+import img1 from '../../assets/imgs/landingpage/img1.jpeg'
+import img2 from '../../assets/imgs/landingpage/img2.jpeg'
+import img3 from '../../assets/imgs/landingpage/img3.jpeg'
+import img4 from '../../assets/imgs/landingpage/img4.jpeg'
+import img5 from '../../assets/imgs/landingpage/img5.jpeg'
 
 
 function Landing() {
@@ -104,23 +104,23 @@ function Landing() {
   
   const reviews = [
     {
-      review: "Stellar for me has been the most worth it bot that I use for retail and it's my go to bot. I got it over a year ago now and it's paid off for me 100 fold, it's easy to use and user friendly.",
+      review: "Stellar for me has been the most worth it bot that i use for retail and it’s my go to bot , I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.",
       img: img1
     },
     {
-      review: "Great product, devs seem to be on top of things, continually provide new ideas and services.",
+      review: "I love Stellar, it has provided me a way to make money easily while sitting away from my keyboard. You guys, make it as easy as starting it and not touching anything!.",
       img: img2
     },
     {
-      review: "I feel it's a great bot that improves daily alongside the retailers constantly changing how their system works. The improvements made daily along with the constant bug fixes is top notch",
+      review: "I feel it’s a great bot that improves daily alongside the retailers constantly changing how their system works. The improvements made daily along with the constant bug fixes is top notch",
       img: img3
     },
     {
-      review: "I love Stellar, it has provided me a way to make money easily while sitting away from my keyboard. You guys make it as easy as starting it and not touching anything!",
+      review: "From what I've seen Stellar holds up against all of the other competitors quite well. It is a solid bot with great Devs and support",
       img: img4
     },
     {
-      review: "It is a solid bot with great Devs and support. It's a new way of doing business and I'm excited about it.",
+      review: "Great product, devs seem to be on top of things, continually provide new ideas and services.",
       img: img5
     },
   ]
@@ -273,7 +273,7 @@ function Landing() {
             className="support-bg"
           >
             <Row>
-              <Col lg={6} md={12}>
+              <Col lg={6} md={12} style={{overflow: 'visible'}}>
                 <div className="support-img">
                   <img className="support-img-cell" src={supportedby} alt="supported-img" />
                   <img src={glowringlg} className="support-img-glowring" alt="" />
