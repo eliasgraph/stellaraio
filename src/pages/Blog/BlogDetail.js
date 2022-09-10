@@ -39,7 +39,7 @@ function BlogDetail() {
     try {
       const res = await BlogService.searchOneBlog(slug, query)
       dispatch(setOneBlog(res.data[0]))
-      document.title = res.data[0].title.rendered
+      document.querySelector('title').textContent = res.data[0].title.rendered
     } catch (e) {
       console.log(e)
       setErrors(e)
