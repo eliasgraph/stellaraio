@@ -169,6 +169,7 @@
 .home-users__card{
   background-image: linear-gradient(to bottom, rgba(17, 17, 37, 1),rgba(17, 17, 37, 1));
   padding-right: 7.7rem;
+  padding-bottom: 4rem;
 }
 
 .home-users-content{
@@ -194,6 +195,10 @@
   color: #DBDCEC;
   min-height: 10rem;
 }
+.home-users__quote--name h3{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
 .home-users-p-role{
   font-size: 12px !important;
   color: #88899E !important;
@@ -201,7 +206,7 @@
 
 .home-users__users{
   width: 330px;
-  margin-top: 7rem;
+  margin-top: 6rem;
 }
 
 .home-users__user {

@@ -105,23 +105,28 @@ function Landing() {
   const reviews = [
     {
       review: "Stellar for me has been the most worth it bot that i use for retail and it’s my go to bot , I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.",
-      img: img1
+      img: img1,
+      name: "Juice#0069"
     },
     {
       review: "I love Stellar, it has provided me a way to make money easily while sitting away from my keyboard. You guys, make it as easy as starting it and not touching anything!.",
-      img: img2
+      img: img2,
+      name: " Chuckles2621#7395"
     },
     {
       review: "I feel it’s a great bot that improves daily alongside the retailers constantly changing how their system works. The improvements made daily along with the constant bug fixes is top notch",
-      img: img3
+      img: img3,
+      name: "Jcameron#3663"
     },
     {
       review: "From what I've seen Stellar holds up against all of the other competitors quite well. It is a solid bot with great Devs and support",
-      img: img4
+      img: img4,
+      name: "Cardking5432#6326"
     },
     {
       review: "Great product, devs seem to be on top of things, continually provide new ideas and services.",
-      img: img5
+      img: img5,
+      name: "Sweetfeet_shoes#1462"
     },
   ]
   return (
@@ -309,7 +314,11 @@ function Landing() {
                   
                   <div className="home-users__quote--quote">
                     <p>{reviews[imgIndex].review}</p>
+                    <div className="home-users__quote--name">
+                      <h3>{reviews[imgIndex].name}</h3>
+                    </div>
                   </div>
+
                 </div>
                 <div className="home-users__users d-flex align-items-center justify-content-between">
                   <div onClick={prev} className="arrow-icon">
