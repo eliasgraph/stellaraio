@@ -15,11 +15,15 @@ import Terms from './pages/Terms/Terms'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import { Helmet } from 'react-helmet';
 
 
 function App() {
   return (
     <Router>
+        <Helmet>
+          <title>Stellar AIO - Best Sneaker and Retail Bot</title>
+        </Helmet>
       <div className="app">
         <Header/>
         <div className="app-content position-relative">

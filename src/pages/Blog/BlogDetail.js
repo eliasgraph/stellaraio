@@ -17,6 +17,7 @@ import BlogService from '../../services/BlogService'
 import { useParams } from 'react-router-dom'
 import Posts from '../../components/Blog/Posts'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
+import { Helmet } from 'react-helmet'
 
 function BlogDetail() {
   const [errors, setErrors] = useState({})
@@ -39,7 +40,7 @@ function BlogDetail() {
     try {
       const res = await BlogService.searchOneBlog(slug, query)
       dispatch(setOneBlog(res.data[0]))
-      document.querySelector('title').textContent = res.data[0].title.rendered
+      /* document.querySelector('title').textContent = res.data[0].title.rendered */
     } catch (e) {
       console.log(e)
       setErrors(e)
@@ -79,6 +80,9 @@ function BlogDetail() {
         <Row>
           <Col md={8}>
             {oneBlog.acf ? (<div>
+              <Helmet>
+                <title>{oneBlog.title.rendered}</title>
+              </Helmet>
               <div className="blog-card-detail position-relative">
                 <div className="blog-card-details-glow">
                   {<img src={glowbig} alt="" />}
