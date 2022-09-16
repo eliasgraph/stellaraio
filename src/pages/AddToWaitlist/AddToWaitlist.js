@@ -20,7 +20,7 @@ import dollars from '../../assets/imgs/icon/dollars.png'
 import cart from '../../assets/imgs/icon/cart-plus.png'
 import glowringsm from '../../assets/imgs/Path 6.png'
 import glowringlg from '../../assets/imgs/Path 5.png'
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 import { isEmail } from '../../helpers/validations'
 import NeedHelp from '../../components/Generals/NeedHelp'
