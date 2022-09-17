@@ -198,15 +198,15 @@ function AddToWaitlist() {
               <Buttons text={"Be First in Line"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
               <img className='skip-glowring' src={glowringsm} alt="" />
             </div> */}
-            <form onSubmit={sendEmail} method="POST" action="https://culturemizedideas.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" noValidate>
-                <input type="hidden" name="u" value="1" />
-                <input type="hidden" name="f" value="1" />
+            <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" class="_form _form_9 _inline-form  _dark" novalidate>
+                <input type="hidden" name="u" value="9" />
+                <input type="hidden" name="f" value="9" />
                 <input type="hidden" name="s" />
                 <input type="hidden" name="c" value="0" />
                 <input type="hidden" name="m" value="0" />
                 <input type="hidden" name="act" value="sub" />
                 <input type="hidden" name="v" value="2" />
-                <input type="hidden" name="or" value="e8713af3a38309585ef3ff0e7c91636b" />
+                <input type="hidden" name="or" value="067581fd61f20f449e807d51da2d44d3" />
                 <div class="_form-content">
                   {/* <div class="_form_element _x16931030 _full_width " >
                     <label for="email" class="_form-label">
