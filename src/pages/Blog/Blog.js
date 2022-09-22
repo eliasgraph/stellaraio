@@ -68,7 +68,6 @@ function Blog() {
     const query = `per_page=4&_fields=id,title,content,acf`
     try {
       const res = await BlogService.getTopPosts(query)
-      console.log(res.data)
       dispatch(setTopPosts(res.data))
       setTopPostLoading(false)
     } catch (e) {
