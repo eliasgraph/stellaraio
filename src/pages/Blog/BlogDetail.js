@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import Buttons from '../../components/Generals/Buttons'
@@ -31,6 +31,9 @@ function BlogDetail() {
   const { slug } = useParams()
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   useEffect(() => {
     run()
   }, [])
@@ -39,7 +42,8 @@ function BlogDetail() {
     const query = `_fields=id,title,content,acf`
     try {
       const res = await BlogService.searchOneBlog(slug, query)
-      dispatch(setOneBlog(res.data[0]))
+      const data = res.data.filter(blog => blog.acf.url === slug)
+      dispatch(setOneBlog(data[0]))
       /* document.querySelector('title').textContent = res.data[0].title.rendered */
     } catch (e) {
       console.log(e)
