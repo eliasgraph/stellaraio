@@ -46,7 +46,7 @@ function Footer() {
   return (
     <footer className="footer">
       <Container>
-        <div className="footer__container">
+        {<div className="footer__container">
           <Row>
             <Col md={6} sm={12}>
               <div className="footer__logo">
@@ -105,7 +105,7 @@ function Footer() {
               &copy; 2021 StellarAIO. All rights reserved.
             </div>
           </div>
-        </div>
+        </div>}
       </Container>
     </footer>
   )

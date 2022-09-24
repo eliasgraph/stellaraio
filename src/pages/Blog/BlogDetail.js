@@ -5,13 +5,11 @@ import Buttons from '../../components/Generals/Buttons'
 import BackArror from '../../assets/svgs/BackArrow'
 import Search from '../../assets/svgs/Search'
 import Twittersm from '../../assets/svgs/Twittersm'
-import Instagramsm from '../../assets/svgs/Instagramsm'
-import Discordsm from '../../assets/svgs/Discordsm'
 import Star from '../../assets/svgs/Star'
 import glowbig from '../../assets/imgs/blog/Path 10.png'
 import BlogCardSm from '../../components/Blog/BlogCardSm'
 import { useSelector } from 'react-redux'
-import { setOneBlog } from '../../store/actions'
+import { setOneBlog, setBlogs,setTopPosts } from '../../store/actions'
 import { useDispatch } from 'react-redux'
 import BlogService from '../../services/BlogService'
 import { useParams } from 'react-router-dom'
@@ -36,7 +34,28 @@ function BlogDetail() {
   });
   useEffect(() => {
     run()
+    prerun()
+    getTopPosts()
   }, [])
+  async function prerun (){
+    const query = `per_page=${10}&page=${1}&_fields=id,title,content,acf`
+    
+    try{
+      const res = await BlogService.getBlogs(query)
+      dispatch(setBlogs(res.data))
+    } catch(e){ 
+      setErrors(e)
+    }
+  }
+  async function getTopPosts (){
+    const query = `per_page=4&_fields=id,title,content,acf`
+    try {
+      const res = await BlogService.getTopPosts(query)
+      dispatch(setTopPosts(res.data))
+    } catch (e) {
+      setErrors({...errors, topPost: true})
+    }
+  }
 
   async function run() {
     const query = `_fields=id,title,content,acf`
@@ -44,7 +63,7 @@ function BlogDetail() {
       const res = await BlogService.searchOneBlog(slug, query)
       const data = res.data.filter(blog => blog.acf.url === slug)
       dispatch(setOneBlog(data[0]))
-      /* document.querySelector('title').textContent = res.data[0].title.rendered */
+      document.querySelector('title').textContent = data[0].title.rendered
     } catch (e) {
       console.log(e)
       setErrors(e)
@@ -83,7 +102,7 @@ function BlogDetail() {
         </Row>
         <Row>
           <Col md={8}>
-            {oneBlog.acf ? (<div>
+            {oneBlog && oneBlog.acf ? (<div>
               <Helmet>
                 <title>{oneBlog.title.rendered}</title>
               </Helmet>
@@ -91,7 +110,7 @@ function BlogDetail() {
                 <div className="blog-card-details-glow">
                   {<img src={glowbig} alt="" />}
                 </div>
-                {oneBlog && <h1 dangerouslySetInnerHTML={{__html: oneBlog.title.rendered}} className='blog-detail-title'></h1>}
+                {oneBlog && <h1 dangerouslySetInnerHTML={{ __html: oneBlog.title.rendered }} className='blog-detail-title'></h1>}
                 {oneBlog && <p className='app-color-primary'>Author: {oneBlog.acf.publisher}</p>}
                 {oneBlog && <div className="blog-card-detail-img mb-20px">
                   {oneBlog.acf.blog_img && <img src={oneBlog.acf.blog_img} alt="" />}

@@ -29,13 +29,13 @@ function App() {
         <div className="app-content position-relative">
           <Container>
             <Routes>
-              <Route path="/" element={ <Landing/> }/>
-              <Route path="/about" element={ <About/>} />
-              <Route path="/add-to-waitlist" element={ <AddToWaitlist/>} />
-              <Route path="/blog" element={ <Blog/>} />
-              <Route path="/blog/:slug" element={ <BlogDetail/>} />
-              <Route path="/thank-you" element={ <ThankYou/>} />
-              <Route path="/terms-of-use" element={ <Terms/>} />
+              <Route path="/" exact element={ <Landing/> }/>
+              <Route path="/about" exact element={ <About/>} />
+              <Route path="/add-to-waitlist" exact element={ <AddToWaitlist/>} />
+              <Route path="/blog" exact element={ <Blog/>} />
+              <Route path="/blog/:slug" exact element={ <BlogDetail/>} />
+              <Route path="/thank-you" exact element={ <ThankYou/>} />
+              <Route path="/terms-of-use" exact element={ <Terms/>} />
             </Routes>
           </Container>
         </div>

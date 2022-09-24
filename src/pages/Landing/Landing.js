@@ -3,7 +3,7 @@ import CardGradient from '../../components/Generals/CardGradient'
 import { Row, Col, Collapse, Modal, ModalBody } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import Buttons from '../../components/Generals/Buttons'
-import { Link } from 'react-router-dom'
+/* import { Link } from 'react-router-dom' */
 
 import dash from '../../assets/imgs/landingpage/dash_.png'
 import analytic from '../../assets/imgs/landingpage/analytic.png'
@@ -78,30 +78,6 @@ function Landing() {
 
     }
   }, [seeSite]);
-
-  const tog_seeSite = ()=>{
-    setSeeSite(!seeSite)
-  }
-  const navigate = useNavigate()
-  
-  const pushJoinWaitlist = ()=>{
-    navigate('/add-to-waitlist')
-  }
-  
-  const prev = ()=>{
-    if(imgIndex === 0){
-      return
-    }
-    setImgIndex(imgIndex - 1)
-  }
-
-  const next = ()=>{
-    if(imgIndex === reviews.length -1){
-      return
-    }
-    setImgIndex(imgIndex + 1)
-  }
-  
   const reviews = [
     {
       review: "Stellar for me has been the most worth it bot that i use for retail and it’s my go to bot , I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.",
@@ -129,6 +105,30 @@ function Landing() {
       name: "Sweetfeet_shoes#1462"
     },
   ]
+  const tog_seeSite = ()=>{
+    setSeeSite(!seeSite)
+  }
+  const navigate = useNavigate()
+  
+  const pushJoinWaitlist = ()=>{
+    navigate('/add-to-waitlist')
+  }
+  
+  const prev = ()=>{
+    if(imgIndex === 0){
+      return
+    }
+    setImgIndex(imgIndex - 1)
+  }
+
+  const next = ()=>{
+    if(imgIndex === reviews.length -1){
+      return
+    }
+    setImgIndex(imgIndex + 1)
+  }
+  
+  
   return (
     <>
       <section id='home'>
