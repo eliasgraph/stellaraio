@@ -356,7 +356,7 @@ function Landing() {
             <div className="need_help">
               <h5 className='text-center'> Need Any Help or Support?</h5>
               <p className='text-center'>Our Support Team is standing by whenever and wherever you need them.</p>
-              <a href="https://help.stellara.io/en/" style={{textDecoration: 'none'}}>
+              <a href="https://help.stellaraio.com/" target={'_blank'} rel='noreferrer' style={{textDecoration: 'none'}}>
                 <Buttons className={'margin-auto d-block text-center'} text={'Visit Support Center'} width="220px" height="38px" background='#161632'/>
               </a>
             </div>
