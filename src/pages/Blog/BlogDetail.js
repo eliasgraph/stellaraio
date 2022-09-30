@@ -10,7 +10,7 @@ import glowbig from '../../assets/imgs/blog/Path 10.png'
 import BlogCardSm from '../../components/Blog/BlogCardSm'
 import { useSelector } from 'react-redux'
 import { setOneBlog, setBlogs,setTopPosts } from '../../store/actions'
-import { useDispatch } from 'react-redux'
+/* import { useDispatch } from 'react-redux' */
 import BlogService from '../../services/BlogService'
 import { useParams } from 'react-router-dom'
 import Posts from '../../components/Blog/Posts'
@@ -27,7 +27,7 @@ function BlogDetail() {
   }))
 
   const { slug } = useParams()
-  const dispatch = useDispatch()
+  /* const dispatch = useDispatch() */
   const navigate = useNavigate()
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
@@ -42,7 +42,7 @@ function BlogDetail() {
     
     try{
       const res = await BlogService.getBlogs(query)
-      dispatch(setBlogs(res.data))
+      /* dispatch(setBlogs(res.data)) */
     } catch(e){ 
       setErrors(e)
     }
@@ -51,7 +51,7 @@ function BlogDetail() {
     const query = `per_page=4&_fields=id,title,content,acf`
     try {
       const res = await BlogService.getTopPosts(query)
-      dispatch(setTopPosts(res.data))
+      /* dispatch(setTopPosts(res.data)) */
     } catch (e) {
       setErrors({...errors, topPost: true})
     }
@@ -62,7 +62,7 @@ function BlogDetail() {
     try {
       const res = await BlogService.searchOneBlog(slug, query)
       const data = res.data.filter(blog => blog.acf.url === slug)
-      dispatch(setOneBlog(data[0]))
+      /* dispatch(setOneBlog(data[0])) */
       document.querySelector('title').textContent = data[0].title.rendered
     } catch (e) {
       console.log(e)

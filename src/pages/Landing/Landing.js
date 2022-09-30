@@ -286,8 +286,8 @@ function Landing() {
               </Col>
               <Col lg={6} md={12}>
                 <div className="support-text">
-                  <h4 className='text-right'>Supported by the most popular <span>Big Box <br /> Retailers.</span>
-                  </h4>
+                  <h1 className='text-right'>Supported by the most popular <span>Big Box <br /> Retailers.</span>
+                  </h1>
                   <p className='text-right'>Stellar is your the only one and true AIO that allows you to shop easily and profitably from your favorite retailers globally.</p>
                 </div>
                 <div role={'button'} onClick={tog_seeSite} className="support-actions d-flex align-items-center justify-content-end">
@@ -356,7 +356,9 @@ function Landing() {
             <div className="need_help">
               <h5 className='text-center'> Need Any Help or Support?</h5>
               <p className='text-center'>Our Support Team is standing by whenever and wherever you need them.</p>
-              <Buttons className={'margin-auto d-block text-center'} text={'Visit Support Center'} width="220px" height="38px" background='#161632'/>
+              <a href="https://help.stellara.io/en/" style={{textDecoration: 'none'}}>
+                <Buttons className={'margin-auto d-block text-center'} text={'Visit Support Center'} width="220px" height="38px" background='#161632'/>
+              </a>
             </div>
             <div className="socials">
               <div className="socials-content">

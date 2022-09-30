@@ -33,7 +33,7 @@
 }
 
 
-.head-info h2{
+.head-info h2, .head-info h1{
   font-weight: 500;
   font-size: 3.8rem;
 }
@@ -150,15 +150,15 @@
   margin-bottom: 4rem;
 }
 
-.support-text h4{
+.support-text h4, .support-text h1{
   font-size: 3.8rem;
   font-weight: 500;
 }
+.support-text h4 span, .support-text h1 span{
+  color: rgba(101, 10, 197, 1);
+}
 .support-text p{
   font-size: 1.6rem;
-}
-.support-text h4 span{
-  color: rgba(101, 10, 197, 1);
 }
 /* .support-actions{
   width: max-content;
