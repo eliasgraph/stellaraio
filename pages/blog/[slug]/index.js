@@ -330,7 +330,7 @@ export const getStaticPaths = async () =>{
   const paths = result.map(data => ({params: {slug: data.acf.url.toString()}}))
   return {
     paths,
-    fallback: "blocking"
+    fallback: false
   }
 } 
 
