@@ -10,9 +10,9 @@ function Header() {
     setIsOpen(!isOpen)
   }
   
-  useEffect(()=>{
+  /* useEffect(()=>{
     setHostname(window.location.origin)
-  },[])
+  },[]) */
 
   return (
     <div className='page-navbar'>

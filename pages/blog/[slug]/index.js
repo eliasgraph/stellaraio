@@ -72,9 +72,9 @@ function BlogDetail({oneBlog}) {
   const goBack = () => {
     router.push('/blog')
   }
-  const twitterShare = () => {
+  /* const twitterShare = () => {
     window.open(`https://twitter.com/share?url=${window.location.href}&text=${oneBlog.title.rendered}`, '_blank')
-  }
+  } */
   return (
     <>
       <Head>
