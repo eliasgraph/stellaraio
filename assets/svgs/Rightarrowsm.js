@@ -1,0 +1,13 @@
+import React from 'react'
+
+function Rightarrowsm() {
+  return (
+    <>
+    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.5 1L6.85858 6.35858C6.93668 6.43668 6.93668 6.56332 6.85858 6.64142L1.5 12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+</>
+  )
+}
+
+export default Rightarrowsm

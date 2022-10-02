@@ -1,0 +1,43 @@
+.thank-you{
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+.thank-you-wrapper{
+  padding-top: 7rem;
+  padding-bottom: 3.8rem;
+}
+.thank-you-wrapper h1{
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.thank-you-wrapper p{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.thank-you-img{
+  position: relative;
+  max-width: 86rem;
+  margin: 0 auto;
+}
+.thank-img{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.thank-glowring-1,.thank-glowring-2,.thank-glowring-3{
+  position: absolute;
+  top: -107px;
+}
+
+.thank-glowring-1{
+  left: -5%;
+}
+.thank-glowring-2{
+  left: 20%;
+}
+.thank-glowring-3{
+  left: 46%;
+}

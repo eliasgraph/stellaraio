@@ -1,0 +1,332 @@
+.join-waitlist-div {
+  padding-top: 9.2rem;
+  position: relative;
+}
+.join-waitlist-div h2{
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.join-waitlist-div p{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.enter-email-div{
+  max-width: 59.5rem;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+.enter-email-wrapper{
+  flex-grow: 1;
+  border-radius: 5px;
+}
+.enter-email-wrapper input{
+  margin: 0px;
+  padding: 0px 7px 0px 2.7rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 4.2rem;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px 1px rgba(50,50,114, 0.1 ), 0px 0px 2px 1px rgba(50,50,114,1 ), 0px 0px 5px 5px rgba(195, 46, 245, 0.1);
+  background-color: rgba(9, 9, 19, 1);
+  color: #fff;
+  font-size: 14px;
+  text-align: start;
+  position: relative;
+  z-index: 1;
+}
+.enter-email-wrapper input:focus{
+  background-color: rgba(9, 9, 19, 1) !important;
+  color: #fff;
+}
+.join-waitlist-div button{
+  margin-bottom: 22px;
+}
+
+.gt-access-btn-div{
+  width: max-content;
+  position: relative;
+  margin: 0 auto;
+}
+.join-waitlist-glowring{
+  position: absolute;
+  bottom: -146px;
+  left: -37%;
+  width: 321px;
+}
+.n-m-restock-div{
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  position: relative;
+}
+.n-m-restock-div p{
+  max-width: 84rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.n-m-restock-img-wrapper{
+  max-width: 80.1rem;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+}
+
+.n-m-glowring{
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 400px;
+}
+.skip-to-front-input-wrapper{
+  max-width: 59.5rem;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.skip-to-front{
+  margin-top: 4.5rem;
+}
+.skip-to-front-div{
+  padding: 9.9rem 0;
+}
+.skip-to-front-div p{
+  max-width: 65.3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.skip-to-front-input-wrapper input{
+  margin: 0px;
+  padding: 0px 7px 0px 2.7rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 5.3rem;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px 1px rgba(50,50,114, 0.1 ), 0px 0px 2px 1px rgba(50,50,114,1 ), 0px 0px 5px 5px rgba(195, 46, 245, 0.1);
+  background-color: rgba(9, 9, 19, 1);
+  color: #fff;
+  font-size: 14px;
+}
+
+.skip-to-front-input-wrapper button{
+  position: absolute;
+  right: 7px;
+  top: 7px;
+}
+
+.skip-glowring{
+  position: absolute;
+  top: -158px;
+  right: -115px;
+  width: 345px;
+}
+
+.need-h-or-s{
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+
+.need-h-or-s-card1{
+  background-image: linear-gradient(to bottom, #111125 0%, #050505 92%, #000 100%);
+  border: none !important;
+}
+.need-h-or-s-card2{
+  background-image: linear-gradient(to bottom, #c432f6 0%, #650ac5 100%);
+  border: none !important;
+}
+
+.need-h-or-s-div{
+  padding-top: 4.1rem;
+}
+
+.need-h-or-s-div p{
+  margin: 0 auto;
+  margin-bottom: 5.6rem;
+  max-width: 66.9rem;
+}
+
+.need-h-or-s-div2{
+  margin-top: 9rem;
+}
+.a-t-w{
+  margin-top: 6rem;
+}
+.a-t-w-wrapper{
+  position: relative;
+  margin-top: 4rem;
+}
+.a-t-w-sponsors{
+  width: 364px;
+  height: 502px;
+  position: relative;
+}
+.a-t-w-benefits{
+  transform: translateX(-45px);
+  position: absolute;
+  top: 21%;
+  left: 382px;
+  width: max-content;
+  background-color: rgba(17, 17, 37, 1);
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 30px;
+  z-index: 1;
+}
+
+.a-t-w-benefits::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px; 
+  padding: 3px; 
+  background:linear-gradient(to left,#8516ac,rgba(177, 83, 235, 0.74) 22.02%,rgba(65, 25, 189, 0.5832) 33.97%, rgba(38, 2, 61, 8.25) 100% ); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.a-t-w-tweet{
+  width: 58.6%;
+  box-shadow: -20px 0px 20px  rgba(133, 22, 172, 0.1), -10px 0 20px rgba(133, 22, 172, 0.1);
+  border-radius: 15px;
+}
+
+.a-t-w-glowring{
+  position: absolute;
+  top: 12%;
+  left: 192px;
+}
+.test1,.test2,.test3{
+  position: relative;
+}
+
+.compass-text{
+  width: 100%;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+@media only screen and (max-width: 991px){
+  .a-t-w-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+  .a-t-w-benefits{
+    position: relative;
+    left: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 27px;
+    transform: translate(-40px, -20px);
+  }
+  .test1,.test2,.test3{
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .a-t-w-sponsors{
+    height: max-content;
+    width: max-content;
+    
+  }
+  .a-t-w-glowring {
+    display: none;
+  }
+  .a-t-w-tweet{
+    width: 100%;
+    transform: translateY(-40px);
+  }
+
+  .skip-to-front{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 767px){
+  .skip-glowring{
+    display: none;
+  }
+  .skip-to-front-input-wrapper{
+    overflow: hidden;
+  }
+  .a-t-w-sponsors{
+    width: 90%;
+  }
+  .a-t-w-benefits{
+    width: 80%;
+  }
+  .a-t-w-tweet{
+    width: 95%;
+  }
+  .need-h-or-s-card1{
+    margin-bottom: 20px;
+  }
+  .n-m-glowring{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 569px){
+  .a-t-w-benefits{
+    padding: 0;
+  }
+  .a-t-w-benefits::before {
+    content: "";
+    position: relative;
+    inset: 0;
+    border-radius: 10px; 
+    padding: 0px; 
+    background:none; 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+  }
+  .a-t-w-tweet{
+    box-shadow: none;
+  }
+  .enter-email-wrapper{
+    width: 90%;
+  }
+  .skip-to-front-div{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+    .skip-to-front-input-wrapper button{
+      position: relative;
+      width: 100%;
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+    }
+  .join-waitlist-glowring{
+    display: none;
+  }
+  .need-h-or-s-div{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .need-h-or-s-card2{
+    min-height: 26.5rem;
+  }
+  .need-h-or-s-div2{
+    margin-top: 7rem;
+  }
+  .need-h-or-s-div br{
+    display: none;
+  }
+}
