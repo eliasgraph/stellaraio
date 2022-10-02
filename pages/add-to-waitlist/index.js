@@ -34,7 +34,8 @@ function AddToWaitlist() {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
   const [emailLoding, setEmailLoading] = useState(false)
-
+  /* const isTab = useMediaQuery({ query: '(min-width: 992px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 569px)' }) */
   useEffect(()=>{
     setIsTab(checkIsTab())
     setIsMobile(checkIsMobile())

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Posts({posts}) {
   const pushToBlogDetail =(post)=>{
-    /* window.location.href = `/blog/${post.acf.url}` */
+    window.location.href = `/blog/${post.acf.url}`
   }
   return (
     <>
