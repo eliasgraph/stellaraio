@@ -6,6 +6,7 @@ function Layout({children}) {
   return (
     <>
       <Meta/>
+      {<div className="product-page-top"></div>}
       <Header/>
       <Container>
         {children}
