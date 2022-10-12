@@ -22,6 +22,11 @@ import yurg from '../../assets/imgs/products/yurg.png'
 import baseball from '../../assets/imgs/products/baseball.png'
 import nhl from '../../assets/imgs/products/nhl.png'
 import fifa from '../../assets/imgs/products/fifa.png'
+import befirstglow from '../../assets/imgs/products/befirstglow.png'
+import brandglow from '../../assets/imgs/products/brandglow.png'
+import automationglow from '../../assets/imgs/products/automationglow.png'
+import howitworksglow from '../../assets/imgs/products/howitworksglow.png'
+import powerbackglow from '../../assets/imgs/products/powerbackglow.png'
 import Faq from '../../components/landing/Faq'
 import Link from 'next/link'
 
@@ -29,7 +34,10 @@ function Products() {
   return (
     <section>
       <div className="bfil">
-        <h2 className="app-h2 text-center mb-2">Be First in Line Every Time</h2>
+        <h2 className="app-h2 text-center mb-2">
+          Be First in Line Every Time 
+          <img src={befirstglow} className="bfil-glow" alt="befirstglow" />
+        </h2>
         <p className="text-center">
           Stellar makes buying trading cards easy with automated checkout software <br /> that gets you the cards you want before anyone else.
         </p>
@@ -75,6 +83,7 @@ function Products() {
           <div className="mywfl-msvp">
             <span>Boxes bought for MSRP:</span> <span>1,000,000</span> <span>and counting </span>
           </div>
+          <img src={brandglow} className="mywfl-glow" alt="brandglow" />
         </div>
         <Row>
           <Col md={6}>
@@ -111,7 +120,8 @@ function Products() {
             </Col>
             <Col md={6}>
               <div className="tpas-img">
-                <img src={tpasImg} alt="Success" />
+                <img src={tpasImg} className="tpas-img-img" alt="Success" />
+                <img src={automationglow} className='tpas-glow' alt="automationglow" />
               </div>
             </Col>
           </Row>
@@ -141,9 +151,14 @@ function Products() {
             </Col>
             <Col md={6}>
               <div className="how-it-works-img">
-                <img src={prod3} alt="prod3" className='prod3'/>
-                <img src={prod2} alt="prod2" className='prod2' />
-                <img src={prod1} alt="prod1" className='prod1' />
+                <div className='position-relative z-index-1'>
+                  <img src={prod3} alt="prod3" className='prod3 prod'/>
+                  <img src={prod2} alt="prod2" className='prod2 prod' />
+                  <img src={prod1} alt="prod1" className='prod1 prod' />
+                </div>
+                
+
+                <img src={howitworksglow} className="how-it-works-glow" alt="howitworksglow" />
               </div>
             </Col>
           </Row>
@@ -265,6 +280,7 @@ function Products() {
       <div className="mbg">
         <div className="mbg-img">
           <img src={mbgimg} alt="mbg-img" />
+          <img src={powerbackglow} className="mbg-img-glow" alt="powerback" />
         </div>
         <div className="mbg-content">
           <h3 className="app-h3">100% Satisfaction <span>Guarantee.</span></h3>
