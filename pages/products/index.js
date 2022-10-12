@@ -1,7 +1,7 @@
 import Buttons from '../../components/Generals/Buttons'
 import CardGradient from '../../components/Generals/CardGradient'
 import midimg from '../../assets/imgs/products/imdimg.png'
-import topImg from '../../assets/imgs/products/topleftimg.png'
+import topImg from '../../assets/imgs/products/topleftImg.png'
 import btmImg from '../../assets/imgs/products/bottomrightimg.png'
 import {Row, Col} from 'reactstrap'
 import medal from '../../assets/imgs/products/medal.png'

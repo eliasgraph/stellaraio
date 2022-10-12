@@ -367,7 +367,7 @@ top: 20px;
 }
 
 .mbg{
-  width: 800px;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -390,4 +390,97 @@ top: 20px;
 
 .mbg-content span{
   color: #ce37db
+}
+
+
+@media only screen and (max-width: 1100px){
+  .product-page-top{
+    height: 1100px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .bfil-glow {
+    left: 15%;
+    top: 5px;
+  }
+  .tpas-img{
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .bfil-glow {
+    display: none;
+  }
+  .bfil .top-img{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  .bfil .btm-img{
+    position: relative;
+  }
+
+  .product-page-top{
+    height: 1650px;
+  }
+
+  .mywfl-glow{
+    display: none;
+  }
+
+  .medal-img, .medal-img-right {
+    max-width: 100%;
+  }
+
+  .medal-img-right {
+    margin-top: 3rem;
+  }
+  .tpas-img{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .tpas-glow{
+    display: none;
+  }
+
+  .how-it-works-img{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 13rem;
+    margin-bottom: 3rem;
+  }
+
+  .happy-customers-review{
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .p-plan-1{
+    display: none;
+  }
+
+  .product-plans-plans{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .p-plan {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    transform: scale(1.0);
+  }
+
+  .mbg{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mbg-content{
+    text-align: center;
+    margin-top: 20px;
+  }
 }
