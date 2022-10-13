@@ -104,24 +104,48 @@ top: 20px;
 .medal-img{
   max-width: 53.2rem;
   height: 617px;
+  border-radius: 20px;
+  background: #090912;
 }
 
-.medal-img img{
-  width: 100%;
-  height: inherit;
+
+.medal-img-img{
+  display: block;
+  margin: 0 auto;
 }
 
+.medal-img span{
+  color: #ce37db;
+}
+.medal-content{
+  margin-left: 7rem;
+  margin-top: 20px;
+}
 .medal-img-right{
   max-width: 53.2rem;
-  height: 660px;
+  height: 617px;
   margin-left: auto;
+  background-color: #090912;
+  border-radius: 20px;
+  padding: 49px 41px;
+  position: relative;
 }
 
-.medal-img-right img{
+.medalright-img{
+  width: 95%;
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.medalright-img-img{
   width: 100%;
-  height: inherit;
 }
 
+.medal-img-right span{
+  color: #ce37db;
+}
 
 .tpas{
   margin-bottom: 10rem;
@@ -136,6 +160,7 @@ top: 20px;
 }
 .tpas-img{
   margin-top: 5rem;
+  margin-bottom: 3rem;
   max-width: 49.4rem;
   position: relative;
 }
@@ -145,6 +170,8 @@ top: 20px;
   display: block;
   margin-left: auto;
   position: relative;
+  border-radius:10px ;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -183,12 +210,12 @@ top: 20px;
 }
 .how-it-works-img .prod2{
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 0;
 }
 .how-it-works-img .prod1{
   position: absolute;
-  top: -80px;
+  top: -40px;
   left: 0;
   border-radius: 30px;
 }
@@ -373,7 +400,7 @@ top: 20px;
   align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .mbg-img{
@@ -440,12 +467,15 @@ top: 20px;
   .tpas-img{
     max-width: 90%;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   .tpas-glow{
     display: none;
   }
-
+  .how-it-works{
+    overflow-x: hidden;
+  }
   .how-it-works-img{
     width: 90%;
     margin: 0 auto;

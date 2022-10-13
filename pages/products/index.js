@@ -4,12 +4,12 @@ import midimg from '../../assets/imgs/products/imdimg.png'
 import topImg from '../../assets/imgs/products/topleftImg.png'
 import btmImg from '../../assets/imgs/products/bottomrightimg.png'
 import {Row, Col} from 'reactstrap'
-import medal from '../../assets/imgs/products/medal.png'
-import medalright from '../../assets/imgs/products/medalright.png'
-import tpasImg from '../../assets/imgs/products/ezgif 29.png'
-import prod1 from '../../assets/imgs/products/prod1.png'
+import medal from '../../assets/imgs/products/medal (2).png'
+import medalright from '../../assets/imgs/products/medalright (2).png'
+import tpasImg from '../../assets/imgs/products/ezgif 29.gif'
+import prod1 from '../../assets/imgs/products/prodd1.gif'
 import prod2 from '../../assets/imgs/products/prod2.png'
-import prod3 from '../../assets/imgs/products/prod3.png'
+import prod3 from '../../assets/imgs/products/prodd3.gif'
 import Logo from '../../assets/imgs/products/Logo (3).png'
 import check from '../../assets/imgs/products/check.png'
 import mbgimg from '../../assets/imgs/products/mbgimg.png'
@@ -88,12 +88,32 @@ function Products() {
         <Row>
           <Col md={6}>
             <div className="medal-img">
-              <img src={medal} alt="medal" />
+              <img src={medal} alt="medal" className="medal-img-img" />
+              <div className="medal-content">
+                <h3 className="app-h2-5">Be <span>first</span> or don't bother.</h3>
+                <p>Collecting sports card is about winning. <br />
+                    It is about getting the packs you want. <br />
+                    when you want them. <br />
+                    For the lowest possible price. <br />
+                    What are you using to guarantee the win?</p>
+              </div>
+              
             </div>
           </Col>
           <Col md={6}>
             <div className="medal-img-right">
-              <img src={medalright} alt="medalright" />
+              <h3 className="app-h2-5">Move your way to the  <br /> <span>front of the line.</span></h3>
+              <p className='mt-20px'>
+              Whether you collect for fun or for business, luck isn’t a winning strategy. <br />
+              You need to be at the front of the line. <br />
+              Being forst means, you get the packs you want. <br />
+              At the lowest price. <br />
+              Everytime. <br />
+              Are you ready to be first?
+              </p>
+              <div className="medalright-img">
+                <img src={medalright} alt="medalright" className="medalright-img-img" />
+              </div>
             </div>
           </Col>
         </Row>
