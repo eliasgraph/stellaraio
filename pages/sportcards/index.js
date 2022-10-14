@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react'
 import Buttons from '../../components/Generals/Buttons'
 import CardGradient from '../../components/Generals/CardGradient'
 import midimg from '../../assets/imgs/products/imdimg.png'
@@ -31,6 +32,26 @@ import Faq from '../../components/landing/Faq'
 import Link from 'next/link'
 
 function Products() {
+  const [yTranslate, setYTranslate] = useState(7)
+  const [xRotate, setXRotate] = useState(20)
+  let bfilStyle = {
+    transform: `translateY(-${yTranslate}%)  rotateX(${xRotate}deg)`
+  }
+  useEffect(()=>{
+    window.addEventListener("scroll", addScrollEffect)
+    
+  },[])
+
+  const addScrollEffect = useCallback(async() =>{
+    const pageOffset = window.pageYOffset
+    if(pageOffset < 600){
+      let percentage = 0
+      percentage = pageOffset/600
+
+      setYTranslate(7 - (7* percentage)) 
+      setXRotate(20 - (20*percentage)) 
+    }
+  },[]) 
   return (
     <section>
       <div className="bfil">
@@ -45,11 +66,12 @@ function Products() {
           <Buttons text={"Get your cards first, always"} border={"none"} width={"63%"}/>
           <Buttons background="#161632" border={"none"} text={"Learn More"} width={"32%"} />
         </div>
-
-        <div className="bfil-imgs">
-          <img src={topImg} alt="topimg" className="top-img" />
-          <img src={midimg} alt="midimg" className='mid-img' />
-          <img src={btmImg} alt="btmimg" className="btm-img" />
+        <div className="bfil-img-container">
+          <div style={bfilStyle} className="bfil-imgs">
+            <img src={topImg} alt="topimg" className="top-img" />
+            <img src={midimg} alt="midimg" className='mid-img' />
+            <img src={btmImg} alt="btmimg" className="btm-img" />
+          </div>
         </div>
 
       </div>

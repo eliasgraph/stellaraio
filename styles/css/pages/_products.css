@@ -24,11 +24,25 @@ top: 20px;
   margin-bottom: 10rem;
   
 }
-
+.bfil-img-container{
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-transform: perspective(1000px);
+  transform: perspective(1000px);
+}
 .bfil-imgs{
   max-width: 95.6rem;
   margin: 0 auto;
   position: relative;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.bfil-imgs img{
+  vertical-align: middle;
+  display: inline-block;
+  
 }
 
 .bfil .top-img{
@@ -36,16 +50,20 @@ top: 20px;
   top:-10px;
   left: -3%;
   box-shadow: 0px 0px 35px rgba(197, 50, 246, 0.5);
+  /* opacity: 0; */
 }
 
 .bfil .mid-img{
-  width: 100%
+  width: 100%;
+  
+  
 }
 
 .bfil .btm-img{
   position: absolute;
   bottom: -15%;
   right: -10%;
+  /* opacity: 0; */
 }
 
 .mywfl{
