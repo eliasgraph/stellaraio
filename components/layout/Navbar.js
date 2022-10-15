@@ -15,7 +15,7 @@ function Header() {
   },[])
 
   return (
-    <div className='page-navbar'>
+    <div id='navbar' className='page-navbar'>
       <Navbar expand="md">
           <NavbarBrand href="/">
             <div className="d-flex align-items-center">

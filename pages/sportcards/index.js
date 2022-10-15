@@ -32,26 +32,74 @@ import Faq from '../../components/landing/Faq'
 import Link from 'next/link'
 
 function Products() {
-  const [yTranslate, setYTranslate] = useState(7)
+  const [stickyOffset,setStickyOffset] = useState(3100)
+  const [pecentage, setPercentage] = useState(0)
+  const [sticyHeight, setStickyHeight] = useState(640)
+  const [isSticky, setIsSticky] = useState(false)
+  const [stickyPadding, setStickyPadding] = useState(800)
+  const [yTranslate, setYTranslate] = useState(9)
+  const [scrolledY, setScrolledY]= useState(0)
   const [xRotate, setXRotate] = useState(20)
+  const [prod1top, setProd1top] = useState(0)
+  const [prod2top, setProd2top] = useState(0)
+  const [translateProd, setTranslateProd] = useState(100)
+  const [a, setA] = useState(10)
   let bfilStyle = {
-    transform: `translateY(-${yTranslate}%)  rotateX(${xRotate}deg)`
+    transform: `translateY(-${yTranslate}%) rotateX(${xRotate}deg)`
   }
   useEffect(()=>{
     window.addEventListener("scroll", addScrollEffect)
-    
   },[])
+
+  useEffect(()=>{
+    /* const offset = document.getElementById("hiws").getBoundingClientRect().top + document.getElementById('navbar').clientHeight
+    setStickyOffset(offset)
+    console.log(offset, 'offset') */
+    window.addEventListener("scroll", stickyEffect)
+  },[isSticky, stickyPadding, scrolledY, prod1top, stickyOffset, sticyHeight])
 
   const addScrollEffect = useCallback(async() =>{
     const pageOffset = window.pageYOffset
     if(pageOffset < 600){
-      let percentage = 0
-      percentage = pageOffset/600
-
-      setYTranslate(7 - (7* percentage)) 
-      setXRotate(20 - (20*percentage)) 
+      let percent = pageOffset/600
+      setPercentage(percent)
+      setYTranslate(9 - (9* percent)) 
+      setXRotate(20 - (20*percent)) 
     }
-  },[]) 
+  },[])
+
+  const stickyEffect = async(e)=>{
+    const isEffectReady = window.scrollY >= stickyOffset && window.scrollY <= stickyOffset+sticyHeight
+    if(isEffectReady){
+      
+      /* console.log('scroll', window.scrollY)
+      console.log('stickyoffset', stickyOffset)
+      console.log('stopsticky', stickyOffset+sticyHeight) */
+
+     /*  console.log('=============')
+      console.log(scrolledY)
+      console.log(window.scrollY)
+
+      console.log(window.scrollY > scrolledY)
+      console.log('================');
+ */
+      setIsSticky(true)
+      if(window.scrollY > scrolledY){
+        setProd1top(prod1top + 30)
+        if(prod1top >= 480){
+          setProd2top(prod2top +30)
+        }
+        setStickyHeight(sticyHeight + 30)
+        console.log(prod1top, "prod1topp")
+      }
+      console.log('stickypAfter', stickyPadding)
+      setScrolledY(window.scrollY)
+    }
+    if(window.scrollY >= stickyOffset+sticyHeight){
+      setIsSticky(false)
+    }
+    
+  }
   return (
     <section>
       <div className="bfil">
@@ -68,9 +116,9 @@ function Products() {
         </div>
         <div className="bfil-img-container">
           <div style={bfilStyle} className="bfil-imgs">
-            <img src={topImg} alt="topimg" className="top-img" />
+            <img style={{opacity: `${pecentage}`}} src={topImg} alt="topimg" className="top-img" />
             <img src={midimg} alt="midimg" className='mid-img' />
-            <img src={btmImg} alt="btmimg" className="btm-img" />
+            <img style={{opacity: `${pecentage}`}} src={btmImg} alt="btmimg" className="btm-img" />
           </div>
         </div>
 
@@ -170,44 +218,48 @@ function Products() {
         </CardGradient>
       </div>
 
-      <div className="how-it-works">
-        <CardGradient height={"64rem"}>
-          <Row>
-            <Col md={6}>
-              <div className="how-it-works-left">
-                <h2 className="app-h2 mb-30px">
-                  How it works
-                </h2>
+      <div id='hiws' style={{ position: `${isSticky ? 'sticky' : 'relative'}`}} className="how-it-works">
+          <div id='hiws-cont' className="how-it-works-container">
+            <div className="how-it-works-sticky">
+              <CardGradient style={{width: '100%'}} height={"64rem"}>
+                  <Row>
+                    <Col md={6}>
+                      <div className="how-it-works-left">
+                        <h2 className="app-h2 mb-30px">
+                          How it works
+                        </h2>
 
-                <h3>Select your <span>Product</span></h3>
-                <p className='mb-20px'>From the top re­tail­ers: Topps. Pani­ni. Tar­get.
-                  Wal­mart. Ama­zon. Best Buy. Fa­nat­ics.</p>
+                        <h3>Select your <span>Product</span></h3>
+                        <p className='mb-20px'>From the top re­tail­ers: Topps. Pani­ni. Tar­get.
+                          Wal­mart. Ama­zon. Best Buy. Fa­nat­ics.</p>
 
-                <h3>Create your <span>Task</span></h3>
-                <p className='mb-20px'>Easily create tasks with breeze from our catalog of hot card releases. We’ll monitor these store’s for you every second. </p>
+                        <h3>Create your <span>Task</span></h3>
+                        <p className='mb-20px'>Easily create tasks with breeze from our catalog of hot card releases. We’ll monitor these store’s for you every second. </p>
 
-                <h3>Watch and <span>Win</span></h3>
-                <p> Once your selected packs are released or restocked, we’ll automatically get you to the front of the line. </p>
+                        <h3>Watch and <span>Win</span></h3>
+                        <p> Once your selected packs are released or restocked, we’ll automatically get you to the front of the line. </p>
 
-              </div>
-            </Col>
-            <Col md={6}>
-              <div className="how-it-works-img">
-                <div className='position-relative z-index-1'>
-                  <img src={prod3} alt="prod3" className='prod3 prod'/>
-                  <img src={prod2} alt="prod2" className='prod2 prod' />
-                  <img src={prod1} alt="prod1" className='prod1 prod' />
-                </div>
-                
+                      </div>
+                    </Col>
+                    <Col md={6}>
+                      <div className="how-it-works-img">
+                        <div className='position-relative z-index-1 how-it-works-img-imgs'>
+                          <img id='prod3' src={prod3} alt="prod3" className='prod3 prod'/>
+                          <img id='prod2' src={prod2} style={{transform: `translateY(-${prod2top}px)` }} alt="prod2" className='prod2 prod' />
+                          <img id='prod1' style={{transform: `translateY(-${prod1top}px)` }} src={prod1} alt="prod1" className='prod1 prod' />
+                        </div>
+                        
 
-                <img src={howitworksglow} className="how-it-works-glow" alt="howitworksglow" />
-              </div>
-            </Col>
-          </Row>
-        </CardGradient>
+                        <img src={howitworksglow} className="how-it-works-glow" alt="howitworksglow" />
+                      </div>
+                    </Col>
+                  </Row>
+              </CardGradient>
+            </div>
+          </div>
       </div>
 
-      <div className="happy-customers">
+      <div className="happy-customers" style={{marginTop: `${isSticky ? '1700px' : '170px'}`}} >
         <CardGradient height={"51rem"} overflow={true} className="happy-customers-card">
           <h2 className='app-h2 text-center mt-30px'>Over <span>10,000</span> Happy Customers.</h2>
           <p className='text-center'>What are users saying?</p>
