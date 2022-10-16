@@ -86,16 +86,14 @@ function Products() {
       setIsSticky(true)
       if(window.scrollY > scrolledY){
         setProd1top(prod1top + 30)
-        if(prod1top >= 480){
+        if(prod1top >= 480 & prod2top <= 480){
           setProd2top(prod2top +30)
         }
-        setStickyHeight(sticyHeight + 30)
-        console.log(prod1top, "prod1topp")
+        /* console.log(prod1top, "prod1topp") */
       }
-      console.log('stickypAfter', stickyPadding)
       setScrolledY(window.scrollY)
     }
-    if(window.scrollY >= stickyOffset+sticyHeight){
+    if(window.scrollY >= stickyOffset+sticyHeight+20){
       setIsSticky(false)
     }
     
