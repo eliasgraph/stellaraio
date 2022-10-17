@@ -69,31 +69,20 @@ function Products() {
   },[])
 
   const stickyEffect = async(e)=>{
-    const isEffectReady = window.scrollY >= stickyOffset && window.scrollY <= stickyOffset+sticyHeight
+    const isEffectReady = window.scrollY >= stickyOffset
     if(isEffectReady){
       
-      /* console.log('scroll', window.scrollY)
-      console.log('stickyoffset', stickyOffset)
-      console.log('stopsticky', stickyOffset+sticyHeight) */
-
-     /*  console.log('=============')
-      console.log(scrolledY)
-      console.log(window.scrollY)
-
-      console.log(window.scrollY > scrolledY)
-      console.log('================');
- */
       setIsSticky(true)
       if(window.scrollY > scrolledY){
-        setProd1top(prod1top + 30)
+        setProd1top(prod1top + 35)
         if(prod1top >= 480 & prod2top <= 480){
-          setProd2top(prod2top +30)
+          setProd2top(prod2top +35)
         }
         /* console.log(prod1top, "prod1topp") */
       }
       setScrolledY(window.scrollY)
     }
-    if(window.scrollY >= stickyOffset+sticyHeight+20){
+    if(window.scrollY >= stickyOffset+sticyHeight){
       setIsSticky(false)
     }
     
@@ -215,7 +204,7 @@ function Products() {
           </Row>
         </CardGradient>
       </div>
-
+   
       <div id='hiws' style={{ position: `${isSticky ? 'sticky' : 'relative'}`}} className="how-it-works">
           <div id='hiws-cont' className="how-it-works-container">
             <div className="how-it-works-sticky">
@@ -257,7 +246,7 @@ function Products() {
           </div>
       </div>
 
-      <div className="happy-customers" style={{marginTop: `${isSticky ? '1700px' : '170px'}`}} >
+      <div className="happy-customers" style={{marginTop: `${isSticky ? '1700px' : '150px'}`}} >
         <CardGradient height={"51rem"} overflow={true} className="happy-customers-card">
           <h2 className='app-h2 text-center mt-30px'>Over <span>10,000</span> Happy Customers.</h2>
           <p className='text-center'>What are users saying?</p>
