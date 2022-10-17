@@ -73,7 +73,7 @@ function Products() {
     if(isEffectReady){
       
       setIsSticky(true)
-      if(window.scrollY > scrolledY){
+      if(window.scrollY > scrolledY && prod2top <= 480){
         setProd1top(prod1top + 35)
         if(prod1top >= 480 & prod2top <= 480){
           setProd2top(prod2top +35)
@@ -255,9 +255,9 @@ function Products() {
             <Row>
               <Col md={4}>
                 <div className="happy-customers-review happy-customers-review-1">
-                  <p>“The days of waiting and hoping you can purchase trading cards before they’re sold out are over. Stellar has automated the checkout and monitors retailers for every release, getting you the cards you want, when you want them”.</p>
+                  <p>“I was tired of paying 2-5x markup on eBay for cards and figured I’d try to use the software resellers use. Hit my first box for the retail price within two weeks of getting Stellar!!! I decided to upgrade to Lifetime based on the savings from purchasing retail cards.”</p>
 
-                  <p className='mt-30px mb-0'>Stephanie Jorge</p>
+                  <p className='mb-0'>Liam Roberts</p>
                   <div className="hcr-img">
                     <img src={discord} alt="discord" />
                   </div>
@@ -265,9 +265,9 @@ function Products() {
               </Col>
               <Col md={4}>
                 <div className="happy-customers-review happy-customers-review-2">
-                  <p>“The days of waiting and hoping you can purchase trading cards before they’re sold out are over. Stellar has automated the checkout and monitors retailers for every release, getting you the cards you want, when you want them”.</p>
+                  <p>“As a collector, this is my favorite software!! People have started to invest in alternative assets, which made resell prices skyrocket. It doesn’t get better than buying cards for MSRP! Thank you, Stellar!!”</p>
 
-                  <p className='mt-30px mb-0'>Stephanie Jorge</p>
+                  <p className='mb-0'>Harold Grace</p>
                   <div className="hcr-img">
                     <img src={twitter} alt="twitter" />
                   </div>
@@ -275,9 +275,9 @@ function Products() {
               </Col>
               <Col md={4}>
                 <div className="happy-customers-review happy-customers-review-3">
-                  <p>“The days of waiting and hoping you can purchase trading cards before they’re sold out are over. Stellar has automated the checkout and monitors retailers for every release, getting you the cards you want, when you want them”.</p>
+                  <p>“I purchased Stellar due to the various amounts of retailers they support. Dropped every other bot subscription and purchased a Lifetime license to Stellar. Best investment ever!!! Been in the scene for 4 years and never seen a better development team!”.</p>
 
-                  <p className='mt-30px mb-0'>Stephanie Jorge</p>
+                  <p className='mb-0'>Kyle Douglas</p>
                   <div className="hcr-img">
                     <img src={twitter} alt="twitter" />
                   </div>
