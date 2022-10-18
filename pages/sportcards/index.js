@@ -73,14 +73,30 @@ function Products() {
     if(isEffectReady){
       
       setIsSticky(true)
-      if(window.scrollY > scrolledY && prod2top <= 480){
-        setProd1top(prod1top + 35)
-        if(prod1top >= 480 & prod2top <= 480){
-          setProd2top(prod2top +35)
+      if(window.pageYOffset > scrolledY && window.pageYOffset <= stickyOffset+640){
+
+        let amountscrolled = 640 - (stickyOffset+640 - window.pageYOffset )
+
+        const percent = amountscrolled/640
+        const transform1 = 560 * percent 
+
+        setProd1top(transform1 * 2)
+        if((prod1top >= 480 && prod1top <= 480) || prod1top < 560){
+          setProd2top(transform1)
+          if(prod2top >=480) {
+            setProd2top(480)
+          }
+          
+        } else if(prod1top < 480 && prod2top < 480){
+          setProd2top(transform1)
         }
-        /* console.log(prod1top, "prod1topp") */
+        /* if(scrolledY > window.pageYOffset){
+          setProd2top(transform1)
+        } */
+        
       }
-      setScrolledY(window.scrollY)
+      
+      setScrolledY(window.pageYOffset)
     }
     if(window.scrollY >= stickyOffset+sticyHeight){
       setIsSticky(false)
