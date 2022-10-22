@@ -339,29 +339,45 @@ top: 20px;
   max-width: 102.9rem;
   margin: 0 auto;
   margin-top: 8rem;
-  
+  gap: 3rem
 }
 
 .p-plan{
   height: 570px;
-  width: 25%;
+  width: 33.3%;
   padding-top: 5.4rem;
   position: relative;
+  border-radius: 20px;
+}
+
+.p-plan::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px; 
+  padding: 2px;
+  overflow: hidden;
+  background:linear-gradient(to right,#8516ac,rgba(177, 83, 235, 0.74) 22.02%,rgba(65, 25, 189, 0.5832) 33.97%, rgba(38, 2, 61, 8.25) 100% ); 
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
 }
 
 .p-plan-logo{
   margin-bottom: 4.2rem;
 }
 
-.p-plan-1{
+/* .p-plan-1{
   padding-left: 4.2rem;
   background-image: linear-gradient(to bottom, #06060B 0%, #050509 100%);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-}
+} */
 
 .p-plan-2,.p-plan-3,.p-plan-4{
-  text-align: center;
+  
   background-image: linear-gradient(to bottom, #090913 0%, #0D0D1C 39.15%, #111124 100%);
 }
 
@@ -380,22 +396,26 @@ top: 20px;
   font-weight: 700;
   color: #fff;
 }
-
-.p-plan-check{
-  width: max-content;
+.p-plan-content{
+  width: 70%;
   margin: 0 auto;
+}
+.p-plan-check{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
   height: 24px;
+  font-size: 1.6rem;
 }
 
 .p-plan button{
-  background-color: #650AC5;
+  background-color: #fff;
   border-radius: 4px;
   width: 159px;
   height: 40px;
   border: none;
   outline: none;
-  color: #fff;
   font-size: 14px;
   font-weight: 500;
   margin-top: 4rem;
@@ -403,8 +423,8 @@ top: 20px;
 
 .p-plan-active{
   background-image: linear-gradient(to bottom, #C432F6 0%, #650AC5 100%);
-  border-radius: 20px;
-  transform: scaleY(1.1);
+  /* border-radius: 20px; */
+  /* transform: scaleY(1.1); */
 }
 
 .p-plan-active button{
@@ -413,15 +433,17 @@ top: 20px;
 }
 
 .product-plans p:last-of-type{
-  font-weight: 600;
+  
   font-size: 24px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
-
+.p-plan-top span{
+  font-weight: 600;
+}
 .p-plan-badge{
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0px;
+  left: 6rem;
   border-radius: 14px;
   padding: 5px 15px;
   font-size: 14px;
@@ -429,12 +451,12 @@ top: 20px;
 
 .p-plan-3 .p-plan-badge{
   background: #EF7C29;
+  top: -6px;
 }
 
 .p-plan-4 .p-plan-badge{
   background: #0EA02E;
 }
-
 .mbg{
   max-width: 800px;
   display: flex;
@@ -442,7 +464,7 @@ top: 20px;
   align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
-  margin-top: 7rem;
+  margin-top: 9rem;
 }
 
 .mbg-img{
@@ -452,6 +474,13 @@ top: 20px;
   position: absolute;
   top: -35%;
   left: -150px;
+  width: 500px;
+}
+.mbg-img-glow2{
+  position: absolute;
+  top: -10%;
+  left: -35px;
+  width: 500px;
 }
 .mbg-content{
   width: 383px;
@@ -503,7 +532,7 @@ top: 20px;
     max-width: 100%;
   }
 
-  .medal-img-right {
+  .medal-img {
     margin-top: 3rem;
   }
   .tpas-img{
@@ -528,11 +557,9 @@ top: 20px;
   .happy-customers-review{
     max-width: 100%;
     margin-bottom: 3rem;
+    height: 27rem;
   }
 
-  .p-plan-1{
-    display: none;
-  }
 
   .product-plans-plans{
     flex-direction: column;
@@ -549,6 +576,7 @@ top: 20px;
   .mbg{
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
 
   .mbg-content{

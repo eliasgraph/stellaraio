@@ -13,7 +13,7 @@ import prod2 from '../../assets/imgs/products/prod2.png'
 import prod3 from '../../assets/imgs/products/prodd3.gif'
 import Logo from '../../assets/imgs/products/Logo (3).png'
 import check from '../../assets/imgs/products/check.png'
-import mbgimg from '../../assets/imgs/products/mbgimg.png'
+import mbgimg from '../../assets/imgs/products/mbgimg1.png'
 import twitter from '../../assets/imgs/products/twitter.png'
 import discord from '../../assets/imgs/products/discord.png'
 import nba from '../../assets/imgs/products/nba.png'
@@ -78,16 +78,16 @@ function Products() {
         let amountscrolled = 640 - (stickyOffset+640 - window.pageYOffset )
 
         const percent = amountscrolled/640
-        const transform1 = 560 * percent 
+        const transform1 = 630 * percent 
 
         setProd1top(transform1 * 2)
-        if((prod1top >= 480 && prod1top <= 480) || prod1top < 560){
+        if(prod1top > 760){
+          setProd1top(760)
+        }
+        if((prod1top >= 480) ){
           setProd2top(transform1)
-          if(prod2top >=480) {
-            setProd2top(480)
-          }
           
-        } else if(prod1top < 480 && prod2top < 480){
+        } else if( prod1top < 480){
           setProd2top(transform1)
         }
         /* if(scrolledY > window.pageYOffset){
@@ -159,21 +159,7 @@ function Products() {
           <img src={brandglow} className="mywfl-glow" alt="brandglow" />
         </div>
         <Row>
-          <Col md={6}>
-            <div className="medal-img">
-              <img src={medal} alt="medal" className="medal-img-img" />
-              <div className="medal-content">
-                <h3 className="app-h2-5">Be <span>first</span> or don't bother.</h3>
-                <p>Collecting sports card is about winning. <br />
-                    It is about getting the packs you want. <br />
-                    when you want them. <br />
-                    For the lowest possible price. <br />
-                    What are you using to guarantee the win?</p>
-              </div>
-              
-            </div>
-          </Col>
-          <Col md={6}>
+        <Col md={6}>
             <div className="medal-img-right">
               <h3 className="app-h2-5">Move your way to the  <br /> <span>front of the line.</span></h3>
               <p className='mt-20px'>
@@ -189,6 +175,22 @@ function Products() {
               </div>
             </div>
           </Col>
+
+          <Col md={6}>
+            <div className="medal-img">
+              <img src={medal} alt="medal" className="medal-img-img" />
+              <div className="medal-content">
+                <h3 className="app-h2-5">Be <span>first</span> or don't bother.</h3>
+                <p>Collecting sports card is about winning. <br />
+                    It is about getting the packs you want. <br />
+                    when you want them. <br />
+                    For the lowest possible price. <br />
+                    What are you using to guarantee the win?</p>
+              </div>
+              
+            </div>
+          </Col>
+          
         </Row>
       </div>
 
@@ -308,64 +310,65 @@ function Products() {
         <h2 className="app-h2 text-center">Never <span>pay resale</span> on Cards or Collectibles <br /> ever again.</h2>
 
         <div className="product-plans-plans d-flex">
-          <div className="p-plan p-plan-1">
-            <div className="p-plan-logo">
-             <img src={Logo} alt="logo" />
-            </div>
-            <p className='mb-20px'>Retail Software</p>
-            <p className='mb-20px'>Retail Sites</p>
-            <p className='mb-20px'>Sneakers Sites</p>
-            <p className='mb-20px'>Unlimted Tasks</p>
-            <p>Expiration Date</p>
-          </div>
+          
           <div className="p-plan p-plan-2">
-            <div className="p-plan-top">
-              <h3 className="app-h3 mb-20px">Quarterly</h3>
-              <p><span>149</span>/yr</p>
+            <div className="p-plan-content">
+              <div className="p-plan-top">
+                <h3 className="app-h3 mb-20px">Quarterly</h3>
+                <p className='d-flex align-items-center gap-2'><span>149</span>per year</p>
+              </div>
+
+              <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Retail Sites<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Sneakers Sites<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Unlimited Tasks<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>3 Months<img src={check} alt="check" /></div>
+
+              
+
+              <button>Choose Plan</button>
             </div>
-
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-
-            <p>3 Months</p>
-
-            <button>Choose Plan</button>
+            
 
           </div>
           <div className="p-plan p-plan-3 p-plan-active">
             <div className="p-plan-badge">Most Popular</div>
-            <div className="p-plan-top">
-              <h3 className="app-h3 mb-20px">Quarterly</h3>
-              <p><span>149</span>/yr</p>
+            <div className="p-plan-content">
+              <div className="p-plan-top">
+                <h3 className="app-h3 ">Premium</h3>
+                <p className='d-flex align-items-center gap-2'><span>499</span> per year</p>
+              </div>
+
+              <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Retail Sites<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Sneakers Sites<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Unlimited Tasks<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>6 Months<img src={check} alt="check" /></div>
+
+            
+
+              <button>Choose Plan</button>
+
             </div>
-
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-
-            <p>3 Months</p>
-
-            <button>Choose Plan</button>
 
           </div>
           <div className="p-plan p-plan-4">
           <div className="p-plan-badge">Best Value</div>
-            <div className="p-plan-top">
-              <h3 className="app-h3 mb-20px">Quarterly</h3>
-              <p><span>149</span>/yr</p>
+            <div className="p-plan-content">
+              <div className="p-plan-top">
+                <h3 className="app-h3 mb-20px">Starter</h3>
+                <p className='d-flex align-items-center gap-2'><span>999</span>per year</p>
+              </div>
+
+              <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
+                <div className='p-plan-check'>Retail Sites<img src={check} alt="check" /></div>
+                <div className='p-plan-check'>Sneakers Sites<img src={check} alt="check" /></div>
+                <div className='p-plan-check'>Unlimited Tasks<img src={check} alt="check" /></div>
+                <div className='p-plan-check'>Unlimited<img src={check} alt="check" /></div>
+
+
+              <button>Choose Plan</button>
             </div>
-
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-            <div className='p-plan-check'><img src={check} alt="check" /></div>
-
-            <p>3 Months</p>
-
-            <button>Choose Plan</button>
 
           </div>
           
@@ -376,8 +379,9 @@ function Products() {
 
       <div className="mbg">
         <div className="mbg-img">
-          <img src={mbgimg} alt="mbg-img" />
+          <img style={{width: '31.7rem'}} src={mbgimg} alt="mbg-img" />
           <img src={powerbackglow} className="mbg-img-glow" alt="powerback" />
+          <img src={powerbackglow} className="mbg-img-glow2" alt="powerback" />
         </div>
         <div className="mbg-content">
           <h3 className="app-h3">100% Satisfaction <span>Guarantee.</span></h3>
