@@ -114,7 +114,7 @@ function Products() {
           Stellar makes buying trading cards easy with automated checkout software <br /> that gets you the cards you want before anyone else.
         </p>
         <div className="bfil-actions d-flex justify-content-between">
-          <Buttons text={"Get your cards first, always"} border={"none"} width={"63%"}/>
+          <Buttons text={"Get your cards for MSRP"} border={"none"} width={"63%"}/>
           <Buttons background="#161632" border={"none"} text={"Learn More"} width={"32%"} />
         </div>
         <div className="bfil-img-container">
@@ -199,7 +199,7 @@ function Products() {
           <Row>
             <Col md={6}>
               <div className="tpas-left">
-                <h2 className='app-h2 mb-20px'>The <span>power</span> of an <span>automated Software.</span></h2>
+                <h2 className='app-h2 mb-20px'>The <span>power</span> of <span>automated Software.</span></h2>
                 <p>
                 Stellar is your ace in the hole. <br />
                 You’re closer. <br />
@@ -311,7 +311,7 @@ function Products() {
 
         <div className="product-plans-plans d-flex">
           
-          <div className="p-plan p-plan-2">
+          <a href='https://account.stellaraio.com/stellaraio?checkout=true&directPlanIdplan_fzdpIxLQSRBQL' target={'_blank'} rel="noreferrer" className="p-plan p-plan-2 d-block">
             <div className="p-plan-content">
               <div className="p-plan-top">
                 <h3 className="app-h3 mb-20px">Quarterly</h3>
@@ -330,8 +330,8 @@ function Products() {
             </div>
             
 
-          </div>
-          <div className="p-plan p-plan-3 p-plan-active">
+          </a>
+          <a href='https://account.stellaraio.com/stellaraio?checkout=true&directPlanId=plan_Y22l5R4VK1aBQ' target={'_blank'} rel="noreferrer" className="p-plan p-plan-3 p-plan-active d-block">
             <div className="p-plan-badge">Most Popular</div>
             <div className="p-plan-content">
               <div className="p-plan-top">
@@ -351,8 +351,8 @@ function Products() {
 
             </div>
 
-          </div>
-          <div className="p-plan p-plan-4">
+          </a>
+          <a href='https://account.stellaraio.com/stellaraio?checkout=true&directPlanId=plan_3KO63fE24depc' target={'_blank'} rel="noreferrer" className="p-plan p-plan-4 d-block">
           <div className="p-plan-badge">Best Value</div>
             <div className="p-plan-content">
               <div className="p-plan-top">
@@ -370,7 +370,7 @@ function Products() {
               <button>Choose Plan</button>
             </div>
 
-          </div>
+          </a>
           
         </div>
 

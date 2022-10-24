@@ -348,6 +348,12 @@ top: 20px;
   padding-top: 5.4rem;
   position: relative;
   border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.p-plan:hover{
+  color: #fff;
 }
 
 .p-plan::before{
