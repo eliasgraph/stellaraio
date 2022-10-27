@@ -102,19 +102,7 @@ function AddToWaitlist() {
                 <input type="hidden" name="v" value="2" />
                 <input type="hidden" name="or" value="0734ba72b8be9f78c85dd4bfb81da87f" />
                 <div className="_form-content">
-                  {/* <div class="_form_element _x16931030 _full_width " >
-                    <label for="email" class="_form-label">
-                      Email*
-                    </label>
-                    <div class="_field-wrapper">
-                      <input type="text" id="email" name="email" placeholder="Type your email" required/>
-                    </div>
-                  </div> */}
-                  {/* <div class="_button-wrapper _full_width">
-                    <button id="_form_1_submit" className="_submit" type="submit">
-                      Submit
-                    </button>
-                  </div> */}
+            
                   <div className="enter-email-div d-flex align-items-start">
                   <div className="enter-email-wrapper me-4">
                     <input type="email" id='email' name='email' onChange={(e)=>{ setEmail(e.target.value)}} placeholder='Enter your Email' className={`text-center form-control ${emailError ? 'is-invalid': ''}`}/>
@@ -207,7 +195,7 @@ function AddToWaitlist() {
               <Buttons text={"Be First in Line"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
               <img className='skip-glowring' src={glowringsm} alt="" />
             </div> */}
-            <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" class="_form _form_9 _inline-form  _dark" novalidate>
+            <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" className="_form _form_9 _inline-form  _dark" novalidate>
             <input type="hidden" name="u" value="9" />
             <input type="hidden" name="f" value="9" />
             <input type="hidden" name="s" />
