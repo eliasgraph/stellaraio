@@ -25,6 +25,6 @@ fbq('track', 'PageView');`}}></Script>
 }
 
 Meta.defaultProps = {
-  title: "Stellar AIO - Best Sneaker and Retail Bot | Shoe Bot | Automation CHeck Software"
+  title: "Stellar AIO - Best Sneaker and Retail Bot | Shoe Bot | Automation Checkout Software"
 }
 export default Meta
