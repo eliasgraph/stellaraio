@@ -1,12 +1,17 @@
+import {useState, useEffect} from 'react'
 import Header from "./Navbar"
 import Footer from "./Footer"
 import {Container} from 'reactstrap'
 import Meta from './Meta'
 function Layout({children}) {
+  const [path, setPath] = useState('')
+  useEffect(()=>{
+    setPath(window.location.pathname)
+  },[])
   return (
     <>
       <Meta/>
-      {<div className="product-page-top"></div>}
+      {path === '/sportcards' && <div className="product-page-top"></div>}
       <Header/>
       <Container>
         {children}

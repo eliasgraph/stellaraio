@@ -92,7 +92,7 @@ function AddToWaitlist() {
             <p className='text-center'>Stellar handles the checkout process for you, ensuring you get the <br /> products you want before anyone else.</p>
             
                 
-                <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" className="_form _form_9 _inline-form  _dark" novalidate>
+                <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" className="_form _form_9 _inline-form  _dark" noValidate>
                 <input type="hidden" name="u" value="9" />
                 <input type="hidden" name="f" value="9" />
                 <input type="hidden" name="s" />
@@ -195,7 +195,7 @@ function AddToWaitlist() {
               <Buttons text={"Be First in Line"} className="d-block mx-auto" border={"none"} width={"17.7rem"} zIndex={1}/>
               <img className='skip-glowring' src={glowringsm} alt="" />
             </div> */}
-            <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" className="_form _form_9 _inline-form  _dark" novalidate>
+            <form onSubmit={sendEmail} method="POST" action="https://stellarautomation.activehosted.com/proc.php" id="form_9" className="_form _form_9 _inline-form  _dark" noValidate>
             <input type="hidden" name="u" value="9" />
             <input type="hidden" name="f" value="9" />
             <input type="hidden" name="s" />
