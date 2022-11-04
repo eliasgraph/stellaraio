@@ -22,7 +22,6 @@ function BlogCardLg({blog}) {
           <div className="blog-card-glow-half">
             <img src={glowhalf} alt="" />
           </div>
-          
         </div>
       </div>
       
