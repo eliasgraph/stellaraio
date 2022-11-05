@@ -183,11 +183,11 @@ function Blog() {
                 </div>
               </div>
               {topPosts ? <Posts posts={topPosts} /> : <div className='d-flex justify-content-center'>
-                <Spinner color='primary'
+                <Spinner 
                   style={{
                     height: '3rem',
                     width: '3rem',
-
+                    color: '#c32ef5'
                   }}
                   >
                   Loading...
