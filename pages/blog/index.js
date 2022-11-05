@@ -31,7 +31,7 @@ function Blog() {
 
   
   const [topPostLoading, setTopPostLoading] = useState(false)
-  const [topPosts, setTopPosts] = useState([])
+  const [topPosts, setTopPosts] = useState(null)
   
   const router = useRouter()
   /* const [page, setPage] = useState(1) */
@@ -182,14 +182,17 @@ function Blog() {
                   <img src={glowmd} alt="" />
                 </div>
               </div>
-              {topPosts ? <Posts posts={topPosts} /> : <Spinner color="primary" 
-              style={{
-                height: '6rem',
-                width: '6rem'
-              }}
-              >
-              Loading...
-            </Spinner> }
+              {topPosts ? <Posts posts={topPosts} /> : <div className='d-flex justify-content-center'>
+                <Spinner color='primary'
+                  style={{
+                    height: '3rem',
+                    width: '3rem',
+
+                  }}
+                  >
+                  Loading...
+                </Spinner> 
+            </div> }
               
             </div>
             <div className="blog-socials">

@@ -124,7 +124,7 @@ function BlogDetail({oneBlog}) {
               {oneBlog.acf.title_1 && <h2 className="blog-detail-subtitle mb-20px">{oneBlog.acf.title_1}</h2>}
               {oneBlog.acf.sub_title_1 && <h3 className="blog-detail-subtitle-sub mb-20px">{oneBlog.acf.sub_title_1}</h3>}
               {oneBlog.acf.description_1 && <p className="mb-30px blog-detail-description" dangerouslySetInnerHTML={{ __html: oneBlog.acf.description_1 }}></p>}
-              {oneBlog.acf.twitter_id_1.length && <div className="mb-30px">
+              {oneBlog.acf.twitter_id_1 && <div className="mb-30px">
                {<TwitterTweetEmbed
                   tweetId={oneBlog.acf.twitter_id_1}
                 /> }

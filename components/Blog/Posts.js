@@ -6,7 +6,7 @@ function Posts({posts}) {
   }
   return (
     <>
-      {posts.length && posts.map((post, key)=>(
+      {posts && posts.map((post, key)=>(
         <div role={'button'} onClick={()=>{pushToBlogDetail(post)}} key={key} className="side-posts mb-20px">
         <h6>{post.title.rendered}</h6>
         <p className='mb-0'>Author: {post.acf.publisher}</p>
