@@ -293,6 +293,11 @@
 
 @media only screen and (max-width: 767px) {
   .blog-right-sidebar{
-    padding-left: 0;
+    padding-left: 0 !important;
+    margin-top: 3rem !important;
+  }
+
+  .blog-top-post-glow{
+    display: none;
   }
 }
