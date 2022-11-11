@@ -341,7 +341,7 @@ export const getStaticProps = async (context) =>{
   let oneBlog = null
 
   try{
-    const query = `per_page=1000&_fields=id,title,content,acf`
+    const query = `per_page=100&_fields=id,title,content,acf`
     const res = await BlogService.searchOneBlog(slug, query)
     const data = res.data.filter(blog => blog.acf.url === slug)
     oneBlog = data[0]
