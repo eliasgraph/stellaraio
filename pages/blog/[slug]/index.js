@@ -324,7 +324,7 @@ function BlogDetail({oneBlog}) {
 export default BlogDetail
 
 export const getStaticPaths = async () =>{
-  const query = `per_page=1000&_fields=id,title,content,acf`
+  const query = `per_page=100&_fields=id,title,content,acf`
   const res = await BlogService.getBlogs(query)
   const result = res.data
   const paths = result.map(data => ({params: {slug: data.acf.url.toString()}}))
