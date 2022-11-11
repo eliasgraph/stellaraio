@@ -324,7 +324,7 @@ function BlogDetail({oneBlog}) {
 export default BlogDetail
 
 export const getStaticPaths = async () =>{
-  const query = `_fields=id,title,content,acf`
+  const query = `per_page=1000&_fields=id,title,content,acf`
   const res = await BlogService.getBlogs(query)
   const result = res.data
   const paths = result.map(data => ({params: {slug: data.acf.url.toString()}}))
@@ -341,7 +341,7 @@ export const getStaticProps = async (context) =>{
   let oneBlog = null
 
   try{
-    const query = `_fields=id,title,content,acf`
+    const query = `per_page=1000&_fields=id,title,content,acf`
     const res = await BlogService.searchOneBlog(slug, query)
     const data = res.data.filter(blog => blog.acf.url === slug)
     oneBlog = data[0]
