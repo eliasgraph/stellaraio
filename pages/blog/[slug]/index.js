@@ -70,7 +70,7 @@ function BlogDetail({oneBlog}) {
     router.push('/add-to-waitlist')
   }
   const goBack = () => {
-    router.push('/blog')
+    router.back()
   }
   const twitterShare = () => {
     window.open(`https://twitter.com/share?url=${window.location.href}&text=${oneBlog.title.rendered}`, '_blank')
