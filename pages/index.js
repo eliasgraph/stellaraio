@@ -60,6 +60,7 @@ import img5 from '../assets/imgs/landingpage/img5.jpeg'
 import glowringsm from '../assets/imgs/Path 6.png'
 
 import Faq from '../components/landing/Faq'
+import Software from '../components/landing/Software'
 
 function Home() {
   
@@ -207,33 +208,7 @@ function Home() {
         </CardGradient>
       </section>
 
-      <section className="software">
-        <div className="head-info">
-          <h2 className='text-center'>No more missed Opportunities.</h2>
-          <p className='text-center'>Packed with advanced features</p>
-        </div>
-        <Row>
-          <Col sm={12} md={4}>
-            <div className="userfriendly">
-              <img src={cone} alt="cone" className="cone" />
-              <img width={"100%"} src={userfriendly} className="software-img" alt="userfriendly" />
-            </div>
-          </Col>
-          <Col sm={12} md={4}>
-            <div className="analytic">
-              <img src={torus} alt="torus" className="torus" />
-              <img width={"100%"} src={analytic} className="software-img" alt="analytic" />
-            </div>
-
-          </Col>
-          <Col sm={12} md={4}>
-            <div style={{height: ""}} className="support">
-              <img src={spherespring} alt="spherespring" className='spherespring'/>
-              <img width={"100%"} height={"475px"} src={support} className="software-img" alt="support" />
-            </div>
-          </Col>
-        </Row>
-      </section>
+      <Software showHeadings={true} showConeIcon={true} showTorusIcon={true} showSphereIcon={true} />
 
       <section id='features' className="c-a-d">
         <div className="head-info">
