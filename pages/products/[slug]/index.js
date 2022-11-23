@@ -28,6 +28,7 @@ import FaqCard from '../../../components/landing/FaqCard'
 import ProductPlans from '../../../components/PageComponents/ProductPlans'
 
 import ProductService from '../../../services/ProductService'
+import { useRouter } from 'next/router'
 
 function index({product}) {
   const faq = {
@@ -42,6 +43,8 @@ function index({product}) {
     faq_question_5: product.acf.faq_question_5 || '',
     faq_answer_5: product.acf.faq_answer_5 || '',
   }
+
+  const router = useRouter()
 
   return (
     <>
