@@ -118,9 +118,9 @@ function index({product}) {
               <div className="stellar-love-right">
                 <div className="stellar-love-right-img">
                   <img src={DashboardHalf} className="stellar-love-dashalf" alt="" />
-                  <img src={Bolt} className="stellar-love-right-img-sub stellar-love-right-img-sub-1" alt="" />
-                  <img src={Msg} className="stellar-love-right-img-sub stellar-love-right-img-sub-2" alt="" />
-                  <img src={Life} className="stellar-love-right-img-sub stellar-love-right-img-sub-3" alt="" />
+                  {/* <img src={Bolt} className="stellar-love-right-img-sub stellar-love-right-img-sub-1" alt="" /> */}
+                  {/* <img src={Msg} className="stellar-love-right-img-sub stellar-love-right-img-sub-2" alt="" /> */}
+                  {/* <img src={Life} className="stellar-love-right-img-sub stellar-love-right-img-sub-3" alt="" /> */}
                 </div>
               </div>
             </Col>
