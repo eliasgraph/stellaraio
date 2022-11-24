@@ -36,9 +36,9 @@ function index({product}) {
   const [section1_text, setSection1_text] = useState(product.acf.section1_text || '')
   const handleShowMore = ()=>{
     if(showMore){
-      setSection1_text(product.acf.section1_text)
-    } else{
       setSection1_text(product.acf.section1_text.substring(0, 180) + '...')
+    } else{
+      setSection1_text(product.acf.section1_text)
     }
     setShowMore(!showMore)
   }

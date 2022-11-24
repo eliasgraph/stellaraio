@@ -17,10 +17,13 @@
 }
 .target__right--img{
   box-shadow: 0px 0px 15px 15px rgba(196, 50, 246, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .target__right--img img{
   width: 100%;
+  
 }
 
 .read-more-btn{
