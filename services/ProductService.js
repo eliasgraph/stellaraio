@@ -2,7 +2,7 @@ import Api from "./Api";
 
 const ProductService = {
   getAllProducts(query){
-    return Api().get(`/'products?${query}`)
+    return Api().get(`/products?${query}`)
   },
   getProductPageDetails(slug, query){
     

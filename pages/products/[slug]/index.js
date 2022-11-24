@@ -28,9 +28,9 @@ import FaqCard from '../../../components/landing/FaqCard'
 import ProductPlans from '../../../components/PageComponents/ProductPlans'
 
 import ProductService from '../../../services/ProductService'
-import { useRouter } from 'next/router'
 
 function index({product}) {
+  
   const faq = {
     faq_question_1: product.acf.faq_question_1 || '',
     faq_answer_1: product.acf.faq_answer_1 || '',
@@ -44,10 +44,8 @@ function index({product}) {
     faq_answer_5: product.acf.faq_answer_5 || '',
   }
 
-  const router = useRouter()
-
   return (
-    <>
+    product ? <>
       <section className="target-bot">
         <Row>
           <Col sm={12} md={6}>
@@ -116,7 +114,7 @@ function index({product}) {
             <Buttons text={"Buy Now"} border={"none"} width={"31.7rem"}/>
           </div>
         </div>
-      </section>
+      </section> 
 
       <section className="sup-the-box">
         <div className="sup-the-box-card">
@@ -156,7 +154,7 @@ function index({product}) {
             <img src={Phone} alt="" />
           </div>
         </div>
-      </section>
+      </section> 
 
       <section className="c-hap-cus">
         <h2 className="app-h2 text-center mb-20px">Our <span>Happy</span> Customers</h2>
@@ -167,28 +165,28 @@ function index({product}) {
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={product.section5_profile_img_1} alt="" />
+                <img src={product.acf.section5_profile_img_1} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">{product.section5_profile_name_1}</h6>
-                <p className="mb-0">{product.section5_location_1}</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_1}</h6>
+                <p className="mb-0">{product.acf.section5_location_1}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>{product.section5_header_1}</h5>
+              <h5>{product.acf.section5_header_1}</h5>
               <div className="c-hap-cus-rating">
-              { Array(parseInt(section5_rating_1)).fill(0).map((_, i) => {
+              { Array(parseInt(product.acf.section5_rating_1)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarYellow} alt="" />
+                      <img key={i} src={StarYellow} alt="" />
                     )
                   })
               
               }
               
-              { Array(parseInt(5-section5_rating_1)).fill(0).map((_, i) => {
+              { Array(parseInt(5-product.acf.section5_rating_1)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarWhite} alt="" />
+                      <img key={i} src={StarWhite} alt="" />
                     )
                   })
                 }
@@ -196,7 +194,7 @@ function index({product}) {
 
               </div>
               <p>
-                {product.section5_text_1}
+                {product.acf.section5_text_1}
 
               </p>
             </div>
@@ -206,28 +204,28 @@ function index({product}) {
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={product.section5_profile_img_2} alt="" />
+                <img src={product.acf.section5_profile_img_2} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">{product.section5_profile_name_2}</h6>
-                <p className="mb-0">{product.section5_location_2}</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_2}</h6>
+                <p className="mb-0">{product.acf.section5_location_2}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>{product.section5_header_2}</h5>
+              <h5>{product.acf.section5_header_2}</h5>
               <div className="c-hap-cus-rating">
-              { Array(parseInt(section5_rating_2)).fill(0).map((_, i) => {
+              { Array(parseInt(product.acf.section5_rating_2)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarYellow} alt="" />
+                      <img key={i} src={StarYellow} alt="" />
                     )
                   })
               
               }
               
-              { Array(parseInt(5-section5_rating_2)).fill(0).map((_, i) => {
+              { Array(parseInt(5-product.acf.section5_rating_2)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarWhite} alt="" />
+                      <img key={i} src={StarWhite} alt="" />
                     )
                   })
                 }
@@ -235,7 +233,7 @@ function index({product}) {
 
               </div>
               <p>
-                {product.section5_text_2}
+                {product.acf.section5_text_2}
 
               </p>
             </div>
@@ -244,28 +242,28 @@ function index({product}) {
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={product.section5_profile_img_3} alt="" />
+                <img src={product.acf.section5_profile_img_3} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">{product.section5_profile_name_3}</h6>
-                <p className="mb-0">{product.section5_location_3}</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_3}</h6>
+                <p className="mb-0">{product.acf.section5_location_3}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>{product.section5_header_3}</h5>
+              <h5>{product.acf.section5_header_3}</h5>
               <div className="c-hap-cus-rating">
-              { Array(parseInt(section5_rating_3)).fill(0).map((_, i) => {
+              { Array(parseInt(product.acf.section5_rating_3)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarYellow} alt="" />
+                      <img key={i} src={StarYellow} alt="" />
                     )
                   })
               
               }
               
-              { Array(parseInt(5-section5_rating_3)).fill(0).map((_, i) => {
+              { Array(parseInt(5-product.acf.section5_rating_3)).fill(0).map((_, i) => {
                     return (
-                      <img src={StarWhite} alt="" />
+                      <img key={i} src={StarWhite} alt="" />
                     )
                   })
                 }
@@ -273,50 +271,25 @@ function index({product}) {
 
               </div>
               <p>
-                {product.section5_text_3}
+                {product.acf.section5_text_3}
 
               </p>
             </div>
           </div>
 
           
-          {/* <div className="c-hap-cus-item">
-
-            <div className="c-hap-cus-top">
-              <div className="c-hap-cus-avi">
-                <img src={Mikky} alt="" />
-              </div>
-              <div className="c-hap-cus-profile">
-                <h6 className="mb-0">Mikky lo2us</h6>
-                <p className="mb-0">USA</p>
-              </div>
-            </div>
-
-            <div className="c-hap-cus-detail">
-              <h5>Always up to date</h5>
-              <div className="c-hap-cus-rating">
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarWhite} alt="" />
-              </div>
-              <p>
-                Stellar allowed me to get a barbie collectible for my daughter and some special edition Funko’s for my personal collection! I couldn’t be more happier with Stellar. Thank you to the tremendous development team that allowed me to bring smiles to our family! 
-
-
-              </p>
-            </div>
-          </div> */}
+          
         </div>
       </section>
+
+
       <section className="cardproduct-plan" >
         <ProductPlans/>
       </section>
       <section className={"cardfaq"} >
         <FaqCard faq={faq}/>
       </section>
-    </>
+    </>: <></>
   )
 } 
 
