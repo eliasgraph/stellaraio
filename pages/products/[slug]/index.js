@@ -32,6 +32,16 @@ import ProductService from '../../../services/ProductService'
 function index({product}) {
   
   const [faq, setFaq] = useState({})
+  const [showMore, setShowMore] = useState(false)
+  const [section1_text, setSection1_text] = useState(product.acf.section1_text || '')
+  const handleShowMore = ()=>{
+    if(showMore){
+      setSection1_text(product.acf.section1_text)
+    } else{
+      setSection1_text(product.acf.section1_text.substring(0, 180) + '...')
+    }
+    setShowMore(!showMore)
+  }
   
   useEffect(()=>{
     const faqCompute = {}
@@ -59,9 +69,9 @@ function index({product}) {
               <h1 className="app-h1 mb-20px">{product.acf.section1_h1}</h1>
               <Buttons text={"Buy Now"} border={"none"} width={"17.7rem"}/>
 
-              <p>{product.acf.section1_text}</p>
+              <p>{section1_text}</p>
 
-              <div className="read-more-btn d-flex align-items-center gap-3">Read More <img src={UpIcon} alt="" /> </div>
+              <div onClick={handleShowMore} className="read-more-btn d-flex align-items-center gap-3">{showMore ? 'Show Less' : 'Show More'}  <img src={UpIcon} alt="" /> </div>
             </div>
           </Col>
           <Col sm={12} md={6}>
@@ -78,7 +88,7 @@ function index({product}) {
 
       <section className="stellar-love">
         <div className="stellar-love-card">
-          <h2 className="app-h2 text-center">Why people love <span>Stellar's Target Bot</span></h2>
+          <h2 dangerouslySetInnerHTML={{__html: product.acf.section3_h1}} className="app-h2 text-center"></h2>
 
           <Row>
             <Col md={6}>
@@ -171,37 +181,28 @@ function index({product}) {
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={product.acf.section5_profile_img_1} alt="" />
+                <img src={Mike} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">{product.acf.section5_profile_name_1}</h6>
-                <p className="mb-0">{product.acf.section5_location_1}</p>
+                <h6 className="mb-0">Mike Bulk</h6>
+                <p className="mb-0">USA</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>{product.acf.section5_header_1}</h5>
+              <h5>Superman Bot</h5>
               <div className="c-hap-cus-rating">
-              { Array(parseInt(product.acf.section5_rating_1)).fill(0).map((_, i) => {
-                    return (
-                      <img key={i} src={StarYellow} alt="" />
-                    )
-                  })
               
-              }
-              
-              { Array(parseInt(5-product.acf.section5_rating_1)).fill(0).map((_, i) => {
-                    return (
-                      <img key={i} src={StarWhite} alt="" />
-                    )
-                  })
-                }
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarWhite} alt="" />
               
 
               </div>
               <p>
-                {product.acf.section5_text_1}
-
+              Most other bots can only run 100-200 tasks before crashing. Stellar AIO is  the only bot I’ve used that can support  thousands of tasks without lag.
               </p>
             </div>
           </div>
@@ -210,41 +211,60 @@ function index({product}) {
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={product.acf.section5_profile_img_2} alt="" />
+                <img src={Kinsley} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">{product.acf.section5_profile_name_2}</h6>
-                <p className="mb-0">{product.acf.section5_location_2}</p>
+                <h6 className="mb-0">Kinsley Barkley</h6>
+                <p className="mb-0">United Kingdom</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>{product.acf.section5_header_2}</h5>
+              <h5>Pocket Friendly</h5>
               <div className="c-hap-cus-rating">
-              { Array(parseInt(product.acf.section5_rating_2)).fill(0).map((_, i) => {
-                    return (
-                      <img key={i} src={StarYellow} alt="" />
-                    )
-                  })
-              
-              }
-              
-              { Array(parseInt(5-product.acf.section5_rating_2)).fill(0).map((_, i) => {
-                    return (
-                      <img key={i} src={StarWhite} alt="" />
-                    )
-                  })
-                }
-              
-
+  
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarWhite} alt="" />
+    
               </div>
               <p>
-                {product.acf.section5_text_2}
-
+              I paid off the cost of Stellar after one successful drop. I got 10 NFL Panini Mega boxes that resold for 4x and paid for the entire year of using Stellar!
               </p>
             </div>
           </div>
           <div className="c-hap-cus-item">
+
+            <div className="c-hap-cus-top">
+              <div className="c-hap-cus-avi">
+                <img src={Mikky} alt="" />
+              </div>
+              <div className="c-hap-cus-profile">
+                <h6 className="mb-0">Mikky lo2us</h6>
+                <p className="mb-0">USA</p>
+              </div>
+            </div>
+
+            <div className="c-hap-cus-detail">
+              <h5>Always up to date</h5>
+              <div className="c-hap-cus-rating">
+              
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarYellow} alt="" />
+                <img src={StarWhite} alt="" />
+     
+              </div>
+              <p>
+              Stellar allowed me to get a barbie collectible for my daughter and some special edition Funko’s for my personal collection! I couldn’t be more happier with Stellar. Thank you to the tremendous development team that allowed me to bring smiles to our family! 
+
+              </p>
+            </div>
+          </div>
+          {/* <div className="c-hap-cus-item">
 
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
@@ -281,7 +301,7 @@ function index({product}) {
 
               </p>
             </div>
-          </div>
+          </div> */}
 
           
           
