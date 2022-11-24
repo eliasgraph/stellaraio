@@ -8,6 +8,7 @@ function FaqCard({faq}) {
   const [isOpenFaq3, setIsOpenFaq3] = useState(false)
   const [isOpenFaq4, setIsOpenFaq4] = useState(false)
   const [isOpenFaq5, setIsOpenFaq5] = useState(false)
+  /* console.log(faq); */
   return (
     <>
       {
@@ -19,7 +20,7 @@ function FaqCard({faq}) {
           <div className="faq__faqs">
             <h3>Frequently Asked Questions.</h3>
 
-            {faq.faq_question_1.length ? <div className="faq__faqs--item">
+            {faq.faq_question_1 ? <div className="faq__faqs--item">
               <h6
                 className='d-flex align-items-center justify-content-between'
                 onClick={()=>{setIsOpenFaq1(!isOpenFaq1)}}
@@ -38,7 +39,7 @@ function FaqCard({faq}) {
               </Collapse>
             </div> : <></>}
 
-            {faq.faq_question_2.length ? <div className="faq__faqs--item">
+            {faq.faq_question_2 ? <div className="faq__faqs--item">
               <h6
                 className='d-flex align-items-center justify-content-between'
                 onClick={()=>{setIsOpenFaq2(!isOpenFaq2)}}
@@ -57,7 +58,7 @@ function FaqCard({faq}) {
               </Collapse>
             </div>: <></>}
 
-            {faq.faq_question_3.length ? <div className="faq__faqs--item">
+            {faq.faq_question_3 ? <div className="faq__faqs--item">
               <h6
                 className='d-flex align-items-center justify-content-between'
                 onClick={()=>{setIsOpenFaq3(!isOpenFaq3)}}
@@ -76,7 +77,7 @@ function FaqCard({faq}) {
               </Collapse>
             </div>: <></>}
 
-            {faq.faq_question_4.length ? <div className="faq__faqs--item">
+            {faq.faq_question_4 ? <div className="faq__faqs--item">
               <h6
                 className='d-flex align-items-center justify-content-between'
                 onClick={()=>{setIsOpenFaq4(!isOpenFaq4)}}
@@ -95,7 +96,7 @@ function FaqCard({faq}) {
               </Collapse>
             </div>: <></>}
 
-            {faq.faq_question_5.length ? <div className="faq__faqs--item">
+            {faq.faq_question_5 ? <div className="faq__faqs--item">
               <h6
                 className='d-flex align-items-center justify-content-between'
                 onClick={()=>{setIsOpenFaq5(!isOpenFaq5)}}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import {Row, Col} from 'reactstrap'
 import Buttons from '../../../components/Generals/Buttons'
 import UpIcon from '../../../assets/imgs/icon/readmore.png'
@@ -31,18 +31,24 @@ import ProductService from '../../../services/ProductService'
 
 function index({product}) {
   
-  const faq = {
-    faq_question_1: product.acf.faq_question_1 || '',
-    faq_answer_1: product.acf.faq_answer_1 || '',
-    faq_question_2: product.acf.faq_question_2 || '',
-    faq_answer_2: product.acf.faq_answer_2 || '',
-    faq_question_3: product.acf.faq_question_3 || '',
-    faq_answer_3: product.acf.faq_answer_3 || '',
-    faq_question_4: product.acf.faq_question_4 || '',
-    faq_answer_4: product.acf.faq_answer_4 || '',
-    faq_question_5: product.acf.faq_question_5 || '',
-    faq_answer_5: product.acf.faq_answer_5 || '',
-  }
+  const [faq, setFaq] = useState({})
+  
+  useEffect(()=>{
+    const faqCompute = {}
+    const {acf} = product
+
+    Object.keys(acf).forEach((item, index)=>{
+      if(item.startsWith('faq')){
+        faqCompute[item] = Object.values(acf)[index]
+        setFaq(faqCompute)
+        
+      }
+      
+    })
+  },[])
+  
+
+  
 
   return (
     product ? <>
