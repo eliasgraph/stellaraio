@@ -13,7 +13,7 @@ function ProductPlans({msrp=false}) {
             <div className="p-plan-content">
               <div className="p-plan-top">
                 <h3 className="app-h3 mb-20px">Quarterly</h3>
-                <p className='d-flex align-items-center gap-2'><span>149</span>per year</p>
+                <p className='d-flex align-items-center gap-2'><span>$149</span>per Quarter</p>
               </div>
 
               <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
@@ -34,14 +34,14 @@ function ProductPlans({msrp=false}) {
             <div className="p-plan-content">
               <div className="p-plan-top">
                 <h3 className="app-h3 ">Premium</h3>
-                <p className='d-flex align-items-center gap-2'><span>499</span> per year</p>
+                <p className='d-flex align-items-center gap-2'><span>$499</span> per 12 months</p>
               </div>
 
               <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
               <div className='p-plan-check'>Retail Sites<img src={check} alt="check" /></div>
               <div className='p-plan-check'>Sneakers Sites<img src={check} alt="check" /></div>
               <div className='p-plan-check'>Unlimited Tasks<img src={check} alt="check" /></div>
-              <div className='p-plan-check'>6 Months<img src={check} alt="check" /></div>
+              <div className='p-plan-check'>Annually<img src={check} alt="check" /></div>
 
             
 
@@ -55,14 +55,14 @@ function ProductPlans({msrp=false}) {
             <div className="p-plan-content">
               <div className="p-plan-top">
                 <h3 className="app-h3 mb-20px">Starter</h3>
-                <p className='d-flex align-items-center gap-2'><span>999</span>per year</p>
+                <p className='d-flex align-items-center gap-2'><span>$999</span>per year</p>
               </div>
 
               <div className='p-plan-check'>Retail Software<img src={check} alt="check" /></div>
                 <div className='p-plan-check'>Retail Sites<img src={check} alt="check" /></div>
                 <div className='p-plan-check'>Sneakers Sites<img src={check} alt="check" /></div>
                 <div className='p-plan-check'>Unlimited Tasks<img src={check} alt="check" /></div>
-                <div className='p-plan-check'>Unlimited<img src={check} alt="check" /></div>
+                <div className='p-plan-check'>Lifetime<img src={check} alt="check" /></div>
 
 
               <button>Choose Plan</button>

@@ -17,7 +17,7 @@
 }
 .target__right--img{
   box-shadow: 0px 0px 15px 15px rgba(196, 50, 246, 0.1);
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .sup-the-box-brands{
-  width: 300px;
+  max-width: 300px;
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
@@ -147,12 +147,13 @@
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
   padding-right: 3.3rem;
-  width: max-content;
+  max-width: max-content;
   margin-left: auto;
   margin-top: 3rem;
   font-size: 1.6rem;
   font-weight: 500;
   position: relative;
+  word-wrap: break-word;
 }
 
 .sup-the-box-join::before{
@@ -194,6 +195,7 @@
   display: flex;
   gap: 3rem;
   align-items: stretch;
+  
 }
 
 .c-hap-cus-item{
@@ -274,4 +276,30 @@ font-weight: 600;
 
 .cardfaq{
   margin : 10rem 0;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .target-bot{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .target__left {
+    margin-bottom: 50px;
+
+  }
+
+  .stellar-love-card{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .c-hap-cus-div{
+    flex-direction: column;
+  }
+
+  .c-hap-cus-item{
+    max-width: 100%;
+  }
 }
