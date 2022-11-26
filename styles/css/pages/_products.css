@@ -278,7 +278,24 @@ font-weight: 600;
   margin : 10rem 0;
 }
 
+@media only screen and (max-width: 991px) {
+  .sup-the-box-card{
+    padding-right: 6rem;
+    padding-bottom: 5rem;
+  }
 
+  .sup-the-box-img{
+    position: relative;
+    top: -133px;
+  }
+  .sup-the-box-join{
+    width: 90%;
+  }
+
+  .sup-the-box-content{
+    transform: translateY(-40px);
+  }
+}
 
 @media only screen and (max-width: 767px) {
   .target-bot{
@@ -302,4 +319,7 @@ font-weight: 600;
   .c-hap-cus-item{
     max-width: 100%;
   }
+
+  
+
 }

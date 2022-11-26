@@ -77,9 +77,7 @@ function BlogDetail({oneBlog}) {
   }
   return (
     <>
-      <Head>
-        <title>{oneBlog.title.rendered}</title>
-      </Head>
+      <Meta title={oneBlog.title.rendered}/>
       <div className="share-blog-sticky">
         <div onClick={twitterShare} className="share-blog-item share-blog-twitter">
           <Twittersm />

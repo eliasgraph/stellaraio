@@ -61,7 +61,8 @@ function index({product}) {
   
 
   return (
-    product ? <>
+    <>
+      <Meta title={product.acf.title_tag}/>
       <section className="target-bot">
         <Row>
           <Col sm={12} md={6}>
@@ -134,6 +135,9 @@ function index({product}) {
 
       <section className="sup-the-box">
         <div className="sup-the-box-card">
+        <div className="sup-the-box-img">
+            <img src={Phone} alt="" />
+          </div>
           <div className="sup-the-box-content">
             <h3 className="text-right">Support the Big <br /> Box Retailer.</h3>
             <div className="sup-the-box-brands">
@@ -165,9 +169,6 @@ function index({product}) {
             <div className="sup-the-box-join">
               Join over 10,000 customers worldwide getting the products they want
             </div>
-          </div>
-          <div className="sup-the-box-img">
-            <img src={Phone} alt="" />
           </div>
         </div>
       </section> 
@@ -315,7 +316,7 @@ function index({product}) {
       <section className={"cardfaq"} >
         <FaqCard faq={faq}/>
       </section>
-    </>: <></>
+    </>
   )
 } 
 
