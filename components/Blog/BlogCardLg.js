@@ -2,7 +2,7 @@ import React from 'react'
 import glowhalf from '../../assets/imgs/blog/Path 5 (1).png'
 import {useRouter} from 'next/router'
 
-function BlogCardLg({blog}) {
+function BlogCardLg({blog, landing}) {
   const router = useRouter()
   const pushToBlogDetail =()=>{
     router.push(`/blog/${blog.acf.url}`)
@@ -11,11 +11,11 @@ function BlogCardLg({blog}) {
     <>
     
       <div onClick={()=>pushToBlogDetail()} role={'button'} className="blog-card-lg">
-        <div className="blog-card-lg-img">
+        <div className={`blog-card-lg-img ${landing ? 'blog-card-lg-img-landing' : ''}`}>
           {blog && <img src={blog.acf.blog_img} alt="" />}
           
         </div>
-        <div className="blog-card-lg-content">
+        <div className={`blog-card-lg-content ${landing ? 'blog-card-lg-content-landing' : ''}`}>
           {blog && <h1 dangerouslySetInnerHTML={{__html: blog.title.rendered}} ></h1>}
           
           <p  className="app-color-primary">Author: Stellar AIO</p>

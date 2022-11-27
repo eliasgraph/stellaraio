@@ -58,9 +58,16 @@ import img3 from '../assets/imgs/landingpage/img3.jpeg'
 import img4 from '../assets/imgs/landingpage/img4.jpeg'
 import img5 from '../assets/imgs/landingpage/img5.jpeg'
 import glowringsm from '../assets/imgs/Path 6.png'
+import RightArrow from '../assets/imgs/icon/right-purple-arrow.png'
 
 import Faq from '../components/landing/Faq'
 import Software from '../components/landing/Software'
+import glowsmhalf from '../assets/imgs/blog/Path 6.png'
+import glowhalf from '../assets/imgs/blog/Path 5 (1).png'
+import BlogCardLg from '../components/Blog/BlogCardLg'
+
+import BlogService from '../services/BlogService'
+import BlogCardSm from '../components/Blog/BlogCardSm'
 
 function Home() {
   
@@ -69,6 +76,9 @@ function Home() {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
   const [emailLoding, setEmailLoading] = useState(false)
+  const [firstBlog, setFirstBlog] = useState([])
+  const [blogArr, setBlogArr] = useState([])
+  const [errors, setErrors] = useState(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -79,6 +89,11 @@ function Home() {
 
     }
   }, [seeSite]);
+
+  useEffect(()=>{
+    getBlogs()
+  },[])
+
   const reviews = [
     {
       review: "Stellar for me has been the most worth it bot that i use for retail and it’s my go to bot , I got it over a year ago now and it’s paid off for me 100 fold , it’s easy to use and user friendly.",
@@ -144,6 +159,33 @@ function Home() {
   }
   
 
+  const getBlogs = async () =>{
+    setFirstBlog([
+      await getOneBlog('amazon-buy-bot'),
+    ])
+    setBlogArr([
+      await getOneBlog('best-buy-bot'),
+      await getOneBlog('amazon-purchase-bot'),
+      await getOneBlog('playstation-bot'),
+      await getOneBlog('playstation-bot'), 
+    ])
+  }
+  const getOneBlog = async (slug) =>{
+    const query = `_fields=id,title,content,acf`
+    try {
+      const res = await BlogService.searchOneBlog(slug, query)
+      const data = res.data.filter(blog => blog.acf.url === slug)
+      return data[0]
+    } catch (e) {
+      console.log(e)
+      setErrors(e)
+      return null
+    }
+  }
+
+  const pushToBlogDetail =()=>{
+    router.push(`/blog/${blog.acf.url}`)
+  }
   
   const pushJoinWaitlist = ()=>{
     
@@ -309,6 +351,47 @@ function Home() {
               </Col>
             </Row>
           </CardGradient>
+      </section>
+
+      <section className="landing_blog">
+        <div className="landing_blog-top">
+          <span>BLOG</span>
+          <h2 className="app-h2 mb-0">Tips and Insight</h2>
+          <span role={'button'} onClick={()=>{router.push('/blog')}} className="d-flex align-items-center gap-3 landing_blog--seemore mb-20px">See all <img src={RightArrow} alt="" /> </span>
+        </div>
+
+        <Row>
+          <Col md={6}>
+            {/* <div onClick={()=>pushToBlogDetail()} role={'button'} className="blog-card-lg">
+              <div className="blog-card-lg-img">
+                {blog && <img src={blog.acf.blog_img} alt="" />}
+                
+              </div>
+              <div className="blog-card-lg-content">
+                {blog && <h1 dangerouslySetInnerHTML={{__html: blog.title.rendered}} ></h1>}
+                
+                <p  className="app-color-primary">Author: Stellar AIO</p>
+                <div className="blog-card-glow-half">
+                  <img src={glowhalf} alt="" />
+                </div>
+              </div>
+            </div> */}
+            <div className="landing_blog_lg">
+              {firstBlog[0] && <BlogCardLg landing={true} blog={firstBlog[0]} />}
+              
+            </div>
+          </Col>
+
+          <Col md={6}>
+            <Row>
+              {blogArr.map((blog, i)=>(
+                <Col key={i} md={6}>
+                  {blog&& <BlogCardSm landing={true} blog={blog}/>}
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
       </section>
 
       <section className="home-users">

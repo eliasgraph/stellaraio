@@ -163,6 +163,20 @@
 /* .support-actions{
   width: max-content;
 } */
+
+.landing_blog{
+  margin-top: 10rem;
+}
+
+.landing_blog span{
+  color: #C432F6;
+  font-size: 16px;
+  font-weight: 400;
+}
+.landing_blog--seemore{
+  width: max-content;
+  margin-left: auto;
+}
 .home-users{
   margin-top: 12.2rem;
   margin-bottom: 10rem;
