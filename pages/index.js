@@ -167,7 +167,7 @@ function Home() {
       await getOneBlog('best-buy-bot'),
       await getOneBlog('amazon-purchase-bot'),
       await getOneBlog('playstation-bot'),
-      await getOneBlog('playstation-bot'), 
+      await getOneBlog('walmart-bot'), 
     ])
   }
   const getOneBlog = async (slug) =>{
