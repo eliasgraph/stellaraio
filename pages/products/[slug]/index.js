@@ -28,7 +28,7 @@ import FaqCard from '../../../components/landing/FaqCard'
 import ProductPlans from '../../../components/PageComponents/ProductPlans'
 
 import ProductService from '../../../services/ProductService'
-
+import Meta from '../../../components/layout/Meta'
 function index({product}) {
   
   const [faq, setFaq] = useState({})
