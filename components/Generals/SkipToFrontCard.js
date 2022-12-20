@@ -40,7 +40,7 @@ function SkipToFrontCard({ h2, p, onSubmit }) {
   };
   return (
     <>
-      <CardGradient height={"32.7rem"}>
+      <CardGradient overflow={"hidden"} height={"32.7rem"}>
         <div className="skip-to-front-div px-3">
           {h2 && <h2 className="app-h2 text-center mb-20px"> {h2}</h2>}
           {p && <p className="text-center mb-30px">{p}</p>}

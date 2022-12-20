@@ -23,7 +23,7 @@ function index() {
   return (
     <>
       <section className="site-hero">
-        <CardGradient className={"site-hero-card"}>
+        <CardGradient overflow={"hidden"} className={"site-hero-card"}>
           <Row>
             <Col md={6}>
               <div className="site-hero-left">
@@ -65,7 +65,7 @@ function index() {
       </section>
 
       <section className="unparralled">
-        <CardGradient className={"unparralled-card"}>
+        <CardGradient overflow={"hidden"} className={"unparralled-card"}>
           <h2 className="app-h2 text-center mb-50px">
             Our Unparraled Site List
           </h2>
@@ -111,13 +111,13 @@ function index() {
         <Software />
       </section>
       <section className="site-user-say">
-        <CardGradient>
+        <CardGradient overflow={"hidden"}>
           <div className="site-user-say-div">
             <h2 className="app-h2 text-center mb-30px">
               What our users are saying?
             </h2>
             <div className="site-carousel d-flex justify-content-center gap-4 align-items-center">
-              <img src={ArrowLeft} alt="" />
+              <img src={ArrowLeft} alt="" className="site-arrow" />
               <div className="site-carousel-content">
                 <div className="site-carousel-item">
                   <div className="site-carousel-img">
@@ -159,7 +159,7 @@ function index() {
                   </p>
                 </div>
               </div>
-              <img src={ArrowRight} alt="" />
+              <img src={ArrowRight} alt="" className="site-arrow" />
             </div>
           </div>
         </CardGradient>
