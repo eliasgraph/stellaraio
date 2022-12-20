@@ -12,7 +12,7 @@ import ArrowLeft from "../../assets/imgs/Arrowleft.png";
 import ArrowRight from "../../assets/imgs/Arrowright.png";
 import Rowey from "../../assets/imgs/sites/rowey.png";
 import Lolan from "../../assets/imgs/sites/lolan.png";
-import Nonal from "../../assets/imgs/sites/Nonal.png";
+import Nonal from "../../assets/imgs/sites/nonal.png";
 import Glowsm from "../../assets/imgs/Path 6.png";
 
 function index() {
