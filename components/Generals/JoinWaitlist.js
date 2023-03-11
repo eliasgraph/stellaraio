@@ -3,6 +3,7 @@ import CardGradient from "./CardGradient";
 import Buttons from "./Buttons";
 import glowringsm from "../../assets/imgs/Path 6.png";
 import { useRouter } from "next/router";
+import { isEmail } from "../../helpers/validations";
 
 function JoinWaitlist({ height = "32.7rem" }) {
   const [email, setEmail] = useState("");
