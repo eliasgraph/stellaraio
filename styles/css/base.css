@@ -1,6 +1,6 @@
-:root{
+:root {
   --app-bg-color: #080812;
-  --app-text-secondary: #DBDCEC;
+  --app-text-secondary: #dbdcec;
   --color-purple-2: #c32ef5;
 }
 
@@ -10,10 +10,9 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  transition: all .2s ease-out !important;
+  transition: all 0.2s ease-out !important;
   scroll-behavior: smooth;
 }
-
 
 html {
   width: 100% !important;
@@ -21,7 +20,6 @@ html {
   box-sizing: border-box;
   overflow-x: hidden !important;
 }
-
 
 body {
   width: 100% !important;
@@ -37,14 +35,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px){
-  .app{
+@media only screen and (max-width: 767px) {
+  .app {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .navbar{
+  .navbar {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 }
-
