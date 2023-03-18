@@ -68,17 +68,17 @@ function index({ product }) {
           <Col sm={12} md={6}>
             <div className="target__left">
               <h1 className="app-h1 mb-20px">{product.acf.section1_h1}</h1>
-              <Buttons text={"Buy Now"} border={"none"} width={"17.7rem"} />
-
-              <p>{section1_text}</p>
+              <p>{product.acf.section1_text_excerpt}</p>
+              {showMore && <p>{product.acf.section1_text}</p>}
 
               <div
                 onClick={handleShowMore}
-                className="read-more-btn d-flex align-items-center gap-3"
+                className="read-more-btn d-flex align-items-center gap-3 mb-30px"
               >
                 {showMore ? "Show Less" : "Show More"}{" "}
                 <img src={UpIcon} alt="" />{" "}
               </div>
+              <Buttons text={"Buy Now"} border={"none"} width={"17.7rem"} />
             </div>
           </Col>
           <Col sm={12} md={6}>
