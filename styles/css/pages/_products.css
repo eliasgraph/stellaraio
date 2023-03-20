@@ -1,125 +1,138 @@
-.target-bot{
+.target-bot {
   padding-top: 13.6rem;
   padding-left: 8.5rem;
   padding-right: 8.5rem;
   padding-bottom: 4rem;
   margin-bottom: 8rem;
-  background-image: linear-gradient(to bottom, #080812 0%, #080812 28.14%, #050505 57.27%, #000 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #080812 0%,
+    #080812 28.14%,
+    #050505 57.27%,
+    #000 100%
+  );
   transform: translateY(-12px);
 }
 
-.target__left{
+.target__left {
   width: 90%;
 }
 
-.target__left p{
+.target__left p {
   margin-top: 3.8rem;
 }
-.target__right--img{
+.target__right--img {
   box-shadow: 0px 0px 15px 15px rgba(196, 50, 246, 0.1);
   border-radius: 24px;
   overflow: hidden;
 }
 
-.target__right--img img{
+.target__right--img img {
   width: 100%;
-  
 }
 
-.read-more-btn{
+.read-more-btn {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #CE37DB;
+  color: #ce37db;
   cursor: pointer;
   margin-top: 20px;
 }
 
-
-.stellar-love{
+.stellar-love {
   margin-top: 10rem;
 }
 
-.stellar-love span{
-  color: #CE37DB;
+.stellar-love span {
+  color: #ce37db;
 }
 
-.stellar-love-card h2{
+.stellar-love-card h2 {
   margin-bottom: 5.6rem;
 }
 
-.stellar-love-left{
+.stellar-love-left {
   width: 90%;
 }
 
-.stellar-love-items{
+.stellar-love-items {
   margin-bottom: 3rem;
 }
 
-.stellar-love-items h3{
+.stellar-love-items h3 {
   font-size: 3.2rem;
-
 }
 
-.stellar-love-card{
+.stellar-love-card {
   border-radius: 20px;
-  background-image: linear-gradient(to bottom, #080810 0%, #0A0A12 39.15%, #111125 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #080810 0%,
+    #0a0a12 39.15%,
+    #111125 100%
+  );
   padding-left: 8.4rem;
   padding-top: 7.9rem;
-  padding-bottom: 7.7rem; 
+  padding-bottom: 7.7rem;
 }
 
 .stellar-love-right-img {
   position: relative;
 }
 
-.stellar-love-right-img .stellar-love-dashalf{
+.stellar-love-right-img .stellar-love-dashalf {
   width: 100%;
 }
 
-.stellar-love-right-img-sub{
+.stellar-love-right-img-sub {
   position: absolute;
   width: 150px;
 }
 
-.stellar-love-right-img-sub-1{
+.stellar-love-right-img-sub-1 {
   top: 18px;
   left: 0px;
 }
-.stellar-love-right-img-sub-2{
+.stellar-love-right-img-sub-2 {
   top: 38%;
   left: 0px;
 }
-.stellar-love-right-img-sub-3{
+.stellar-love-right-img-sub-3 {
   top: 70%;
   left: 0px;
 }
 
-.buy-now-btn{
+.buy-now-btn {
   width: max-content;
   margin: 0 auto;
   margin-top: 5rem;
 }
 
-.sup-the-box{
+.sup-the-box {
   margin-top: 20rem;
 }
 
-.sup-the-box-card{
+.sup-the-box-card {
   border-radius: 20px;
-  background-image: linear-gradient(to bottom, #080810 0%, #0A0A12 39.15%, #111125 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #080810 0%,
+    #0a0a12 39.15%,
+    #111125 100%
+  );
   padding-top: 6.6rem;
   padding-right: 12rem;
   padding-bottom: 10rem;
   position: relative;
 }
 
-.sup-the-box-content h3{
+.sup-the-box-content h3 {
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 5rem;
 }
 
-.sup-the-box-brands{
+.sup-the-box-brands {
   max-width: 300px;
   margin-left: auto;
   display: flex;
@@ -134,13 +147,12 @@
   align-items: center;
 }
 
-
-.sup-the-box-brand-img p{
+.sup-the-box-brand-img p {
   font-size: 14px;
   font-weight: 400;
 }
 
-.sup-the-box-join{
+.sup-the-box-join {
   background-color: #050505;
   border-radius: 7px;
   padding-left: 7rem;
@@ -156,170 +168,173 @@
   word-wrap: break-word;
 }
 
-.sup-the-box-join::before{
+.sup-the-box-join::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 2px;
   overflow: hidden;
-  background:linear-gradient(to right,#8516ac,rgba(177, 83, 235, 0.74) 22.02%,rgba(65, 25, 189, 0.5832) 33.97%, rgba(38, 2, 61, 8.25) 100% ); 
-  -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
+  background: linear-gradient(
+    to right,
+    #8516ac,
+    rgba(177, 83, 235, 0.74) 22.02%,
+    rgba(65, 25, 189, 0.5832) 33.97%,
+    rgba(38, 2, 61, 8.25) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
 
-.sup-the-box-img{
+.sup-the-box-img {
   position: absolute;
   top: -93px;
   left: 90px;
+  z-index: 1;
 }
 
-.c-hap-cus{
+.c-hap-cus {
   margin-top: 10rem;
 }
 
-.c-hap-cus span{
-  color: #CE37DB;
+.c-hap-cus span {
+  color: #ce37db;
 }
 
-.c-hap-cus h4{
+.c-hap-cus h4 {
   font-size: 2.4rem;
   font-weight: 600;
 }
 
-.c-hap-cus-div{
+.c-hap-cus-div {
   margin-top: 5rem;
   display: flex;
+  justify-content: space-between;
   gap: 3rem;
   align-items: stretch;
-  
 }
 
-.c-hap-cus-item{
+.c-hap-cus-item {
   max-width: 37rem;
   position: relative;
   padding: 27px 24px 21px;
 }
 
-.c-hap-cus-item::before{
+.c-hap-cus-item::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 18px; 
+  border-radius: 18px;
   padding: 2px;
   overflow: hidden;
-  background:linear-gradient(to right,#8516ac,rgba(177, 83, 235, 0.74) 22.02%,rgba(65, 25, 189, 0.5832) 33.97%, rgba(38, 2, 61, 8.25) 100% ); 
-  -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
+  background: linear-gradient(
+    to right,
+    #8516ac,
+    rgba(177, 83, 235, 0.74) 22.02%,
+    rgba(65, 25, 189, 0.5832) 33.97%,
+    rgba(38, 2, 61, 8.25) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
 
-.c-hap-cus-top{
+.c-hap-cus-top {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.c-hap-cus-avi{
+.c-hap-cus-avi {
   width: 77px;
   height: 77px;
   border-radius: 100%;
-  border: 2px solid #CE37DB;
+  border: 2px solid #ce37db;
   overflow: hidden;
 }
 
-.c-hap-cus-avi img{
+.c-hap-cus-avi img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-.c-hap-cus-profile h6{
-font-size: 16px;
-font-weight: 600;
+.c-hap-cus-profile h6 {
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.c-hap-cus-profile p{
+.c-hap-cus-profile p {
   font-size: 12px;
   font-weight: 400;
-  color: #88899E;
+  color: #88899e;
 }
 
 .c-hap-cus-detail {
   margin-top: 3rem;
 }
 
-.c-hap-cus-detail h5{
+.c-hap-cus-detail h5 {
   font-size: 2.4rem;
   font-weight: 500;
 }
 
-.c-hap-cus-detail p{
+.c-hap-cus-detail p {
   font-size: 14px;
   font-weight: medium;
-  color: #DBDCEC;
+  color: #dbdcec;
 }
 
-.c-hap-cus-rating{
+.c-hap-cus-rating {
   display: flex;
   gap: 5px;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
 
-
-.cardfaq{
-  margin : 10rem 0;
+.cardfaq {
+  margin: 10rem 0;
 }
 
 @media only screen and (max-width: 991px) {
-  .sup-the-box-card{
+  .sup-the-box-card {
     padding-right: 6rem;
     padding-bottom: 5rem;
   }
 
-  .sup-the-box-img{
+  .sup-the-box-img {
     position: relative;
     top: -133px;
   }
-  .sup-the-box-join{
+  .sup-the-box-join {
     width: 90%;
   }
 
-  .sup-the-box-content{
+  .sup-the-box-content {
     transform: translateY(-40px);
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .target-bot{
+  .target-bot {
     padding-left: 40px;
     padding-right: 40px;
   }
   .target__left {
     margin-bottom: 50px;
-
   }
 
-  .stellar-love-card{
+  .stellar-love-card {
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  .c-hap-cus-div{
+  .c-hap-cus-div {
     flex-direction: column;
   }
 
-  .c-hap-cus-item{
+  .c-hap-cus-item {
     max-width: 100%;
   }
-
-  
-
 }

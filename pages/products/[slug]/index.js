@@ -69,7 +69,13 @@ function index({ product }) {
             <div className="target__left">
               <h1 className="app-h1 mb-20px">{product.acf.section1_h1}</h1>
               <p>{product.acf.section1_text_excerpt}</p>
-              {showMore && <p>{product.acf.section1_text}</p>}
+              {showMore && (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: product.acf.section1_text,
+                  }}
+                ></p>
+              )}
 
               <div
                 onClick={handleShowMore}
@@ -126,6 +132,23 @@ function index({ product }) {
                     }}
                   ></h3>
                   <p>{product.acf.section3_text_3}</p>
+                </div>
+                <div className="stellar-love-items">
+                  <h3
+                    dangerouslySetInnerHTML={{
+                      __html: product.acf.section3_h2_4,
+                    }}
+                  ></h3>
+                  <p>{product.acf.section3_text_4}</p>
+                </div>
+
+                <div className="stellar-love-items">
+                  <h3
+                    dangerouslySetInnerHTML={{
+                      __html: product.acf.section3_h2_5,
+                    }}
+                  ></h3>
+                  <p>{product.acf.section3_text_5}</p>
                 </div>
               </div>
             </Col>
@@ -224,85 +247,86 @@ function index({ product }) {
           <div className="c-hap-cus-item">
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={Mike} alt="" />
+                <img src={product.acf.section5_profile_img_1} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">Mike Bulk</h6>
-                <p className="mb-0">USA</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_1}</h6>
+                <p className="mb-0">{product.acf.section5_location_1}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>Superman Bot</h5>
+              <h5>{product.acf.section5_header_1}</h5>
               <div className="c-hap-cus-rating">
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarWhite} alt="" />
+                {Array(parseInt(5))
+                  .fill()
+                  .map((_, i) => {
+                    if (i + 1 <= parseInt(product.acf.section5_rating_1)) {
+                      return <img key={i} src={StarYellow} alt="" />;
+                    } else {
+                      return <img key={i} src={StarWhite} alt="" />;
+                    }
+                  })}
               </div>
-              <p>
-                Most other bots can only run 100-200 tasks before crashing.
-                Stellar AIO is the only bot I’ve used that can support thousands
-                of tasks without lag.
-              </p>
+
+              <p>{product.acf.section5_text_1.substring(0, 280)}</p>
             </div>
           </div>
 
           <div className="c-hap-cus-item">
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={Kinsley} alt="" />
+                <img src={product.acf.section5_profile_img_2} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">Kinsley Barkley</h6>
-                <p className="mb-0">United Kingdom</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_2}</h6>
+                <p className="mb-0">{product.acf.section5_location_2}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
-              <h5>Pocket Friendly</h5>
+              <h5>{product.acf.section5_header_2}</h5>
               <div className="c-hap-cus-rating">
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarWhite} alt="" />
+                {Array(parseInt(5))
+                  .fill(0)
+                  .map((_, i) => {
+                    if (i + 1 <= product.acf.section5_rating_2) {
+                      return <img key={i} src={StarYellow} alt="" />;
+                    } else {
+                      return <img key={i} src={StarWhite} alt="" />;
+                    }
+                  })}
               </div>
-              <p>
-                I paid off the cost of Stellar after one successful drop. I got
-                10 NFL Panini Mega boxes that resold for 4x and paid for the
-                entire year of using Stellar!
-              </p>
+
+              <p>{product.acf.section5_text_2.substring(0, 280)}</p>
             </div>
           </div>
           <div className="c-hap-cus-item">
             <div className="c-hap-cus-top">
               <div className="c-hap-cus-avi">
-                <img src={Mikky} alt="" />
+                <img src={product.acf.section5_profile_img_3} alt="" />
               </div>
               <div className="c-hap-cus-profile">
-                <h6 className="mb-0">Mikky lo2us</h6>
-                <p className="mb-0">USA</p>
+                <h6 className="mb-0">{product.acf.section5_profile_name_3}</h6>
+                <p className="mb-0">{product.acf.section5_location_3}</p>
               </div>
             </div>
 
             <div className="c-hap-cus-detail">
               <h5>Always up to date</h5>
               <div className="c-hap-cus-rating">
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarYellow} alt="" />
-                <img src={StarWhite} alt="" />
+                {Array(parseInt(5))
+                  .fill(0)
+                  .map((_, i) => {
+                    if (i + 1 <= product.acf.section5_rating_3) {
+                      return <img key={i} src={StarYellow} alt="" />;
+                    } else {
+                      return <img key={i} src={StarWhite} alt="" />;
+                    }
+                  })}
               </div>
-              <p>
-                Stellar allowed me to get a barbie collectible for my daughter
-                and some special edition Funko’s for my personal collection! I
-                couldn’t be more happier with Stellar. Thank you to the
-                tremendous development team that allowed me to bring smiles to
-                our family!
-              </p>
+
+              <p>{product.acf.section5_text_3.substring(0, 280)}</p>
             </div>
           </div>
           {/* <div className="c-hap-cus-item">
@@ -347,7 +371,7 @@ function index({ product }) {
       </section>
 
       <section className="cardproduct-plan">
-        <ProductPlans />
+        <ProductPlans header={product.acf.section6_header} />
       </section>
       <section className={"cardfaq"}>
         <FaqCard faq={faq} />
