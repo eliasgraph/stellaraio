@@ -337,4 +337,12 @@
   .c-hap-cus-item {
     max-width: 100%;
   }
+
+  .sup-the-box-content h3 {
+    text-align: center !important;
+  }
+
+  .sup-the-box-brands {
+    margin: 0 auto;
+  }
 }
