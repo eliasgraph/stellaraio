@@ -21,6 +21,7 @@ import Kinsley from "../../../assets/imgs/cardspage/kinsley.png";
 
 import StarYellow from "../../../assets/imgs/icon/staryellow.png";
 import StarWhite from "../../../assets/imgs/icon/starwhite.png";
+import supportnext from "../../../assets/imgs/icon/support-next.png";
 
 import Software from "../../../components/landing/Software";
 import FaqCard from "../../../components/landing/FaqCard";
@@ -28,9 +29,11 @@ import ProductPlans from "../../../components/PageComponents/ProductPlans";
 
 import ProductService from "../../../services/ProductService";
 import Meta from "../../../components/layout/Meta";
+import SeeSiteModal from "../../../components/landing/modals/seeSite";
 function index({ product }) {
   const [faq, setFaq] = useState({});
   const [showMore, setShowMore] = useState(false);
+  const [seeSite, setSeeSite] = useState(false);
   const [section1_text, setSection1_text] = useState(
     product.acf.section1_text || ""
   );
@@ -46,6 +49,10 @@ function index({ product }) {
       setSection1_text(product.acf.section1_text);
     }
     setShowMore(!showMore);
+  };
+
+  const tog_seeSite = () => {
+    setSeeSite(!seeSite);
   };
 
   useEffect(() => {
@@ -204,31 +211,44 @@ function index({ product }) {
             <h3 className="text-right">
               Support the Big <br /> Box Retailer.
             </h3>
-            <div className="sup-the-box-brands">
-              <div className="sup-the-box-brand-img">
-                <img src={Walmart} style={{ width: "36px" }} alt="" />
-                <p className="mb-0">Walmart</p>
+            <div className="sup-the-box-brands-div">
+              <div className="sup-the-box-brands">
+                <div className="sup-the-box-brand-img">
+                  <img src={Walmart} style={{ width: "36px" }} alt="" />
+                  <p className="mb-0">Walmart</p>
+                </div>
+                <div className="sup-the-box-brand-img">
+                  <img src={Amazon} style={{ width: "40px" }} alt="" />
+                  <p className="mb-0">Amazon</p>
+                </div>
+                <div className="sup-the-box-brand-img">
+                  <img src={Bestbuy} style={{ width: "40px" }} alt="" />
+                  <p className="mb-0">Best Buy</p>
+                </div>
+                <div className="sup-the-box-brand-img">
+                  <img src={Footlocker} style={{ width: "50px" }} alt="" />
+                  <p className="mb-0">Footlocker</p>
+                </div>
+                <div className="sup-the-box-brand-img">
+                  <img src={Shopify} style={{ width: "33px" }} alt="" />
+                  <p className="mb-0">Shopify</p>
+                </div>
+                <div className="sup-the-box-brand-img">
+                  <img src={Nike} style={{ width: "66px" }} alt="" />
+                </div>
               </div>
-              <div className="sup-the-box-brand-img">
-                <img src={Amazon} style={{ width: "40px" }} alt="" />
-                <p className="mb-0">Amazon</p>
-              </div>
-              <div className="sup-the-box-brand-img">
-                <img src={Bestbuy} style={{ width: "40px" }} alt="" />
-                <p className="mb-0">Best Buy</p>
-              </div>
-              <div className="sup-the-box-brand-img">
-                <img src={Footlocker} style={{ width: "50px" }} alt="" />
-                <p className="mb-0">Footlocker</p>
-              </div>
-              <div className="sup-the-box-brand-img">
-                <img src={Shopify} style={{ width: "33px" }} alt="" />
-                <p className="mb-0">Shopify</p>
-              </div>
-              <div className="sup-the-box-brand-img">
-                <img src={Nike} style={{ width: "66px" }} alt="" />
+              <div
+                role={"button"}
+                onClick={tog_seeSite}
+                className="support-actions d-flex align-items-center justify-content-end mt-20px"
+              >
+                <p className="color-purple-2 me-3 mb-0">See all Site</p>
+                <div className="supportaction">
+                  <img src={supportnext} alt="next" />
+                </div>
               </div>
             </div>
+
             <div className="sup-the-box-join">
               Join over 10,000 customers worldwide getting the products they
               want
@@ -376,6 +396,7 @@ function index({ product }) {
       <section className={"cardfaq"}>
         <FaqCard faq={faq} />
       </section>
+      <SeeSiteModal seeSite={seeSite} tog_seeSite={tog_seeSite} />
     </>
   );
 }

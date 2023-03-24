@@ -5,51 +5,52 @@ button:active {
   transform: translateY(2px);
 }
 
-.card-gradient{
+.card-gradient {
   background-image: linear-gradient(to bottom, #090912, #090912);
 }
-.card{
+.card {
   border: none !important;
 }
-.text-muted{
-  color: var(--app-text-secondary)
+.text-muted {
+  color: var(--app-text-secondary);
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
-p, button{
+p,
+button {
   font-size: 1.6rem;
 }
 
-.margin-auto{
+.margin-auto {
   margin: 0 auto;
 }
 
-.mb-20px{
+.mb-20px {
   margin-bottom: 20px;
 }
-.mb-30px{
+.mb-30px {
   margin-bottom: 30px;
 }
-.mt-20px{
+.mt-20px {
   margin-top: 20px;
 }
-.mt-30px{
+.mt-30px {
   margin-top: 30px;
 }
-.mb-40px{
+.mb-40px {
   margin-bottom: 40px;
 }
-.mt-40px{
+.mt-40px {
   margin-top: 40px;
 }
-.color-purple-2{
+.color-purple-2 {
   color: var(--color-purple-2);
 }
 
-.modal-content{
+.modal-content {
   background-image: linear-gradient(to bottom, #111125, #111125);
   box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.1) !important;
   border-radius: 15px !important;
@@ -60,42 +61,42 @@ p, button{
   border-bottom: none !important;
 }
 
-.modal-header button{
+.modal-header button {
   color: #fff;
 }
-.app-h1{
+.app-h1 {
   font-size: 4.8rem;
   font-weight: 700;
 }
-.app-h2{
+.app-h2 {
   font-size: 3.8rem;
   font-weight: 500;
 }
-.app-h2-5{
+.app-h2-5 {
   font-size: 3.2rem;
   font-weight: 600;
 }
-.app-h3{
+.app-h3 {
   font-size: 2.8rem;
   font-weight: 500;
 }
 
-.app-h5{
+.app-h5 {
   font-weight: 500;
   font-size: 2.5rem;
 }
-.app-h6{
+.app-h6 {
   font-weight: 500;
   font-size: 2rem;
 }
 
-.app-color-primary{
+.app-color-primary {
   color: var(--color-purple-2);
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
-.z-index-1{
+.z-index-1 {
   z-index: 1;
 }

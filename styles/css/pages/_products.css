@@ -131,10 +131,12 @@
   font-weight: 500;
   margin-bottom: 5rem;
 }
-
+.sup-the-box-brands-div {
+  width: max-content;
+  margin-left: auto;
+}
 .sup-the-box-brands {
   max-width: 300px;
-  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   gap: 4rem;
@@ -339,10 +341,34 @@
   }
 
   .sup-the-box-content h3 {
-    text-align: center !important;
+    text-align: left !important;
+    margin-left: 20px;
+  }
+  .sup-the-box-img {
+    left: 0;
+  }
+  .sup-the-box-brands-div {
+    margin: 0 auto;
+    margin-left: 20px;
   }
 
   .sup-the-box-brands {
-    margin: 0 auto;
+    justify-content: flex-start;
+  }
+
+  .sup-the-box-brands-div .support-actions {
+    justify-content: flex-start !important;
+  }
+
+  .sup-the-box-join {
+    margin-left: 20px;
+  }
+
+  .stellar-love-card h2 {
+    text-align: left !important;
+  }
+  .c-hap-cus h2,
+  .c-hap-cus h4 {
+    text-align: left !important;
   }
 }
