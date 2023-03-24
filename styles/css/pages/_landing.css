@@ -428,7 +428,12 @@
     width: 100%;
     text-align: center;
   }
+
   .home__actions {
+    margin: 4rem auto;
+  }
+
+  .home__actions--bottom {
     margin: 4rem auto;
   }
 

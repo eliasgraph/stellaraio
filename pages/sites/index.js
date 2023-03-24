@@ -34,7 +34,7 @@ function index() {
                   From Sneakers to collectibles to electronics and everything in
                   between. The Fastest AIO bot for over 50+ Retailers.
                 </p>
-                <div className="home__actions">
+                <div className="site home__actions">
                   <div className="home__actions--bottom d-flex justify-content-between">
                     <Buttons
                       background="#161632"
