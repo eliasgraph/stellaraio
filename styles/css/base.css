@@ -29,10 +29,6 @@ body {
   font-size: 1.6rem;
 }
 
-section {
-  overflow: hidden;
-}
-
 @media only screen and (max-width: 68.75em) {
   html {
     font-size: 50%;

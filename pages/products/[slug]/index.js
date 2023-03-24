@@ -237,21 +237,21 @@ function index({ product }) {
                   <img src={Nike} style={{ width: "66px" }} alt="" />
                 </div>
               </div>
-              <div
-                role={"button"}
-                onClick={tog_seeSite}
-                className="support-actions d-flex align-items-center justify-content-end mt-20px"
-              >
-                <p className="color-purple-2 me-3 mb-0">See all Site</p>
-                <div className="supportaction">
-                  <img src={supportnext} alt="next" />
-                </div>
-              </div>
             </div>
 
             <div className="sup-the-box-join">
               Join over 10,000 customers worldwide getting the products they
               want
+            </div>
+            <div
+              role={"button"}
+              onClick={tog_seeSite}
+              className="support-actions d-flex align-items-center justify-content-end mt-20px"
+            >
+              <p className="color-purple-2 me-3 mb-0">See all Site</p>
+              <div className="supportaction">
+                <img src={supportnext} alt="next" />
+              </div>
             </div>
           </div>
         </div>
