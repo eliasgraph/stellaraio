@@ -44,7 +44,7 @@ import BlogCardLg from "../components/Blog/BlogCardLg";
 import BlogService from "../services/BlogService";
 import BlogCardSm from "../components/Blog/BlogCardSm";
 import JoinWaitlist from "../components/Generals/JoinWaitlist";
-import SeeSiteModal from "../components/landing/modals/seeSite";
+import SeeSiteModal from "../components/landing/modals/SeeSiteModal";
 
 function Home() {
   const [seeSite, setSeeSite] = useState(false);

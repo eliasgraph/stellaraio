@@ -29,7 +29,7 @@ import ProductPlans from "../../../components/PageComponents/ProductPlans";
 
 import ProductService from "../../../services/ProductService";
 import Meta from "../../../components/layout/Meta";
-import SeeSiteModal from "../../../components/landing/modals/seeSite";
+import SeeSiteModal from "../../../components/landing/modals/SeeSiteModal";
 function index({ product }) {
   const [faq, setFaq] = useState({});
   const [showMore, setShowMore] = useState(false);
