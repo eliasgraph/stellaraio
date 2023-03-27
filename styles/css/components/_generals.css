@@ -38,7 +38,7 @@ button {
   margin-top: 20px;
 }
 .mt-30px {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 .mb-40px {
   margin-bottom: 40px;
@@ -99,4 +99,14 @@ button {
 }
 .z-index-1 {
   z-index: 1;
+}
+
+h2 span,
+h3 span {
+  color: var(--color-purple-2);
+}
+
+.mx-auto {
+  width: max-content;
+  margin: auto;
 }

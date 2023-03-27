@@ -1,0 +1,137 @@
+.supported-site-hero-card {
+  padding-left: 8.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(9, 9, 18, 1) 0%,
+    rgba(9, 9, 18, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.supported-site-hero-left {
+  width: 85%;
+  margin-top: 10rem;
+}
+
+.supported-site-hero-left span {
+  color: var(--color-purple-2);
+}
+
+.supported-site-hero-right img {
+  filter: drop-shadow(-5px 5px 15px var(--color-purple-2));
+}
+
+.supported-cards-item {
+  width: 47rem;
+  min-height: 27.7rem;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #050505 0%,
+    #0a0a12 39%,
+    #111125 100%
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+
+.supported-cards-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    #8516ac,
+    rgba(177, 83, 235, 0.74) 22.02%,
+    rgba(65, 25, 189, 0.5832) 33.97%,
+    rgba(38, 2, 61, 8.25) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.supported-cards {
+  margin-top: 5rem;
+}
+
+.supported-cards span {
+  color: var(--color-purple-2);
+}
+
+.supported-cards-item-left {
+  margin-left: auto;
+  width: max-content;
+}
+
+.supported-site-selected-card {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(9, 9, 18, 1) 0%,
+    rgba(9, 9, 18, 1) 100%
+  );
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-left: 5.4rem;
+  padding-right: 5.4rem;
+  padding-bottom: 6rem;
+  margin-top: 25px;
+}
+
+.supported-site-selected-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.supported-site-selected-top h3 {
+  font-size: 3.8rem;
+}
+
+.supported-site-selected-top span {
+  color: var(--color-purple-2);
+}
+.supported-site-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  row-gap: 18px;
+}
+.supported-site-list p {
+  margin-bottom: 24px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.supported-site-list-item {
+  width: 135px;
+  height: 140px;
+}
+.supported-site-list-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.supported-site-load-more {
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .supported-cards-item-left {
+    width: 100%;
+  }
+  .supported-cards-item {
+    width: 100%;
+  }
+}
