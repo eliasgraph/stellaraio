@@ -9,9 +9,13 @@ function ThankYou() {
         <CardGradient>
           <div className="thank-you-wrapper">
             <h1 className="text-center">
+              Thank you for taking interest in <br />{" "}
+              <span className="color-purple-2">Stellar AIO.</span>
+            </h1>
+            <p className="text-center">
               Thanks for signing up! Please check your inbox to confirm your
               request.
-            </h1>
+            </p>
 
             <div className="thank-you-img">
               <img className="thank-img" src={tank} alt="" />
