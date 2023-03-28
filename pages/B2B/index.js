@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import CardGradient from "../../components/Generals/CardGradient";
 import { Row, Col } from "reactstrap";
 import Hero from "../../assets/imgs/B2B/hero.png";
@@ -18,6 +19,11 @@ import glowbigest from "../../assets/imgs/B2B/Ellipse 124.png";
 import Logo from "../../assets/imgs/favicon.png";
 
 function index() {
+  const [state, handleSubmit] = useForm("xbjezjre", {
+    data: {
+      subject: "B2B Contact Form",
+    },
+  });
   return (
     <div className="b2b">
       {" "}
@@ -322,13 +328,21 @@ function index() {
             </Col>
             <Col md={6}>
               <div className="b2b-get-started-right">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
                       type="text"
+                      name="name"
                       className="form-control"
                       placeholder="Enter Name"
+                      id="name"
+                      required
+                    />
+                    <ValidationError
+                      field="name"
+                      prefix="Name"
+                      errors={state.errors}
                     />
                   </div>
                   <div className="form-group">
@@ -337,6 +351,14 @@ function index() {
                       type="text"
                       className="form-control"
                       placeholder="Enter Company Name"
+                      name="company"
+                      id="company"
+                      required
+                    />
+                    <ValidationError
+                      field="company"
+                      prefix="Company"
+                      errors={state.errors}
                     />
                   </div>
                   <div className="form-group">
@@ -345,6 +367,14 @@ function index() {
                       type="text"
                       className="form-control"
                       placeholder="Enter Contact Number"
+                      name="contact"
+                      id="contact"
+                      required
+                    />
+                    <ValidationError
+                      field="contact"
+                      prefix="Contact"
+                      errors={state.errors}
                     />
                   </div>
                   <div className="form-group">
@@ -353,6 +383,14 @@ function index() {
                       type="email"
                       className="form-control"
                       placeholder="Enter Your Email"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                    <ValidationError
+                      field="email"
+                      prefix="Email"
+                      errors={state.errors}
                     />
                   </div>
                   <div className="form-group">
@@ -361,10 +399,28 @@ function index() {
                       className="form-control"
                       placeholder="Enter Message"
                       rows={4}
+                      name="message"
+                      id="message"
+                      required
                     ></textarea>
+                    <ValidationError
+                      field="message"
+                      prefix="Message"
+                      errors={state.errors}
+                    />
+                    <ValidationError
+                      field="message"
+                      prefix="Message"
+                      errors={state.errors}
+                    />
                   </div>
                   <div className="mx-auto b2b-action">
-                    <Buttons text={"Submit"} width={"177px"} />
+                    <Buttons
+                      type={"submit"}
+                      text={"Submit"}
+                      width={"177px"}
+                      disabled={state.submitting}
+                    />
                     <img src={glowbig} alt="" />
                   </div>
                 </form>
