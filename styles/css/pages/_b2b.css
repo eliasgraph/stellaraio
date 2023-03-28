@@ -429,6 +429,8 @@
 }
 .form-group {
   margin-bottom: 20px;
+  z-index: 5;
+  position: relative;
 }
 
 .b2b-get-started-right label {
@@ -438,12 +440,17 @@
 }
 
 .b2b-get-started-right input,
-.b2b-get-started-right textarea {
+.b2b-get-started-right textarea,
+.b2b-get-started-right input:focus,
+.b2b-get-started-right textarea:focus,
+.b2b-get-started-right input:active,
+.b2b-get-started-right textarea:active {
   border: 1px solid #323272;
   background-color: #080812;
   font-size: 14px;
   padding: 10px 20px;
   font-weight: 400;
+  color: #fff;
 }
 
 .b2b-get-started-right form .b2b-action {

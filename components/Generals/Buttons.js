@@ -39,7 +39,11 @@ function Buttons({
       onClick={clicked}
     >
       {" "}
-      {loading ? <Spinner color="secondary"> Loading </Spinner> : text}
+      {loading || disabled ? (
+        <Spinner color="secondary"> Loading </Spinner>
+      ) : (
+        text
+      )}
     </Button>
   );
 }

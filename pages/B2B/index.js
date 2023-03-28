@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import CardGradient from "../../components/Generals/CardGradient";
 import { Row, Col } from "reactstrap";
@@ -19,11 +19,24 @@ import glowbigest from "../../assets/imgs/B2B/Ellipse 124.png";
 import Logo from "../../assets/imgs/favicon.png";
 
 function index() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [contact, setContact] = useState("");
+  const [message, setMessage] = useState("");
   const [state, handleSubmit] = useForm("xbjezjre", {
     data: {
       subject: "B2B Contact Form",
     },
   });
+  useEffect(() => {
+    setEmail("");
+    setName("");
+    setCompany("");
+    setContact("");
+    setMessage("");
+  }, [state.succeeded]);
+
   return (
     <div className="b2b">
       {" "}
@@ -338,6 +351,9 @@ function index() {
                       placeholder="Enter Name"
                       id="name"
                       required
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
                     />
                     <ValidationError
                       field="name"
@@ -354,6 +370,9 @@ function index() {
                       name="company"
                       id="company"
                       required
+                      onChange={(e) => {
+                        setCompany(e.target.value);
+                      }}
                     />
                     <ValidationError
                       field="company"
@@ -370,6 +389,9 @@ function index() {
                       name="contact"
                       id="contact"
                       required
+                      onChange={(e) => {
+                        setContact(e.target.value);
+                      }}
                     />
                     <ValidationError
                       field="contact"
@@ -386,6 +408,9 @@ function index() {
                       name="email"
                       id="email"
                       required
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
                     />
                     <ValidationError
                       field="email"
@@ -402,6 +427,9 @@ function index() {
                       name="message"
                       id="message"
                       required
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
                     ></textarea>
                     <ValidationError
                       field="message"
