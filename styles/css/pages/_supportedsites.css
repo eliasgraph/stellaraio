@@ -119,7 +119,7 @@
 }
 
 .supported-site-list {
-  margin-top: 10rem;
+  padding-top: 10rem;
 }
 .supported-site-list-container {
   display: flex;
