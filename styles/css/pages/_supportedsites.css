@@ -182,6 +182,24 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .supported-site-hero-card {
+    padding: 20px;
+  }
+  .supported-site-hero-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .supported-site-hero-left h2,
+  .supported-site-hero-left p {
+    text-align: center;
+  }
+  .supported-site-hero-right img {
+    width: 100%;
+  }
+  .supported-cards-item-left,
+  .supported-cards-item-right {
+    text-align: center;
+  }
   .supported-site-selected-card {
     padding: 0;
   }
