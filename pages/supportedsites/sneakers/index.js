@@ -22,6 +22,9 @@ function index() {
   const goBack = () => {
     router.back();
   };
+  const pushToCollectors = () => {
+    router.push("/supportedsites/collectors");
+  };
   return (
     <>
       <div
@@ -44,7 +47,9 @@ function index() {
                 <span>Redefine</span> the Game: <br /> Elevate your{" "}
                 <span>Sneaker</span> <br /> Collection.
               </h1>
-              <img src={Readmore} alt="" />
+              <a href="#supported-site-list">
+                <img src={Readmore} alt="" />
+              </a>
             </div>
             <div className="supported-site-selected-top-right">
               <img
@@ -55,7 +60,7 @@ function index() {
           </div>
         </CardGradient>
       </section>
-      <section className="supported-site-list">
+      <section id="supported-site-list" className="supported-site-list">
         <CardGradient className="supported-site-list-card">
           <Row>
             <Col md={5}>
@@ -120,7 +125,11 @@ function index() {
                 Stellar is an all-in one solution, meaning we <br /> automate
                 the checkout process for all <br /> Collectible sites!
               </p>
-              <Buttons text={"View Retail Sitelist"} width={"183px"} />
+              <Buttons
+                clicked={pushToCollectors}
+                text={"View Retail Sitelist"}
+                width={"183px"}
+              />
             </div>
             <div className="supported-site-selected-top-right">
               <img

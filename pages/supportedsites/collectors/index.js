@@ -39,6 +39,9 @@ function index() {
   const goBack = () => {
     router.back();
   };
+  const pushToSneakers = () => {
+    router.push("/supportedsites/sneakers");
+  };
   return (
     <>
       <div
@@ -159,7 +162,11 @@ function index() {
                 automate the checkout process for all <br />
                 sneaker sites!
               </p>
-              <Buttons text={"View Sneakers Sitelist"} width={"183px"} />
+              <Buttons
+                clicked={pushToSneakers}
+                text={"View Sneakers Sitelist"}
+                width={"183px"}
+              />
             </div>
             <div className="supported-site-selected-top-right">
               <img src={Sneakershirts} alt="" />
