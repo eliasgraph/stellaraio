@@ -65,7 +65,9 @@ function index() {
                 of Collecting <br />
                 with <span>Stellar.</span>
               </h1>
-              <img src={Readmore} alt="" />
+              <a href="#supported-site-list">
+                <img src={Readmore} alt="" />
+              </a>
             </div>
             <div className="supported-site-selected-top-right">
               <img
