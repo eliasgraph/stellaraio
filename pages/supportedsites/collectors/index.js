@@ -5,12 +5,29 @@ import BackArror from "../../../assets/svgs/BackArrow";
 import SkipToFrontCard from "../../../components/Generals/SkipToFrontCard";
 import CardGradient from "../../../components/Generals/CardGradient";
 import Sneakers from "../../../assets/imgs/supportedsites/sneakersbg.png";
+import Sneakershirts from "../../../assets/imgs/supportedsites/sneakshirts.png";
 import Collectors from "../../../assets/imgs/supportedsites/collectorsbg.png";
+import Amazon from "../../../assets/imgs/supportedsites/amazon.png";
+import BestBuy from "../../../assets/imgs/supportedsites/bestbuy.png";
+import Walmart from "../../../assets/imgs/supportedsites/walmart.png";
 import Yeeze from "../../../assets/imgs/supportedsites/yeeze.png";
+import Gamestop from "../../../assets/imgs/supportedsites/gamestop.png";
+import Queueit from "../../../assets/imgs/supportedsites/queueit.png";
 import Shopify from "../../../assets/imgs/supportedsites/shopify.png";
+import Target from "../../../assets/imgs/supportedsites/target.png";
+import Newegg from "../../../assets/imgs/supportedsites/newegg.png";
+import Fanatics from "../../../assets/imgs/supportedsites/fantastics.png";
+import Pinini from "../../../assets/imgs/supportedsites/pinini.png";
+import Amd from "../../../assets/imgs/supportedsites/amd.png";
+import Topps from "../../../assets/imgs/supportedsites/topps.png";
+import Disney from "../../../assets/imgs/supportedsites/disney.png";
 import Sense from "../../../assets/imgs/supportedsites/sense.png";
 import Dicks from "../../../assets/imgs/supportedsites/dicks.png";
+import Swatch from "../../../assets/imgs/supportedsites/swatch.png";
+import Snipes from "../../../assets/imgs/supportedsites/snipes.png";
 import Nords from "../../../assets/imgs/supportedsites/nords.png";
+import Sams from "../../../assets/imgs/supportedsites/sams.png";
+import Costo from "../../../assets/imgs/supportedsites/costo.png";
 import Footlocker from "../../../assets/imgs/supportedsites/footlocker.png";
 import Nike from "../../../assets/imgs/supportedsites/nike.png";
 import Snkrs from "../../../assets/imgs/supportedsites/snkrs.png";
@@ -41,15 +58,16 @@ function index() {
           <div className="supported-site-selected-top">
             <div className="supported-site-selected-top-left">
               <h1>
-                <span>Redefine</span> the Game: <br /> Elevate your{" "}
-                <span>Sneaker</span> <br /> Collection.
+                Master the Art <br />
+                of Collecting <br />
+                with <span>Stellar.</span>
               </h1>
               <img src={Readmore} alt="" />
             </div>
             <div className="supported-site-selected-top-right">
               <img
-                src={Sneakers}
-                alt="A pile of different sneakers Showing how Stella AIO can help you collect sneakers easily."
+                src={Collectors}
+                alt="A pile of different collectible items, A GPU, a Doll, Pokemon cards, showing you how StellarAIO can help you collect easily."
               />
             </div>
           </div>
@@ -58,47 +76,67 @@ function index() {
       <section className="supported-site-list">
         <CardGradient className="supported-site-list-card">
           <Row>
-            <Col md={5}>
+            <Col md={5} className={"align-self-center"}>
               <h2>
-                <span>Dominate</span> Every <br /> Drop on our{" "}
-                <span>
-                  {" "}
-                  <br /> Sitelist.
-                </span>{" "}
+                Support <span>Every</span> <br /> Box Retailer <br /> For
+                <span> Collectors.</span>{" "}
               </h2>
             </Col>
             <Col md={7}>
               <div className="supported-site-list-wrapper">
                 <div className="supported-site-list-item">
-                  <img src={Footlocker} alt="" />
+                  <img src={Amazon} alt="" />
                 </div>
-
+                <div className="supported-site-list-item">
+                  <img src={BestBuy} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Walmart} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Gamestop} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Fanatics} alt="" />
+                </div>
                 <div className="supported-site-list-item">
                   <img src={Shopify} alt="" />
                 </div>
-
                 <div className="supported-site-list-item">
-                  <img src={Nords} alt="" />
+                  <img src={Target} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Newegg} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Pinini} alt="" />
+                </div>
+                <div className="supported-site-list-item">
+                  <img src={Amd} alt="" />
                 </div>
 
                 <div className="supported-site-list-item">
-                  <img src={Dicks} alt="" />
+                  <img src={Topps} alt="" />
                 </div>
 
                 <div className="supported-site-list-item">
-                  <img src={Snkrs} alt="" />
+                  <img src={Disney} alt="" />
                 </div>
 
                 <div className="supported-site-list-item">
-                  <img src={Sense} alt="" />
+                  <img src={Queueit} alt="" />
                 </div>
 
                 <div className="supported-site-list-item">
-                  <img src={Yeeze} alt="" />
+                  <img src={Costo} alt="" />
                 </div>
 
                 <div className="supported-site-list-item">
-                  <img src={Nike} alt="" />
+                  <img src={Swatch} alt="" />
+                </div>
+
+                <div className="supported-site-list-item">
+                  <img src={Sams} alt="" />
                 </div>
               </div>
             </Col>
@@ -114,19 +152,17 @@ function index() {
           <div className="supported-site-selected-top">
             <div className="supported-site-selected-top-left">
               <h2>
-                Need <span>Cards</span> or <br /> <span>Collectibles?</span>
+                Need <span>Sneakers</span> or <br /> <span>High Clothing?</span>
               </h2>
               <p className="mb-20px">
-                Stellar is an all-in one solution, meaning we <br /> automate
-                the checkout process for all <br /> Collectible sites!
+                Stellar is an all-in one solution, meaning we <br />
+                automate the checkout process for all <br />
+                sneaker sites!
               </p>
-              <Buttons text={"View Retail Sitelist"} width={"183px"} />
+              <Buttons text={"View Sneakers Sitelist"} width={"183px"} />
             </div>
             <div className="supported-site-selected-top-right">
-              <img
-                src={Collectors}
-                alt="A pile of different collectible items, A GPU, a Doll, Pokemon cards, showing you how StellarAIO can help you collect easily."
-              />
+              <img src={Sneakershirts} alt="" />
             </div>
           </div>
         </CardGradient>

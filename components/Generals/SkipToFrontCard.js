@@ -3,6 +3,7 @@ import CardGradient from "./CardGradient";
 import { useRouter } from "next/router";
 import glowringsm from "../../assets/imgs/Path 6.png";
 import Buttons from "./Buttons";
+import { isEmail } from "../../helpers/validations";
 function SkipToFrontCard({ h2, p, onSubmit }) {
   const [email, setEmail] = useState("");
   const router = useRouter();

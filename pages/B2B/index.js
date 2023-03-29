@@ -45,9 +45,9 @@ function index() {
           <Row>
             <Col md={5} sm={12}>
               <div className="b2b-hero-left">
-                <h2 className="app-h2 mb-20px">
+                <h1 className="app-h2 mb-20px">
                   Revolutionize your <br /> Company’s Workflow <br /> Today.
-                </h2>
+                </h1>
                 <p className="mb-20px">
                   Optimize your Company’s Processes and <br /> Accelerate your
                   Growth Today!
@@ -70,10 +70,10 @@ function index() {
             <img src={Cog} alt="" />
           </div>
           <div className="b2b-stellar-ad-right">
-            <h3 className="mb-20px">
+            <h2 className="mb-20px">
               The <span>Stellar</span> AI
               <img src={Logo} alt="" /> <br /> Advantage
-            </h3>
+            </h2>
             <p>
               Are you struggling with manual processes, lost time, and
               inefficiencies in your business? Look no further! Stellar AIO
@@ -94,7 +94,7 @@ function index() {
           <div className="b2b-automation-item">
             <div className="b2b-auto-item-head d-flex gap-3 align-items-center mb-4">
               <img src={Clock} alt="" />{" "}
-              <h3 className="mb-0">Time & Resources Savings</h3>
+              <h2 className="mb-0">Time & Resources Savings</h2>
             </div>
             <p>
               Eliminate manual tasks and human errors, freeing up time and
@@ -104,7 +104,7 @@ function index() {
           <div className="b2b-automation-item">
             <div className="b2b-auto-item-head d-flex gap-3 align-items-center mb-4">
               <img src={Setting} alt="" />{" "}
-              <h3 className="mb-0">Improved Emergency</h3>
+              <h2 className="mb-0">Improved Emergency</h2>
             </div>
             <p>
               Accelerate your business processes, allowing you to process more
@@ -114,7 +114,7 @@ function index() {
           <div className="b2b-automation-item">
             <div className="b2b-auto-item-head d-flex gap-3 align-items-center mb-4">
               <img src={Dollar} alt="" />{" "}
-              <h3 className="mb-0">Increased Revenue</h3>
+              <h2 className="mb-0">Increased Revenue</h2>
             </div>
             <p>
               Optimize your operations for faster turnaround time and increased
@@ -131,11 +131,11 @@ function index() {
           <Row>
             <Col md={6}>
               <div className="b2b-proven-process-item">
-                <h3 className="mb-3">
+                <h2 className="mb-3">
                   Need <br />
                   Assessment
                   <img src={glowrngsm} alt="" />
-                </h3>
+                </h2>
                 <p className="mb-0">
                   We start by understanding your business and its unique
                   challenges, identifying areas where automation can provide the
@@ -146,11 +146,11 @@ function index() {
             </Col>
             <Col md={6}>
               <div className="b2b-proven-process-item">
-                <h3 className="mb-3">
+                <h2 className="mb-3">
                   Need <br />
                   Assessment
                   <img src={glowrngsm} alt="" />
-                </h3>
+                </h2>
                 <p className="mb-0">
                   We start by understanding your business and its unique
                   challenges, identifying areas where automation can provide the
@@ -161,11 +161,11 @@ function index() {
             </Col>
             <Col md={6}>
               <div className="b2b-proven-process-item">
-                <h3 className="mb-3">
+                <h2 className="mb-3">
                   Need <br />
                   Assessment
                   <img src={glowrngsm} alt="" />
-                </h3>
+                </h2>
                 <p className="mb-0">
                   We start by understanding your business and its unique
                   challenges, identifying areas where automation can provide the
@@ -176,11 +176,11 @@ function index() {
             </Col>
             <Col md={6}>
               <div className="b2b-proven-process-item">
-                <h3 className="mb-3">
+                <h2 className="mb-3">
                   Need <br />
                   Assessment
                   <img src={glowrngsm} alt="" />
-                </h3>
+                </h2>
                 <p className="mb-0">
                   We start by understanding your business and its unique
                   challenges, identifying areas where automation can provide the
@@ -219,9 +219,9 @@ function index() {
           </div>
         </div>
         <div className="b2b-success-story-bottom-wrapper">
-          <h3 className="mb-20px">
+          <h2 className="mb-20px">
             Our <span>Happy</span> clients are saying that...
-          </h3>
+          </h2>
           <div className="b2b-success-story-carousel">
             <div className="carousel-nav">{"<"}</div>
             <div className="carousel-div">

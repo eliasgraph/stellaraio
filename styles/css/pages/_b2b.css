@@ -70,7 +70,7 @@
   text-align: right;
 }
 
-.b2b-stellar-ad-right h3 {
+.b2b-stellar-ad-right h2 {
   font-size: 38px;
   font-weight: 600;
 }
@@ -107,7 +107,7 @@
   width: 30%;
 }
 
-.b2b-automation-item h3 {
+.b2b-automation-item h2 {
   font-size: 18px;
 }
 
@@ -142,7 +142,7 @@
   overflow: hidden;
 }
 
-.b2b-proven-process-item h3 {
+.b2b-proven-process-item h2 {
   font-size: 32px;
   font-weight: 600;
   position: relative;
@@ -240,7 +240,7 @@
   padding-right: 8.5rem;
   padding-bottom: 20px;
 }
-.b2b-success-story-bottom-wrapper h3 {
+.b2b-success-story-bottom-wrapper h2 {
   font-size: 24px;
   font-weight: 600;
   text-align: center;

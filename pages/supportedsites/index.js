@@ -34,7 +34,10 @@ function index() {
             </Col>
             <Col md={6}>
               <div className="supported-site-hero-right">
-                <img src={Hero} alt="" />
+                <img
+                  src={Hero}
+                  alt="A box representing StellarAIO filled and overflowing with logos of the popular retailers that are supported by Stellar AIO"
+                />
               </div>
             </Col>
           </Row>
@@ -45,7 +48,10 @@ function index() {
           <Col md={6}>
             <div className="supported-cards-item-left me-3">
               <div className="supported-cards-item">
-                <img src={Sneakers} alt="" />{" "}
+                <img
+                  src={Sneakers}
+                  alt="A pile of different sneakers Showing how Stella AIO can help you collect sneakers easily."
+                />{" "}
               </div>
               <h3 className="mt-4 mb-3">
                 Supported Retailers for <span>SneakerHeads</span>{" "}
@@ -62,7 +68,10 @@ function index() {
           <Col md={6}>
             <div className="supported-cards-item-right">
               <div className="supported-cards-item">
-                <img src={Collectors} alt="" />{" "}
+                <img
+                  src={Collectors}
+                  alt="A pile of different collectible items, A GPU, a Doll, Pokemon cards, showing you how StellarAIO can help you collect easily."
+                />{" "}
               </div>
               <h3 className="mt-4 mb-3">
                 Supported Retailers for <span>Collectors</span>{" "}

@@ -92,20 +92,65 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  padding-left: 5rem;
 }
 
-.supported-site-selected-top h3 {
+.supported-site-selected-top-left button {
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.supported-site-selected-top h1,
+.supported-site-selected-top h2 {
   font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .supported-site-selected-top span {
   color: var(--color-purple-2);
 }
+.supported-site-selected-top-right {
+  padding-top: 30px;
+}
+.supported-site-selected-top-right img {
+  filter: drop-shadow(1px 1px 30px rgba(195, 46, 245, 0.5));
+}
+
+.supported-site-list {
+  margin-top: 10rem;
+}
+.supported-site-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.supported-site-list-card {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(9, 9, 18, 1) 0%,
+    rgba(9, 9, 18, 1) 100%
+  );
+  overflow: hidden;
+  padding-top: 5.4rem;
+  padding-left: 8.4rem;
+  padding-right: 8rem;
+  padding-bottom: 6rem;
+}
+
 .supported-site-list-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   row-gap: 18px;
+  justify-content: flex-end;
+}
+.supported-site-list h1,
+.supported-site-list h2 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  /* margin-top: 15%; */
 }
 .supported-site-list p {
   margin-bottom: 24px;
@@ -127,7 +172,63 @@
   margin-top: 50px;
 }
 
+.supported-sites-need {
+  margin-top: 10rem;
+}
+
+.supported-site-list p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 767px) {
+  .supported-site-selected-card {
+    padding: 0;
+  }
+
+  .supported-site-selected-top {
+    padding: 10px;
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+
+  .supported-site-selected-top h1 {
+    text-align: center;
+  }
+  .supported-site-selected-top-left img {
+    margin: 0 auto;
+    display: block;
+    width: max-content;
+  }
+  .supported-site-selected-top-left h2,
+  .supported-site-selected-top-left p {
+    text-align: center;
+  }
+
+  .supported-site-selected-top-left button {
+    margin: auto;
+    display: block;
+  }
+  .supported-site-selected-top-right {
+    padding: 20px;
+  }
+
+  .supported-site-selected-top-right img {
+    width: 100%;
+  }
+
+  .supported-site-list-card {
+    padding: 20px;
+  }
+
+  .supported-site-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .supported-site-list-wrapper {
+    justify-content: center;
+  }
   .supported-cards-item-left {
     width: 100%;
   }
