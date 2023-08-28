@@ -601,6 +601,19 @@ max-width: 28.4rem;
   
 }
 
+.new-whats-new-shortcuts-left {
+  padding: 3rem;
+}
+
+.new-whats-new-middle-left {
+  padding: 3rem;
+}
+
+.new-whats-new-middle-right {
+  padding: 3rem;
+  padding-bottom: 218px;
+}
+
 .new-streamline p:first-child{
   text-align: center;
   margin-top: 2rem;
@@ -669,7 +682,6 @@ margin-bottom: 3.5rem;
 }
 
 .new-streamline-p-top{
-  width: 588px;
   margin: 0 auto;
   margin-top: 2.4rem !important;
 }
@@ -1468,6 +1480,24 @@ line-height: 24px; /* 171.429% */
   .new-hero p br{
     display: none;
   }
+
+  .new-c-a-d-content {
+    padding: 1.5rem;
+  }
+  .new-cad-content-left{
+    padding-top: 0 !important;
+  }
+  .new-step-1, .new-step-1 span, .new-step-2, .new-step-2 span, .new-step-3, .new-step-3 span {
+    font-size: 12px;
+  }
+
+  .new-step-1 span, .new-step-2 span, .new-step-3 span {
+    width: 24px;
+    height: 24px;
+  }
+  /* .new-cad-step-num {
+    flex-wrap: wrap;
+  } */
   .new-testimonial-bottom{
     gap: 20px
   }
