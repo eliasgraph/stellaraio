@@ -198,7 +198,6 @@ section.new-hero{
   font-weight: 400;
   line-height: 28px; /* 140% */
   letter-spacing: -0.2px;
-  width: 588px;
   margin: 0 auto;
   margin-top: 2.4rem;
 }
@@ -252,7 +251,9 @@ padding-left: 5px;
   width: 100%;
 }
 
-.new-what-is-stella{}
+.new-what-is-stella{
+  margin-bottom: 21rem;
+}
 
 .new-what-is-stella button{
   display: block;
@@ -309,6 +310,7 @@ padding-left: 5px;
   gap: 5px;
   margin: 0 auto;
   margin-top: 8.2rem;
+  cursor: pointer;
 }
 
 .new-scroll-to-view p{
@@ -1462,8 +1464,16 @@ line-height: 24px; /* 171.429% */
   .hero-glow{
     display: none;
   }
+
+  .new-hero p br{
+    display: none;
+  }
   .new-testimonial-bottom{
     gap: 20px
+  }
+
+  .new-testimonial-item{
+    width: 100%;
   }
   .new-our-blog-bottom-left{
     height: 40rem;
@@ -1486,4 +1496,9 @@ line-height: 24px; /* 171.429% */
   .new-faq__faqs .collapse{
     background-color: transparent !important;
   }
+
+  .new-by-numbers {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
 }

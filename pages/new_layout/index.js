@@ -112,6 +112,7 @@ function index() {
     window.scrollTo(0, 0)
   }, []);
 
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -209,7 +210,7 @@ function index() {
           <img src={HeroGlow} alt="" className='hero-glow'/>
           <h1 className='new-app-h1'>The <span>Fastest</span> automation<br/>  checkout software.</h1>
           <p>
-            Stellar handles the checkout process for you, ensuring you get the products you want before anyone else.
+            Stellar handles the checkout process for you, ensuring you get <br/> the products you want before anyone else.
           </p>
           <Button className='new-gradient-button new-hero-btn'>
             <Lock/>
@@ -225,8 +226,8 @@ function index() {
             <h2>
               Intuitive automation for maximized profits.
             </h2>
-            <p>An intuitive and efficient UI/UX that allows for streamlined task creation and faster checkouts.</p>
-            <div className="new-scroll-to-view">
+            <p>An intuitive and efficient UI/UX that allows for streamlined task <br/> creation and faster checkouts.</p>
+            <div onClick={()=>{linkClicked('new-whats-new')}} className="new-scroll-to-view">
               <ScrollSmSvg/>
               <p>Scroll to view more</p> 
             </div>
@@ -234,7 +235,7 @@ function index() {
           
         </section>
         <div className='new-l'>
-          <section className="new-whats-new" >
+          <section className="new-whats-new" id='new-whats-new'>
             <p className="new-top-of-line new-section-top-heading">TOP OF THE LINE FEATURES</p>
             <h2>What's new in <span>3.0</span> <img src={ArrowRight} alt=""/></h2>
             <p>An intuitive and efficient UI/UX that allows for streamlined task creation and faster checkouts.</p>
@@ -351,7 +352,7 @@ function index() {
           <p className="new-top-of-line new-section-top-heading text-center">TOP OF THE LINE FEATURES</p>
             <h2 className='text-center'>Streamline Your Reselling Experience</h2>
             <p className='text-center new-streamline-p-top'>
-              An intuitive and efficient UI/UX that allows for streamlined task creation and faster checkouts.
+              An intuitive and efficient UI/UX that allows for streamlined task <br/> creation and faster checkouts.
             </p>
             <div className="new-streamline-top">
               <Row>
