@@ -11,6 +11,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { useRouter } from 'next/router';
 import ArrowRight from "../../assets/imgs/newLayout/arrow-right.png"
 import HeroImg from '../../assets/imgs/newLayout/herooimg.png'
 import Lock from '../../assets/svgs/LockSvg'
@@ -47,6 +48,14 @@ import TabNavRight from '../../assets/svgs/TabNavRight'
 import ViewAllArrow from '../../assets/svgs/ViewAllArrow'
 
 import NewAvi1 from '../../assets/imgs/newLayout/newAvi1.png'
+import NewAvi2 from '../../assets/imgs/newLayout/newavi2.png'
+import NewAvi3 from '../../assets/imgs/newLayout/newavi3.png'
+import NewAvi4 from '../../assets/imgs/newLayout/newavi4.png'
+import NewAvi5 from '../../assets/imgs/newLayout/newavi5.png'
+import NewAvi6 from '../../assets/imgs/newLayout/newavi6.png'
+import NewAvi7 from '../../assets/imgs/newLayout/newavi7.png'
+import NewAvi8 from '../../assets/imgs/newLayout/newavi8.png'
+import NewAvi9 from '../../assets/imgs/newLayout/newavi9.png'
 
 import StarOn from '../../assets/imgs/newLayout/star-on.png'
 import StarOff from '../../assets/imgs/newLayout/start-off.png'
@@ -105,6 +114,7 @@ function index() {
     }
   ]
 
+  const router = useRouter()
   const faq = undefined
 
   useEffect(() => {
@@ -112,6 +122,13 @@ function index() {
     window.scrollTo(0, 0)
   }, []);
 
+  const pushJoinWaitlist = () => {
+    router.push("/add-to-waitlist");
+  };
+
+  const pushToBlog = (path)=>{
+    router.push(`/blog${path ? '/'+path : ""}`)
+  }
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -212,7 +229,7 @@ function index() {
           <p>
             Stellar handles the checkout process for you, ensuring you get <br/> the products you want before anyone else.
           </p>
-          <Button className='new-gradient-button new-hero-btn'>
+          <Button onClick={pushJoinWaitlist} className='new-gradient-button new-hero-btn'>
             <Lock/>
             <p className="mb-0">7 days trial</p>
             <RightArrowSmSvg/>
@@ -457,12 +474,13 @@ function index() {
           <section className="new-our-blog">
             <p className="new-top-of-line new-section-top-heading mb-0">STELLAR BLOG</p>
             <h2>Our blogs</h2>
-            <p>An intuitive and efficient UI/UX that allows for streamlined task <br/> creation and faster checkouts. <span>View All <ViewAllArrow/></span></p>
+            <p>An intuitive and efficient UI/UX that allows for streamlined task <br/> creation and faster checkouts. <span onClick={()=>{pushToBlog()}}>View All <ViewAllArrow/></span></p>
             <div className="new-our-blog-bottom">
               <Row>
                 <Col md={8}>
-                  <div className="new-our-blog-bottom-left">
-                    <div className="new-our-blog-bottom-left-top">
+                  <div onClick={()=>{pushToBlog("/amazon-buy-bot")}}  className="new-our-blog-bottom-left">
+                    <div
+                    className="new-our-blog-bottom-left-top">
                       <h3>Amazon Buy Bot: What to Consider Before Getting One:</h3>
                       <p>
                         12/25/2012 <br/>
@@ -476,14 +494,15 @@ function index() {
                   </div>
                 </Col>
                 <Col md={4}>
-                  <div className="new-our-blog-bottom-right-container">
-                    <div className="new-our-blog-bottom-right">
-                      <h3>Amazon Buy Bot: What to Consider Before Getting One:</h3>
+                  <div 
+                  className="new-our-blog-bottom-right-container">
+                    <div onClick={()=>{pushToBlog("/getting-profitable-leads-on-amazon-fba")}} className="new-our-blog-bottom-right">
+                      <h3>How to get Profitable leads on Amazon FBA — A Stellar Guide</h3>
                       <Button className='new-learn-more-btn'>5-min read <TailIconSvg/>
                       </Button>
                     </div>
-                    <div className="new-our-blog-bottom-right">
-                      <h3>Amazon Buy Bot: What to Consider Before Getting One:</h3>
+                    <div onClick={()=>{pushToBlog("/how-to-set-up-a-sneaker-bot")}} className="new-our-blog-bottom-right">
+                      <h3>How To Set Up A Sneaker Bot For A Release (Easy-To-Follow Guide)</h3>
                       <Button className='new-learn-more-btn'>5-min read <TailIconSvg/>
                       </Button>
                       <img src={BlogBottomRightGlow} alt="" className="blog-bottom-right-glow"/>
@@ -528,7 +547,7 @@ function index() {
               <div className="new-testimonial-item">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi2}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -554,7 +573,7 @@ function index() {
               <div className="new-testimonial-item">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi3}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -580,7 +599,7 @@ function index() {
               <div className="new-testimonial-item new-translate-up-40px">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi4}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -606,7 +625,7 @@ function index() {
               <div className="new-testimonial-item">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi5}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -632,7 +651,7 @@ function index() {
               <div className="new-testimonial-item new-translate-down-20px">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi6}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -658,7 +677,7 @@ function index() {
               <div className="new-testimonial-item new-translate-up-30px">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi7}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -684,7 +703,7 @@ function index() {
               <div className="new-testimonial-item new-translate-down-20px">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi8}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -710,7 +729,7 @@ function index() {
               <div className="new-testimonial-item new-translate-up-20px">
                 <div className="new-testimonial-top">
                   <div className="new-testimonial-avi">
-                    <img src={NewAvi1}/>
+                    <img src={NewAvi9}/>
                   </div>
                   <div className="new-testimonial-user-details">
                     <h4>John Doe</h4>
@@ -966,7 +985,7 @@ function index() {
             <p className='text-center my-20px new-by-numbers-p'>
               An intuitive and efficient UI/UX that allows for streamlined task <br/> creation and faster checkouts.
             </p>
-            <Button className='new-gradient-button new-hero-btn'>
+            <Button onClick={pushJoinWaitlist}  className='new-gradient-button new-hero-btn'>
             <Lock/>
             <p className="mb-0">7 days trial</p>
             <RightArrowSmSvg/>
@@ -974,7 +993,7 @@ function index() {
           </section>
         </div>
         <footer className="new-footer">
-          <h2>Stellar. <span>3D</span></h2>
+          <h2>Stellar. <span>3.0</span></h2>
           <p>Streamlined reselling backed by world class automation.</p>
           <div className="new-footer-bottom">
             <div className="new-footer-bottom-left">
