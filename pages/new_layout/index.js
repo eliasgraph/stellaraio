@@ -524,7 +524,7 @@ function index() {
                     <img src={NewAvi1}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Martin Donnavan</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -550,7 +550,7 @@ function index() {
                     <img src={NewAvi2}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Sage Knovo</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -576,7 +576,7 @@ function index() {
                     <img src={NewAvi3}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>King Glovor</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -602,7 +602,7 @@ function index() {
                     <img src={NewAvi4}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Sammy Pringe</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -628,7 +628,7 @@ function index() {
                     <img src={NewAvi5}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Holmes Posieder</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -654,7 +654,7 @@ function index() {
                     <img src={NewAvi6}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Bridget Knowles</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -680,7 +680,7 @@ function index() {
                     <img src={NewAvi7}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Kheck Nornasvzski</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -706,7 +706,7 @@ function index() {
                     <img src={NewAvi8}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Star Line Ranger</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
@@ -732,7 +732,7 @@ function index() {
                     <img src={NewAvi9}/>
                   </div>
                   <div className="new-testimonial-user-details">
-                    <h4>John Doe</h4>
+                    <h4>Harry Gains</h4>
                     <p>Member since 4/12/2023</p>
                   </div>
                 </div>
