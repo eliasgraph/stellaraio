@@ -231,7 +231,7 @@ function index() {
           </p>
           <Button onClick={pushJoinWaitlist} className='new-gradient-button new-hero-btn'>
             <Lock/>
-            <p className="mb-0">7 days trial</p>
+            <p className="mb-0">Try Today for $39 </p>
             <RightArrowSmSvg/>
           </Button>
           <div className="new-hero-img">
@@ -987,7 +987,7 @@ function index() {
             </p>
             <Button onClick={pushJoinWaitlist}  className='new-gradient-button new-hero-btn'>
             <Lock/>
-            <p className="mb-0">7 days trial</p>
+            <p className="mb-0">Try Now</p>
             <RightArrowSmSvg/>
           </Button>
           </section>
