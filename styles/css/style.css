@@ -3,16 +3,10 @@
 @import url("./components/_footer.css");
 @import url("./components/_generals.css");
 @import url("./pages/_landing.css");
-@import url("./pages/_addToWaitlist.css");
 @import url("./pages/_blog.css");
 @import url("./pages/_thankYou.css");
-@import url("./pages/_about.css");
 @import url("./pages/_terms.css");
-@import url("./pages/_sportscard.css");
-@import url("./pages/_products.css");
-@import url("./pages/_sitess.css");
-@import url("./pages/_supportedsites.css");
 @import url("./pages/_b2b.css");
-
+@import url("./pages/_products.css");
 
 @import url("./newLayout/index.css");
